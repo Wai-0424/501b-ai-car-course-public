@@ -1,0 +1,315 @@
+[INFO] [launch]: All log files can be found below /home/orinnode/.ros/log/2026-10-08-13-45-16-591029-localhost.localdomain-16333
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [autonomous] speed_pct=0：只轉向、輪子不動。
+[INFO] [component_container-1]: process started with pid [16360]
+[INFO] [depth_bev_node-2]: process started with pid [16361]
+[INFO] [mjpeg_bridge_node-3]: process started with pid [16362]
+[INFO] [mjpeg_bridge_node-4]: process started with pid [16363]
+[INFO] [uart_bridge_node-5]: process started with pid [16364]
+[INFO] [line_follow_control_node-6]: process started with pid [16365]
+[component_container-1] [INFO] [1791438317.457892017] [camera.camera_container]: Load Library: /home/orinnode/car2_ws/install/orbbec_camera/lib/liborbbec_camera.so
+[component_container-1] [INFO] [1791438317.800872334] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1791438317.801015417] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1791438317.817416888] [camera.camera]: SDK log file path set to: /home/orinnode/.ros/Log/camera/OrbbecSDK_20261008_134517.log
+[component_container-1] [INFO] [1791438317.855924689] [camera.camera]: Device access mode: Default (4)
+[component_container-1] [INFO] [1791438317.856024655] [camera.camera]: Set UVC backend to libuvc
+[mjpeg_bridge_node-4] [INFO] [1791438318.128848876] [bev_debug_mjpeg]: mjpeg_bridge_node 啟動，訂閱 /line_follow/bev_debug/compressed，串流網址 http://<jetson-ip>:8083/stream
+[uart_bridge_node-5] [INFO] [1791438318.170116248] [uart_bridge_node]: uart_bridge_node 啟動，port=/dev/ttyTHS1，baud=460800，訂閱 /cmd_vel，CMD送出方式=whole
+[line_follow_control_node-6] [WARN] [1791438318.198808413] [line_follow_control_node]: line_follow_control_node 啟動：fixed_speed_pct=0，只會轉向、不會驅動輪子（安全預設值，真的要開始跑要明確帶非0的 fixed_speed_pct 參數）
+[mjpeg_bridge_node-3] [INFO] [1791438318.202731302] [path_overlay_mjpeg]: mjpeg_bridge_node 啟動，訂閱 /line_follow/path_overlay/compressed，串流網址 http://<jetson-ip>:8082/stream
+[depth_bev_node-2] [INFO] [1791438318.805086240] [depth_bev_node]: depth_bev_node 啟動，等待 camera_info/depth/image
+[component_container-1] [INFO] [1791438319.106141467] [camera.camera]: startDevice called
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera/camera' in container '/camera/camera_container'
+[component_container-1] [INFO] [1791438319.116355904] [camera.camera]: Connecting to the default device
+[component_container-1] [INFO] [1791438319.587108334] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-1] [INFO] [1791438319.606458682] [camera.camera]: Current time domain: global
+[component_container-1] [INFO] [1791438319.607400752] [camera.camera]: Loaded device preset: Default
+[component_container-1] [INFO] [1791438319.811739619] [camera.camera]: Current heartbeat: OFF
+[component_container-1] [INFO] [1791438319.811857350] [camera.camera]: Set firmware log to OFF
+[component_container-1] [INFO] [1791438319.811937246] [camera.camera]: set align mode to SW
+[component_container-1] [INFO] [1791438319.813471842] [camera.camera]: Disparity to depth mode: HW
+[component_container-1] [INFO] [1791438319.819399319] [camera.camera]: Current LDP: OFF
+[component_container-1] [INFO] [1791438319.822419185] [camera.camera]: Current G300 laser control: ON
+[component_container-1] [INFO] [1791438319.823913770] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-1] [INFO] [1791438319.823985984] [camera.camera]: Current color mirror: OFF
+[component_container-1] [INFO] [1791438319.824032557] [camera.camera]: Current color flip: OFF
+[component_container-1] [INFO] [1791438319.824076922] [camera.camera]: Current depth mirror: OFF
+[component_container-1] [INFO] [1791438319.824150448] [camera.camera]: Current depth flip: OFF
+[component_container-1] [INFO] [1791438319.825663278] [camera.camera]: Current color auto white balance: ON
+[component_container-1] [WARN] [1791438319.825716766] [camera.camera]: Color preset is not supported by this device
+[component_container-1] [INFO] [1791438319.827167722] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-1] [INFO] [1791438319.830161117] [camera.camera]: Current color auto exposure: ON
+[component_container-1] [INFO] [1791438319.833176535] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-1] [INFO] [1791438319.837923855] [camera.camera]: Current IR auto exposure: ON
+[component_container-1] [INFO] [1791438319.837994756] [camera.camera]: Current noise_removal_filter_min_diff: 256
+[component_container-1] [INFO] [1791438319.838052949] [camera.camera]: Current noise_removal_filter_max_size: 80
+[component_container-1] [INFO] [1791438319.838100067] [camera.camera]: Set noise removal filter to true
+[component_container-1] [INFO] [1791438319.841078994] [camera.camera]: Set hardware noise removal filter to false
+[component_container-1] [INFO] [1791438319.841200342] [camera.camera]: Current accel data correction: ON
+[component_container-1] [INFO] [1791438319.841263688] [camera.camera]: Current gyro data correction: ON
+[component_container-1] [INFO] [1791438319.841644697] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-1] [INFO] [1791438319.841730930] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-1] [INFO] [1791438319.841765084] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-1] [INFO] [1791438319.841793861] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1791438319.841892066] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-1] [INFO] [1791438319.841930861] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-1] [INFO] [1791438319.841960246] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-1] [INFO] [1791438319.841987582] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-1] [INFO] [1791438319.842014342] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-1] [INFO] [1791438319.842042222] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-1] [INFO] [1791438319.845062697] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-1] [INFO] [1791438319.983438011] [camera.camera]: Publish diagnostics every 1 seconds
+[component_container-1] [INFO] [1791438319.988369225] [camera.camera]: Device Orbbec Gemini 336L connected
+[component_container-1] [INFO] [1791438319.988503569] [camera.camera]: Serial number: CPC8563000K7
+[component_container-1] [INFO] [1791438319.988536507] [camera.camera]: Firmware version: 1.4.60
+[component_container-1] [INFO] [1791438319.988556352] [camera.camera]: ROS Wrapper version: 2.9.3
+[component_container-1] [INFO] [1791438319.988597260] [camera.camera]: SDK version: 2.9.3
+[component_container-1] [INFO] [1791438319.988640857] [camera.camera]: Hardware version: 0.1
+[component_container-1] [INFO] [1791438319.988666625] [camera.camera]: ISP firmware version: 20241125
+[component_container-1] [INFO] [1791438319.988686151] [camera.camera]: ISP needed version: 20241125
+[component_container-1] [INFO] [1791438319.988702604] [camera.camera]: usb connect type: USB3.2
+[component_container-1] [INFO] [1791438319.988716368] [camera.camera]: device unique id: 2-1.1-3
+[component_container-1] [INFO] [1791438319.988735157] [camera.camera]: Current node pid: 16360
+[component_container-1] [INFO] [1791438319.999349232] [camera.camera]: Enable frame sync
+[component_container-1] [INFO] [1791438320.528392958] [camera.camera]: Set depth AE ROI to 0, 847, 0, 479
+[component_container-1] [INFO] [1791438320.556456831] [camera.camera]: Set color AE ROI to 0, 1279, 0, 719
+[component_container-1] [INFO] [1791438320.573500886] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-1] [INFO] [1791438320.573658565] [camera.camera]: depth Frame - Width: 1280 Height: 720 fps: 30 Format: Y16
+[depth_bev_node-2] [INFO] [1791438320.641607261] [depth_bev_node]: frame period=n/a process=64ms status=no valid edges
+[component_container-1] [INFO] [1791438320.999554082] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-1] [INFO] [1791438321.004176530] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-1] [INFO] [1791438321.004332896] [camera.camera]: Initialize device cost: 1418 ms
+[depth_bev_node-2] [INFO] [1791438321.689025360] [depth_bev_node]: frame period=57ms process=38ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438321.824662639] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-15.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=25ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-8.3deg
+[line_follow_control_node-6] [INFO] [1791438322.074435507] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-16.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=89ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-8.7deg
+[line_follow_control_node-6] [INFO] [1791438322.274448587] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-25.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=98ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-12.3deg
+[line_follow_control_node-6] [INFO] [1791438322.474552189] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-26.6deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=44ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-13.7deg
+[depth_bev_node-2] [INFO] [1791438322.707093384] [depth_bev_node]: frame period=66ms process=44ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438322.724536506] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-23.7deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=31ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-13.3deg
+[line_follow_control_node-6] [INFO] [1791438322.924574041] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-20.3deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=35ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-12.1deg
+[line_follow_control_node-6] [INFO] [1791438323.125280643] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-27.5deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=170ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-14.2deg
+[line_follow_control_node-6] [INFO] [1791438323.326107510] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-7.9deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=182ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-4.9deg
+[depth_bev_node-2] [INFO] [1791438323.710779357] [depth_bev_node]: frame period=63ms process=39ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438323.826327785] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-13.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=1ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-6.9deg
+[line_follow_control_node-6] [INFO] [1791438324.076277616] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-13.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=251ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-6.9deg
+[line_follow_control_node-6] [INFO] [1791438324.326082763] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+0.6deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=245ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.1deg
+[depth_bev_node-2] [INFO] [1791438324.711702381] [depth_bev_node]: frame period=63ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438324.976404635] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+1.3deg curvature=-0.00/m (wheel_angle=-0.1deg curvature_fwa=-0.1deg) severity=1.00 speed=0.0% scale=1.00 age=26ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+0.6deg
+[line_follow_control_node-6] [INFO] [1791438325.226096625] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=86ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.6deg
+[line_follow_control_node-6] [INFO] [1791438325.426339447] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=286ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.9deg
+[line_follow_control_node-6] [INFO] [1791438325.674465013] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.1deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=32ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.3deg
+[depth_bev_node-2] [INFO] [1791438325.717228382] [depth_bev_node]: frame period=65ms process=38ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438325.877756689] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.1deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=234ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.1deg
+[line_follow_control_node-6] [INFO] [1791438326.126354272] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+8.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=113ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.6deg
+[line_follow_control_node-6] [INFO] [1791438326.376458506] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-4.9deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=171ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-2.0deg
+[depth_bev_node-2] [INFO] [1791438326.722683047] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438326.876198390] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=40ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.0deg
+[line_follow_control_node-6] [INFO] [1791438327.076377254] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.1deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=45ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.2deg
+[line_follow_control_node-6] [INFO] [1791438327.326404455] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+13.4deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=45ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+7.2deg
+[line_follow_control_node-6] [INFO] [1791438327.576351665] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=41ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.3deg
+[depth_bev_node-2] [INFO] [1791438327.735207771] [depth_bev_node]: frame period=60ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438327.826307806] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=291ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.7deg
+[line_follow_control_node-6] [INFO] [1791438328.424305655] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=8ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.7deg
+[line_follow_control_node-6] [INFO] [1791438328.624306539] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+11.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=15ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.6deg
+[depth_bev_node-2] [INFO] [1791438328.753315140] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438328.826362896] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.0deg curvature=-0.02/m (wheel_angle=-0.3deg curvature_fwa=-0.4deg) severity=1.00 speed=0.0% scale=1.00 age=20ms ff_curv=-0.02/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.4deg
+[line_follow_control_node-6] [INFO] [1791438329.026406753] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-10.7deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=89ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-4.1deg
+[line_follow_control_node-6] [INFO] [1791438329.275758241] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+8.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=86ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.8deg
+[line_follow_control_node-6] [INFO] [1791438329.475960483] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-2.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=95ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+0.3deg
+[line_follow_control_node-6] [INFO] [1791438329.676005016] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+1.4deg curvature=-0.02/m (wheel_angle=-0.3deg curvature_fwa=-0.5deg) severity=1.00 speed=0.0% scale=1.00 age=39ms ff_curv=-0.02/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.7deg
+[depth_bev_node-2] [INFO] [1791438329.779945834] [depth_bev_node]: frame period=65ms process=42ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438329.876795171] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.6deg curvature=-0.01/m (wheel_angle=-0.1deg curvature_fwa=-0.2deg) severity=1.00 speed=0.0% scale=1.00 age=110ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.5deg
+[line_follow_control_node-6] [INFO] [1791438330.126484271] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+17.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=46ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.9deg
+[line_follow_control_node-6] [INFO] [1791438330.378470325] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+11.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=102ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.5deg
+[depth_bev_node-2] [INFO] [1791438330.834578871] [depth_bev_node]: frame period=61ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438330.974402716] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-1.4deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.1deg) severity=1.00 speed=0.0% scale=1.00 age=28ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.8deg
+[line_follow_control_node-6] [INFO] [1791438331.174449649] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-1.4deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.1deg) severity=1.00 speed=0.0% scale=1.00 age=228ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.8deg
+[line_follow_control_node-6] [INFO] [1791438331.376656732] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-4.5deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=182ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-2.2deg
+[depth_bev_node-2] [INFO] [1791438331.873169493] [depth_bev_node]: frame period=61ms process=39ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438332.225864379] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-7.4deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=1ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-3.9deg
+[line_follow_control_node-6] [INFO] [1791438332.474147781] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=127ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.5deg
+[depth_bev_node-2] [INFO] [1791438332.902711033] [depth_bev_node]: frame period=61ms process=41ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438332.924519310] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.5deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=36ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.3deg
+[line_follow_control_node-6] [INFO] [1791438333.174599686] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.5deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=286ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.3deg
+[line_follow_control_node-6] [INFO] [1791438333.424675975] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+1.8deg curvature=-0.01/m (wheel_angle=-0.2deg curvature_fwa=-0.3deg) severity=1.00 speed=0.0% scale=1.00 age=108ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=+0.5deg
+[line_follow_control_node-6] [INFO] [1791438333.674434541] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.0deg curvature=-0.02/m (wheel_angle=-0.3deg curvature_fwa=-0.5deg) severity=1.00 speed=0.0% scale=1.00 age=114ms ff_curv=-0.02/m dist=0.00m auto_trim=+0.00deg -> fwa=+0.4deg
+[depth_bev_node-2] [INFO] [1791438333.939347954] [depth_bev_node]: frame period=60ms process=39ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438334.024446751] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+9.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=37ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.8deg
+[line_follow_control_node-6] [INFO] [1791438334.224497866] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+6.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=174ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.3deg
+[line_follow_control_node-6] [INFO] [1791438334.474580516] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+1.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=240ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.0deg
+[line_follow_control_node-6] [INFO] [1791438334.724532761] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+19.4deg curvature=+0.02/m (wheel_angle=+0.3deg curvature_fwa=+0.6deg) severity=1.00 speed=0.0% scale=1.00 age=117ms ff_curv=+0.02/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.6deg
+[line_follow_control_node-6] [INFO] [1791438334.926375264] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-6.9deg curvature=+1.63/m (wheel_angle=+25.1deg curvature_fwa=+40.2deg) severity=1.00 speed=0.0% scale=1.00 age=102ms ff_curv=+1.63/m dist=0.00m auto_trim=+0.00deg -> fwa=+32.5deg
+[depth_bev_node-2] [INFO] [1791438334.942561722] [depth_bev_node]: frame period=50ms process=33ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438335.175184862] [line_follow_control_node]: near=-0.119m near_fresh=True pose_valid=True heading=+11.2deg curvature=+0.17/m (wheel_angle=+2.8deg curvature_fwa=+4.5deg) severity=0.74 speed=0.0% scale=1.00 age=12ms ff_curv=+0.17/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.3deg
+[line_follow_control_node-6] [INFO] [1791438335.376349055] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+11.2deg curvature=+0.17/m (wheel_angle=+2.8deg curvature_fwa=+4.5deg) severity=1.00 speed=0.0% scale=1.00 age=212ms ff_curv=+0.17/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.1deg
+[line_follow_control_node-6] [INFO] [1791438335.576385407] [line_follow_control_node]: near=-0.242m near_fresh=True pose_valid=False heading=+2.3deg curvature=+0.03/m (wheel_angle=+0.6deg curvature_fwa=+0.9deg) severity=1.00 speed=0.0% scale=1.00 age=175ms ff_curv=+0.03/m dist=0.00m auto_trim=+0.00deg -> fwa=-17.3deg
+[line_follow_control_node-6] [INFO] [1791438335.825914261] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+17.1deg curvature=+0.00/m (wheel_angle=+0.1deg curvature_fwa=+0.1deg) severity=1.00 speed=0.0% scale=1.00 age=129ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.8deg
+[depth_bev_node-2] [INFO] [1791438335.948976269] [depth_bev_node]: frame period=58ms process=45ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438336.026209200] [line_follow_control_node]: near=-0.259m near_fresh=True pose_valid=False heading=+3.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=90ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-13.1deg
+[line_follow_control_node-6] [INFO] [1791438336.226441091] [line_follow_control_node]: near=-0.253m near_fresh=True pose_valid=True heading=-20.8deg curvature=-0.06/m (wheel_angle=-1.0deg curvature_fwa=-1.5deg) severity=1.00 speed=0.0% scale=1.00 age=174ms ff_curv=-0.06/m dist=0.00m auto_trim=+0.00deg -> fwa=-33.4deg
+[line_follow_control_node-6] [INFO] [1791438336.476623501] [line_follow_control_node]: near=-0.255m near_fresh=True pose_valid=False heading=-15.7deg curvature=+0.08/m (wheel_angle=+1.3deg curvature_fwa=+2.0deg) severity=1.00 speed=0.0% scale=1.00 age=116ms ff_curv=+0.08/m dist=0.00m auto_trim=+0.00deg -> fwa=-29.4deg
+[line_follow_control_node-6] [INFO] [1791438336.976183292] [line_follow_control_node]: near=-0.264m near_fresh=True pose_valid=False heading=+0.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=10ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-23.7deg
+[depth_bev_node-2] [INFO] [1791438336.978024581] [depth_bev_node]: frame period=60ms process=45ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438337.226356400] [line_follow_control_node]: near=-0.264m near_fresh=True pose_valid=False heading=+0.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=260ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-23.7deg
+[line_follow_control_node-6] [INFO] [1791438337.426389512] [line_follow_control_node]: near=-0.279m near_fresh=True pose_valid=True heading=-30.9deg curvature=+0.30/m (wheel_angle=+4.9deg curvature_fwa=+7.9deg) severity=1.00 speed=0.0% scale=1.00 age=170ms ff_curv=+0.30/m dist=0.00m auto_trim=+0.00deg -> fwa=-32.7deg
+[line_follow_control_node-6] [INFO] [1791438337.676083170] [line_follow_control_node]: near=-0.281m near_fresh=True pose_valid=False heading=-4.6deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=7ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-29.8deg
+[line_follow_control_node-6] [INFO] [1791438337.926458270] [line_follow_control_node]: near=-0.214m near_fresh=True pose_valid=False heading=-1.6deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=95ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-22.3deg
+[depth_bev_node-2] [INFO] [1791438338.007140533] [depth_bev_node]: frame period=50ms process=42ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438338.176305267] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+10.7deg curvature=+0.94/m (wheel_angle=+15.2deg curvature_fwa=+24.4deg) severity=1.00 speed=0.0% scale=1.00 age=55ms ff_curv=+0.94/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.1deg
+[line_follow_control_node-6] [INFO] [1791438338.424612869] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.4deg curvature=-0.01/m (wheel_angle=-0.1deg curvature_fwa=-0.2deg) severity=1.00 speed=0.0% scale=1.00 age=48ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.3deg
+[line_follow_control_node-6] [INFO] [1791438338.626463866] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-40.7deg curvature=+1.59/m (wheel_angle=+24.6deg curvature_fwa=+39.3deg) severity=1.00 speed=0.0% scale=1.00 age=59ms ff_curv=+1.59/m dist=0.00m auto_trim=+0.00deg -> fwa=+17.3deg
+[line_follow_control_node-6] [INFO] [1791438338.876285269] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+5.6deg curvature=+0.00/m (wheel_angle=+0.1deg curvature_fwa=+0.1deg) severity=1.00 speed=0.0% scale=1.00 age=52ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.9deg
+[depth_bev_node-2] [INFO] [1791438339.021641364] [depth_bev_node]: frame period=64ms process=37ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438339.125313281] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+10.2deg curvature=-0.60/m (wheel_angle=-9.9deg curvature_fwa=-15.8deg) severity=1.00 speed=0.0% scale=1.00 age=52ms ff_curv=-0.60/m dist=0.00m auto_trim=+0.00deg -> fwa=-12.2deg
+[line_follow_control_node-6] [INFO] [1791438339.326260597] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+6.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=5ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-7.8deg
+[line_follow_control_node-6] [INFO] [1791438339.526369085] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-4.6deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=17ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.2deg
+[line_follow_control_node-6] [INFO] [1791438339.776356038] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+12.3deg curvature=-0.97/m (wheel_angle=-15.6deg curvature_fwa=-24.9deg) severity=1.00 speed=0.0% scale=1.00 age=14ms ff_curv=-0.97/m dist=0.00m auto_trim=+0.00deg -> fwa=-15.0deg
+[line_follow_control_node-6] [INFO] [1791438339.976428516] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=26ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-6.2deg
+[depth_bev_node-2] [INFO] [1791438340.024988612] [depth_bev_node]: frame period=63ms process=42ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438340.226057625] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+6.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=86ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.5deg
+[line_follow_control_node-6] [INFO] [1791438340.426275680] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-10.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=95ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-2.9deg
+[line_follow_control_node-6] [INFO] [1791438340.626303857] [line_follow_control_node]: near=-0.161m near_fresh=True pose_valid=False heading=-4.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=185ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-15.8deg
+[line_follow_control_node-6] [INFO] [1791438340.876289176] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-33.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=57ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-10.6deg
+[depth_bev_node-2] [INFO] [1791438341.083287097] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438341.124406535] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-9.6deg curvature=-0.01/m (wheel_angle=-0.1deg curvature_fwa=-0.2deg) severity=1.00 speed=0.0% scale=1.00 age=117ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=-6.8deg
+[line_follow_control_node-6] [INFO] [1791438341.374360711] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+10.1deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=57ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.4deg
+[line_follow_control_node-6] [INFO] [1791438341.774360218] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+11.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=27ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.8deg
+[line_follow_control_node-6] [INFO] [1791438341.974414707] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-2.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=103ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.3deg
+[depth_bev_node-2] [INFO] [1791438342.127669755] [depth_bev_node]: frame period=62ms process=36ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438342.574422250] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+0.9deg curvature=-0.59/m (wheel_angle=-9.6deg curvature_fwa=-15.4deg) severity=1.00 speed=0.0% scale=1.00 age=26ms ff_curv=-0.59/m dist=0.00m auto_trim=+0.00deg -> fwa=-14.9deg
+[line_follow_control_node-6] [INFO] [1791438342.775006616] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+0.9deg curvature=-0.59/m (wheel_angle=-9.6deg curvature_fwa=-15.4deg) severity=1.00 speed=0.0% scale=1.00 age=226ms ff_curv=-0.59/m dist=0.00m auto_trim=+0.00deg -> fwa=-14.9deg
+[line_follow_control_node-6] [INFO] [1791438342.976343992] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+12.1deg curvature=-0.04/m (wheel_angle=-0.6deg curvature_fwa=-1.0deg) severity=1.00 speed=0.0% scale=1.00 age=53ms ff_curv=-0.04/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.3deg
+[depth_bev_node-2] [INFO] [1791438343.191272277] [depth_bev_node]: frame period=63ms process=43ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438343.225394611] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+32.9deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=47ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+11.3deg
+[line_follow_control_node-6] [INFO] [1791438343.426567847] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+18.6deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=56ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.1deg
+[line_follow_control_node-6] [INFO] [1791438343.676182989] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+26.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=51ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+14.1deg
+[line_follow_control_node-6] [INFO] [1791438343.926880032] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+13.4deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=53ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+8.0deg
+[line_follow_control_node-6] [INFO] [1791438344.176312712] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+38.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=51ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+19.7deg
+[depth_bev_node-2] [INFO] [1791438344.194749451] [depth_bev_node]: frame period=63ms process=36ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438344.376420311] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+37.1deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=1ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+15.7deg
+[line_follow_control_node-6] [INFO] [1791438344.626482558] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+9.3deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=58ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.4deg
+[line_follow_control_node-6] [INFO] [1791438344.826679782] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+10.0deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=66ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.9deg
+[line_follow_control_node-6] [INFO] [1791438345.076148923] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+7.0deg curvature=-0.01/m (wheel_angle=-0.1deg curvature_fwa=-0.2deg) severity=1.00 speed=0.0% scale=1.00 age=64ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.0deg
+[depth_bev_node-2] [INFO] [1791438345.206591966] [depth_bev_node]: frame period=60ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438345.276420348] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+7.0deg curvature=-0.01/m (wheel_angle=-0.1deg curvature_fwa=-0.2deg) severity=1.00 speed=0.0% scale=1.00 age=264ms ff_curv=-0.01/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.5deg
+[line_follow_control_node-6] [INFO] [1791438345.476432277] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-7.8deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=33ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-6.9deg
+[line_follow_control_node-6] [INFO] [1791438345.726353754] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-16.7deg curvature=+0.05/m (wheel_angle=+0.8deg curvature_fwa=+1.3deg) severity=1.00 speed=0.0% scale=1.00 age=145ms ff_curv=+0.05/m dist=0.00m auto_trim=+0.00deg -> fwa=-7.0deg
+[line_follow_control_node-6] [INFO] [1791438345.926388441] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-18.1deg curvature=+0.81/m (wheel_angle=+13.1deg curvature_fwa=+20.9deg) severity=1.00 speed=0.0% scale=1.00 age=95ms ff_curv=+0.81/m dist=0.00m auto_trim=+0.00deg -> fwa=+6.0deg
+[line_follow_control_node-6] [INFO] [1791438346.174477978] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-30.9deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=157ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-14.1deg
+[depth_bev_node-2] [INFO] [1791438346.212496271] [depth_bev_node]: frame period=58ms process=39ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438346.474434455] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+6.2deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=8ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+3.2deg
+[line_follow_control_node-6] [INFO] [1791438346.674477918] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+17.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=28ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+6.3deg
+[line_follow_control_node-6] [INFO] [1791438346.874599514] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+17.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=228ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+8.7deg
+[depth_bev_node-2] [INFO] [1791438347.254934392] [depth_bev_node]: frame period=60ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438348.307239532] [depth_bev_node]: frame period=62ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438349.352066240] [depth_bev_node]: frame period=60ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438350.399240397] [depth_bev_node]: frame period=61ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438351.452325700] [depth_bev_node]: frame period=62ms process=39ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438352.026438488] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+28.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=31ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+14.9deg
+[line_follow_control_node-6] [INFO] [1791438352.226512635] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+28.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=231ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+14.9deg
+[depth_bev_node-2] [INFO] [1791438352.498828363] [depth_bev_node]: frame period=62ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438352.626252946] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+25.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=11ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+13.5deg
+[line_follow_control_node-6] [INFO] [1791438352.826288939] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+25.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=211ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+13.5deg
+[depth_bev_node-2] [INFO] [1791438353.554755869] [depth_bev_node]: frame period=62ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438354.610088299] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438355.124501465] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=29ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.5deg
+[line_follow_control_node-6] [INFO] [1791438355.324551964] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=229ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.5deg
+[depth_bev_node-2] [INFO] [1791438355.667077118] [depth_bev_node]: frame period=61ms process=41ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438356.074489853] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+16.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=42ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+8.8deg
+[line_follow_control_node-6] [INFO] [1791438356.324613156] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+16.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=292ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+8.8deg
+[depth_bev_node-2] [INFO] [1791438356.667540208] [depth_bev_node]: frame period=63ms process=41ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438356.924507540] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.9deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=15ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+11.0deg
+[line_follow_control_node-6] [INFO] [1791438357.124564420] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+14.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=85ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+8.4deg
+[line_follow_control_node-6] [INFO] [1791438357.374573087] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+24.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=84ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+11.3deg
+[line_follow_control_node-6] [INFO] [1791438357.624414861] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+18.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=11ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.2deg
+[depth_bev_node-2] [INFO] [1791438357.689739806] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438357.874609050] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=66ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.1deg
+[line_follow_control_node-6] [INFO] [1791438358.075561255] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=265ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.5deg
+[line_follow_control_node-6] [INFO] [1791438358.577476006] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+25.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=50ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+13.1deg
+[depth_bev_node-2] [INFO] [1791438358.739934016] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438358.777782141] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+25.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=251ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+13.1deg
+[line_follow_control_node-6] [INFO] [1791438359.224923697] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+27.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=48ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+14.4deg
+[line_follow_control_node-6] [INFO] [1791438359.474564404] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-3.9deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=41ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+6.8deg
+[line_follow_control_node-6] [INFO] [1791438359.676338022] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+21.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=173ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+11.0deg
+[depth_bev_node-2] [INFO] [1791438359.781015436] [depth_bev_node]: frame period=64ms process=47ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438359.876358465] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+6.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=108ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+4.5deg
+[line_follow_control_node-6] [INFO] [1791438360.077322450] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+19.1deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=45ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+6.5deg
+[line_follow_control_node-6] [INFO] [1791438360.326503439] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+19.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=21ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.3deg
+[line_follow_control_node-6] [INFO] [1791438360.576178546] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+23.0deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=6ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+11.1deg
+[depth_bev_node-2] [INFO] [1791438360.781142510] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438360.826326451] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=-4.9deg curvature=-0.00/m (wheel_angle=-0.0deg curvature_fwa=-0.0deg) severity=1.00 speed=0.0% scale=1.00 age=123ms ff_curv=-0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=-0.3deg
+[line_follow_control_node-6] [INFO] [1791438361.026429098] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+2.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=189ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.1deg
+[line_follow_control_node-6] [INFO] [1791438361.277581264] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.4deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=44ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.8deg
+[line_follow_control_node-6] [INFO] [1791438361.526317071] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+3.4deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=294ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+1.8deg
+[line_follow_control_node-6] [INFO] [1791438361.726328332] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+21.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=108ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.4deg
+[depth_bev_node-2] [INFO] [1791438361.821506477] [depth_bev_node]: frame period=62ms process=45ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438361.926363952] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+7.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=45ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+2.5deg
+[line_follow_control_node-6] [INFO] [1791438362.176318008] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+11.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=109ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+5.6deg
+[line_follow_control_node-6] [INFO] [1791438362.424649252] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+17.7deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=41ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.3deg
+[line_follow_control_node-6] [INFO] [1791438362.674612868] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=36ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.9deg
+[depth_bev_node-2] [INFO] [1791438362.840703622] [depth_bev_node]: frame period=63ms process=41ms status=no valid edges
+[line_follow_control_node-6] [INFO] [1791438362.874679653] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+20.2deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=236ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.5deg
+[line_follow_control_node-6] [INFO] [1791438363.076392726] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+18.3deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=182ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+9.7deg
+[line_follow_control_node-6] [INFO] [1791438363.375284563] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+4.8deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=21ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+2.5deg
+[line_follow_control_node-6] [INFO] [1791438363.576411043] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+15.5deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=87ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+6.5deg
+[line_follow_control_node-6] [INFO] [1791438363.826430284] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+14.4deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=79ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+7.7deg
+[depth_bev_node-2] [INFO] [1791438363.894206613] [depth_bev_node]: frame period=65ms process=47ms status=tracking
+[line_follow_control_node-6] [INFO] [1791438364.076552522] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+14.9deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=127ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+7.6deg
+[line_follow_control_node-6] [INFO] [1791438364.376406248] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+19.9deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=38ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.4deg
+[line_follow_control_node-6] [INFO] [1791438364.624508846] [line_follow_control_node]: near=+0.000m near_fresh=False pose_valid=True heading=+19.9deg curvature=+0.00/m (wheel_angle=+0.0deg curvature_fwa=+0.0deg) severity=1.00 speed=0.0% scale=1.00 age=288ms ff_curv=+0.00/m dist=0.00m auto_trim=+0.00deg -> fwa=+10.4deg
+[depth_bev_node-2] [INFO] [1791438364.914881262] [depth_bev_node]: frame period=61ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438365.968585645] [depth_bev_node]: frame period=61ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438367.009712667] [depth_bev_node]: frame period=61ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438368.073257161] [depth_bev_node]: frame period=64ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438369.101710345] [depth_bev_node]: frame period=64ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438370.125524712] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791438371.158914792] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[component_container-1] Received signal: 2
+[uart_bridge_node-5] Exception in thread Thread-1 (_read_loop):
+[uart_bridge_node-5] Traceback (most recent call last):
+[uart_bridge_node-5]   File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+[uart_bridge_node-5]     self.run()
+[uart_bridge_node-5]   File "/usr/lib/python3.12/threading.py", line 1010, in run
+[uart_bridge_node-5]     self._target(*self._args, **self._kwargs)
+[uart_bridge_node-5]   File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_bridge_node.py", line 225, in _read_loop
+[uart_bridge_node-5]     line = self._serial.readline()
+[uart_bridge_node-5]            ^^^^^^^^^^^^^^^^^^^^^^^
+[uart_bridge_node-5]   File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 575, in read
+[uart_bridge_node-5]     buf = os.read(self.fd, size - len(read))
+[uart_bridge_node-5]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[uart_bridge_node-5] TypeError: 'NoneType' object cannot be interpreted as an integer
+[depth_bev_node-2] Traceback (most recent call last):
+[depth_bev_node-2]   File "/home/orinnode/car2_ws/install/car2_bringup/lib/car2_bringup/depth_bev_node", line 33, in <module>
+[depth_bev_node-2]     sys.exit(load_entry_point('car2-bringup', 'console_scripts', 'depth_bev_node')())
+[depth_bev_node-2]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[depth_bev_node-2]   File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/depth_bev_node.py", line 486, in main
+[depth_bev_node-2]     rclpy.spin(node)
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[depth_bev_node-2]     executor.spin_once()
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[depth_bev_node-2]     self._spin_once_impl(timeout_sec)
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+[depth_bev_node-2]     raise handler.exception()
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+[depth_bev_node-2]     result = coro.send(None)
+[depth_bev_node-2]              ^^^^^^^^^^^^^^^
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+[depth_bev_node-2]     await call_coroutine()
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 480, in _execute
+[depth_bev_node-2]     await await_or_execute(sub.callback, *msg_tuple)
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+[depth_bev_node-2]     return callback(*args)
+[depth_bev_node-2]            ^^^^^^^^^^^^^^^
+[depth_bev_node-2]   File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/depth_bev_node.py", line 293, in _on_image
+[depth_bev_node-2]     self._publish_metrics(pose, near_offset, far_offset)
+[depth_bev_node-2]   File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/depth_bev_node.py", line 377, in _publish_metrics
+[depth_bev_node-2]     self._metrics_pub.publish(msg)
+[depth_bev_node-2]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/publisher.py", line 70, in publish
+[depth_bev_node-2]     self.__publisher.publish(msg)
+[depth_bev_node-2] rclpy._rclpy_pybind11.RCLError: Failed to publish: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[INFO] [uart_bridge_node-5]: process has finished cleanly [pid 16364]
+[INFO] [line_follow_control_node-6]: process has finished cleanly [pid 16365]
+[INFO] [mjpeg_bridge_node-4]: process has finished cleanly [pid 16363]
+[INFO] [mjpeg_bridge_node-3]: process has finished cleanly [pid 16362]
+[ERROR] [depth_bev_node-2]: process has died [pid 16361, exit code 1, cmd '/home/orinnode/car2_ws/install/car2_bringup/lib/car2_bringup/depth_bev_node --ros-args -r __node:=depth_bev_node'].
+[INFO] [component_container-1]: process has finished cleanly [pid 16360]

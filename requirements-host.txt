@@ -1,0 +1,5 @@
+# Desktop utilities and motor-characterization scripts.
+# ROS 2 dependencies live in the separate ROS project, not in this repo.
+pyserial>=3.5
+numpy>=1.24
+matplotlib>=3.7

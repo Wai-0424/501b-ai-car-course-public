@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>車一｜自動與手動控制</title><style>
+:root{color-scheme:dark;--bg:#10151c;--panel:#19222d;--line:#344153;--text:#eef3f9;--muted:#a8b7c9;--cyan:#45d9e7;--red:#f65765}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,"Microsoft JhengHei",sans-serif}main{max-width:1320px;margin:auto;padding:22px}
+header{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:18px}h1{font-size:24px;margin:0}p{margin:5px 0;color:var(--muted)}.badge{border:1px solid var(--line);border-radius:20px;padding:7px 15px;white-space:nowrap}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(310px,1fr);gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}h2{font-size:16px;margin:0 0 12px}img{display:block;width:100%;border-radius:10px;background:#000;aspect-ratio:848/480;object-fit:contain}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.stat{background:var(--bg);border-radius:10px;padding:12px}.stat small{display:block;color:var(--muted)}.stat b{font-size:22px;font-variant-numeric:tabular-nums}.controls{display:grid;gap:14px}label{display:block}input[type=range]{width:100%;accent-color:var(--cyan);height:30px}input[type=checkbox]{width:18px;height:18px;vertical-align:middle;margin-right:8px;accent-color:var(--cyan)}button{border:1px solid var(--line);border-radius:10px;padding:12px 16px;background:#29384a;color:var(--text);font:inherit;font-weight:600;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}.row{display:flex;gap:8px}.row button{flex:1}.start{background:#116579}.hold{background:#0f766e;font-size:20px;min-height:76px;touch-action:none;user-select:none}.hold.active{background:#11a596}.stop{background:#a82035;border-color:#f65765;font-size:20px;min-height:64px}.large{font-size:28px;color:var(--cyan);font-variant-numeric:tabular-nums}.note{font-size:13px;color:var(--muted)}.detail{min-height:48px;padding:10px 12px;background:var(--bg);border-radius:8px}.error{color:#ff929c}details{margin-top:15px}summary{cursor:pointer;color:var(--muted)}pre{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere}.record{overflow-wrap:anywhere;font-size:12px}.controlheading{display:flex;justify-content:space-between;align-items:center}
+@media(max-width:900px){.grid{grid-template-columns:1fr}main{padding:12px}header{align-items:flex-start}.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><main>
+<header><div><h1>車一 · 自動與手動控制</h1><p>目標輪速由你設定 · 最高 100% · 無行駛時間上限 · 轉向 ±20°</p></div><span class="badge" id="connection">連線中</span></header>
+<div class="grid"><section class="panel"><h2>相機與車道參考</h2><img id="overlay" alt="車一即時相機疊圖">
+<p class="note">紅：偵測車道中心 · 青：依轉向命令推算的路徑 · 黃：前方 0.61 m 的左右偏差</p>
+<div class="stats"><div class="stat"><small>BM 左輪實測</small><b id="rpmL">—</b> RPM</div><div class="stat"><small>BM 右輪實測</small><b id="rpmR">—</b> RPM</div><div class="stat"><small>實際送出輪速命令</small><b id="sentSpeed">0</b> %</div><div class="stat"><small>實際送出轉向命令</small><b id="sentFwa">0</b> °</div><div class="stat"><small>近點 / 遠點偏差</small><b id="offsets">—</b> cm</div></div>
+<details><summary>鳥瞰圖與完整 BM 回授</summary><img id="bev" alt="車一鳥瞰圖"><pre id="telemetry"></pre></details></section>
+<section class="panel controls"><div class="controlheading"><h2>控制模式</h2><span id="phase">未開始</span></div>
+<div class="detail" id="detail">開頁面不會前進，先確認模式與現場，再按開始。</div>
+<label for="mode">選擇模式</label><select id="mode" style="font:inherit;padding:12px;background:#29384a;color:#eef3f9;border:1px solid #344153;border-radius:10px"><option value="auto">自動循線</option><option value="manual">手動控制 · 按住才前進</option></select>
+<div id="autoSettings"><div class="row"><label>近點修正增益（°/m）<input id="kpLat" type="number" min="0" max="200" step="10" value="150" style="width:100%;font:inherit;padding:8px"></label><label>航向修正增益（°/rad）<input id="kpHead" type="number" min="0" max="30" step="1" value="20" style="width:100%;font:inherit;padding:8px"></label></div><p class="note">自動模式根據 0.61 m 近點與車道方向轉向；失去近點資料就停止。先沿用第一趟的增益，尚未驗證彎道效果。</p></div>
+<label><input type="checkbox" id="drive">允許輪子前進（未勾選時只動舵機）</label>
+<label><input type="checkbox" id="ready">我在車旁，前方淨空，能立即斷電</label>
+<button class="start" id="start">開始自動循線</button>
+<div><label for="steer">轉向命令 · 左負 / 右正</label><div class="large" id="steerValue">0°</div><input id="steer" type="range" min="-20" max="20" step="1" value="0"><div class="row"><button id="left">左 2°</button><button id="center">回正</button><button id="right">右 2°</button></div></div>
+<div><label for="speed">目標輪速 · 百分比不是 PWM duty</label><div class="large" id="speedValue">100%</div><input id="speed" type="range" min="0" max="100" step="1" value="100"><p class="note">可隨時選 0–100%。自動模式會持續用目前的設定值；手動模式只在按住前進時送出。</p></div>
+<button class="hold" id="hold" disabled>按住前進 · 放開停止</button>
+<button class="stop" id="stop">立即停止 / 回正</button>
+<p class="note">鍵盤：A / D 或 ← / → 轉向，C 回正；按住空白鍵前進，Esc 停止。切換分頁、視窗失焦或控制頁失聯會停止，需重新開始。</p>
+<p class="note">自動模式按開始後持續循線；手動模式按住才走。兩種模式不能同時啟用，切換前須先停止。轉向角是命令，BM 沒有實際舵機角度回授。</p>
+<div class="record" id="record"></div></section></div></main>
+<script>
+const $=id=>document.getElementById(id), token=new URLSearchParams(location.search).get('token');
+let armed=false, drive=false, holding=false, session=null, seq=0, sending=false, lastStatus=0, connected=false;
+$('overlay').src='/overlay?token='+encodeURIComponent(token);$('bev').src='/bev?token='+encodeURIComponent(token);
+const headers={'X-Control-Token':token,'Content-Type':'application/json'};
+async function api(path,data){const r=await fetch('/api/'+path,{method:data===undefined?'GET':'POST',headers,cache:'no-store',body:data===undefined?undefined:JSON.stringify(data)});const body=await r.json();if(!r.ok)throw Error(body.error||'連線失敗');return body}
+function fmt(v,d=1){return typeof v==='number'&&Number.isFinite(v)?v.toFixed(d):'—'}
+function values(){const n=+$('steer').value;$('steerValue').textContent=(n>0?'+':'')+n+'°';$('speedValue').textContent=$('speed').value+'%'}
+function refreshButtons(){const auto=$('mode').value==='auto';holding=holding&&armed&&drive&&!auto;$('hold').disabled=!armed||!drive||auto;$('hold').hidden=auto;$('hold').classList.toggle('active',holding);$('start').textContent=auto?'開始自動循線':'開始手動控制';$('start').disabled=armed||!connected||!$('ready').checked;$('ready').disabled=armed;$('drive').disabled=armed;$('mode').disabled=armed;$('autoSettings').hidden=!auto;$('kpLat').disabled=armed;$('kpHead').disabled=armed;for(const id of ['steer','left','center','right'])$(id).disabled=auto}
+function release(){holding=false;refreshButtons();sendCommand()}
+async function stop(){holding=false;armed=false;session=null;refreshButtons();try{await api('stop',{})}catch(e){$('detail').textContent=e.message} }
+async function sendCommand(){if(!armed||sending)return;sending=true;try{await api('cmd',{session,fwa:+$('steer').value,speed:+$('speed').value,go:holding,seq:++seq})}catch(e){holding=false;armed=false;refreshButtons();$('detail').textContent=e.message}finally{sending=false}}
+$('start').onclick=async()=>{holding=false;$('steer').value=0;values();try{const r=await api('start',{ready:$('ready').checked,drive:$('drive').checked,mode:$('mode').value,kp_lateral:+$('kpLat').value,kp_heading:+$('kpHead').value});session=r.session;seq=0;armed=true;drive=$('drive').checked;refreshButtons();sendCommand()}catch(e){$('detail').textContent=e.message}};
+$('stop').onclick=stop;$('ready').onchange=refreshButtons;$('drive').onchange=refreshButtons;
+$('mode').onchange=refreshButtons;
+$('steer').oninput=()=>{values();sendCommand()};$('speed').oninput=()=>{values();sendCommand()};
+function turn(delta){if($('mode').value==='auto')return;$('steer').value=Math.max(-20,Math.min(20,+$('steer').value+delta));values();sendCommand()}
+$('left').onclick=()=>turn(-2);$('right').onclick=()=>turn(2);$('center').onclick=()=>{$('steer').value=0;values();sendCommand()};
+$('hold').onpointerdown=e=>{if(!armed||!drive)return;e.preventDefault();$('hold').setPointerCapture(e.pointerId);holding=true;refreshButtons();sendCommand()};
+for(const event of ['pointerup','pointercancel','lostpointercapture'])$('hold').addEventListener(event,release);
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){stop();return}if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.code==='Space'){e.preventDefault();if(armed&&drive){holding=true;refreshButtons();sendCommand()}}else if(!e.repeat){if(e.key==='ArrowLeft'||e.key.toLowerCase()==='a')turn(-2);if(e.key==='ArrowRight'||e.key.toLowerCase()==='d')turn(2);if(e.key.toLowerCase()==='c')$('center').click()}});
+window.addEventListener('keyup',e=>{if(e.code==='Space'){e.preventDefault();release()}});
+window.addEventListener('blur',stop);document.addEventListener('visibilitychange',()=>{if(document.hidden)stop()});
+window.addEventListener('pagehide',()=>{holding=false;fetch('/api/stop',{method:'POST',headers,body:'{}',keepalive:true}).catch(()=>{})});
+setInterval(sendCommand,100);
+async function poll(){try{const s=await api('status');lastStatus=performance.now();connected=s.connected;armed=s.armed;drive=s.drive;if(!armed){holding=false;session=null}$('connection').textContent=s.connected?'BM 雙向通訊正常':'BM 通訊未就緒';$('connection').classList.toggle('error',!s.connected);$('phase').textContent=s.armed?'控制中':'已停止';$('detail').textContent=s.reason+(s.fault!==0&&s.fault!==null?' · 故障 '+s.fault:'');$('rpmL').textContent=fmt(s.rpm_l,0);$('rpmR').textContent=fmt(s.rpm_r,0);$('sentSpeed').textContent=fmt(s.sent_speed);$('sentFwa').textContent=fmt(s.sent_fwa);$('offsets').textContent=fmt(s.near_cm)+' / '+fmt(s.far_cm);$('record').textContent='本次紀錄：'+s.run_dir;$('telemetry').textContent=JSON.stringify(s.telemetry,null,2);refreshButtons()}catch(e){holding=false;armed=false;connected=false;$('detail').textContent='控制頁失聯，速度將自動歸零';refreshButtons()}}
+setInterval(poll,200);poll();values();refreshButtons();
+</script></body></html>

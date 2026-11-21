@@ -1,0 +1,197 @@
+{
+  "started": "2026-10-10T11:55:59",
+  "port": "COM10",
+  "runs": [
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 7540,
+          "rpm": 175.5,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D9(左,MCTM0) 計時器=ON 通道=0N(互補) CRR=11999 CCR=7529 (duty 160 預期CCR≈7529) 實際頻率≈5000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 5kHz",
+      "cmd": "l",
+      "target": "左輪(D9)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "右輪": {
+          "ticks": 7524,
+          "rpm": 175.1,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D8(右,PWM0)  計時器=ON 通道=0 CRR=11999 CCR=7529 (duty 160 預期CCR≈7529) 實際頻率≈5000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 5kHz",
+      "cmd": "r",
+      "target": "右輪(D8)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 7494,
+          "rpm": 174.4,
+          "verdict": "OK 有回授"
+        },
+        "右輪": {
+          "ticks": 7596,
+          "rpm": 176.8,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D9(左,MCTM0) 計時器=ON 通道=0N(互補) CRR=11999 CCR=7529 (duty 160 預期CCR≈7529) 實際頻率≈5000 Hz(未計預除頻)",
+        "D8(右,PWM0)  計時器=ON 通道=0 CRR=11999 CCR=7529 (duty 160 預期CCR≈7529) 實際頻率≈5000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 5kHz",
+      "cmd": "b",
+      "target": "兩輪",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 7630,
+          "rpm": 177.6,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [],
+      "aborted": null,
+      "label": "SW 5kHz (對照組)",
+      "cmd": "l",
+      "target": "左輪(D9)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "右輪": {
+          "ticks": 7743,
+          "rpm": 180.2,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [],
+      "aborted": null,
+      "label": "SW 5kHz (對照組)",
+      "cmd": "r",
+      "target": "右輪(D8)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 7425,
+          "rpm": 172.8,
+          "verdict": "OK 有回授"
+        },
+        "右輪": {
+          "ticks": 7609,
+          "rpm": 177.1,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [],
+      "aborted": null,
+      "label": "SW 5kHz (對照組)",
+      "cmd": "b",
+      "target": "兩輪",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 10554,
+          "rpm": 245.7,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D9(左,MCTM0) 計時器=ON 通道=0N(互補) CRR=59999 CCR=37647 (duty 160 預期CCR≈37647) 實際頻率≈1000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 1kHz",
+      "cmd": "l",
+      "target": "左輪(D9)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "右輪": {
+          "ticks": 10880,
+          "rpm": 253.2,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D8(右,PWM0)  計時器=ON 通道=0 CRR=59999 CCR=37647 (duty 160 預期CCR≈37647) 實際頻率≈1000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 1kHz",
+      "cmd": "r",
+      "target": "右輪(D8)",
+      "finished": true
+    },
+    {
+      "wheels": {
+        "左輪": {
+          "ticks": 10370,
+          "rpm": 241.4,
+          "verdict": "OK 有回授"
+        },
+        "右輪": {
+          "ticks": 10731,
+          "rpm": 249.8,
+          "verdict": "OK 有回授"
+        }
+      },
+      "regs": [
+        "D9(左,MCTM0) 計時器=ON 通道=0N(互補) CRR=59999 CCR=37647 (duty 160 預期CCR≈37647) 實際頻率≈1000 Hz(未計預除頻)",
+        "D8(右,PWM0)  計時器=ON 通道=0 CRR=59999 CCR=37647 (duty 160 預期CCR≈37647) 實際頻率≈1000 Hz(未計預除頻)"
+      ],
+      "aborted": null,
+      "label": "HW 1kHz",
+      "cmd": "b",
+      "target": "兩輪",
+      "finished": true
+    }
+  ],
+  "banner": [
+    "",
+    "=== car2 硬體PWM + 編碼器回授 測試 ready（開機不會自動轉）===",
+    "--------------------------------------------------------------",
+    "指令: l=只轉左輪(D9)  r=只轉右輪(D8)  b=兩輪同時  x=中止",
+    "      h=硬體PWM(analogWrite)  s=軟體PWM(舊做法,對照用)",
+    "      +/-=duty +-10   1=1kHz  5=5kHz   ?=顯示設定",
+    "閒置時用手轉輪子: 計數會變 = 編碼器正常。輪子要離地才下 l/r/b。",
+    "目前: 模式=硬體PWM  duty=160  頻率=5000Hz  PCA9685=OK",
+    "--------------------------------------------------------------"
+  ],
+  "idle_enc_lines": [],
+  "final_help": [
+    "[enc] L=59350  R=60435",
+    "[enc] L=60512  R=61638",
+    "[enc] L=61234  R=62398",
+    "[enc] L=61562  R=62763",
+    "[enc] L=61592  R=62812",
+    "--------------------------------------------------------------",
+    "指令: l=只轉左輪(D9)  r=只轉右輪(D8)  b=兩輪同時  x=中止",
+    "      h=硬體PWM(analogWrite)  s=軟體PWM(舊做法,對照用)",
+    "      +/-=duty +-10   1=1kHz  5=5kHz   ?=顯示設定",
+    "閒置時用手轉輪子: 計數會變 = 編碼器正常。輪子要離地才下 l/r/b。",
+    "目前: 模式=硬體PWM  duty=160  頻率=1000Hz  PCA9685=OK",
+    "--------------------------------------------------------------"
+  ],
+  "finished": "2026-10-10T11:56:39"
+}

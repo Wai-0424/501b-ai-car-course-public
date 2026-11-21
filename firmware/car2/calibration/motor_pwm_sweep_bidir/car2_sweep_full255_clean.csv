@@ -1,0 +1,1250 @@
+  trace M1 t=300ms posM1=-4532 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-4778 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-5024 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-5269 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-5514 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-5759 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-6004 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-6250 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-6496 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-6748 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,80,-106.06,before=-4091,after=-6831
+-- step M1 fwd duty=90
+  trace M1 t=150ms posM1=-7101 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-7394 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-7698 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-8007 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-8318 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-8631 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-8945 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-9260 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-9577 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-9893 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-10217 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,90,-135.14,before=-6832,after=-10323
+-- step M1 fwd duty=100
+  trace M1 t=150ms posM1=-10660 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-11016 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-11382 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-11752 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-12125 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-12498 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-12873 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-13254 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-13640 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-14021 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-14401 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,100,-162.77,before=-10324,after=-14529
+-- step M1 fwd duty=110
+  trace M1 t=150ms posM1=-14928 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-15347 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-15777 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-16214 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-16656 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-17103 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-17549 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-17995 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-18440 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-18886 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-19334 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,110,-191.69,before=-14530,after=-19482
+-- step M1 fwd duty=120
+  trace M1 t=150ms posM1=-19939 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-20414 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-20897 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-21385 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-21876 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-22368 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-22861 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-23356 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-23850 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-24345 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-24841 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,120,-213.79,before=-19483,after=-25006
+-- step M1 fwd duty=130
+  trace M1 t=150ms posM1=-25512 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-26034 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-26563 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-27097 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-27634 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-28172 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-28710 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-29249 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-29787 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-30326 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-30864 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,130,-233.57,before=-25008,after=-31042
+-- step M1 fwd duty=140
+  trace M1 t=150ms posM1=-31600 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-32170 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-32746 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-33326 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-33906 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-34492 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-35077 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-35662 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-36246 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-36832 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-37417 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,140,-254.25,before=-31045,after=-37613
+-- step M1 fwd duty=150
+  trace M1 t=150ms posM1=-38212 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-38824 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-39442 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-40064 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-40687 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-41312 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-41937 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-42563 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-43189 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-43815 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-44441 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,150,-272.32,before=-37615,after=-44650
+-- step M1 fwd duty=160
+  trace M1 t=150ms posM1=-45290 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-45943 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-46606 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-47270 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-47936 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-48601 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-49268 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-49934 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-50601 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-51268 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-51934 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,160,-290.44,before=-44652,after=-52155
+-- step M1 fwd duty=170
+  trace M1 t=150ms posM1=-52833 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-53523 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-54219 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-54917 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-55616 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-56316 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-57016 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-57715 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-58415 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-59116 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-59817 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,170,-305.50,before=-52158,after=-60050
+-- step M1 fwd duty=180
+  trace M1 t=150ms posM1=-60761 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-61482 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-62207 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-62934 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-63663 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-64393 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-65122 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-65853 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-66584 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-67315 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-68045 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,180,-318.81,before=-60052,after=-68288
+-- step M1 fwd duty=190
+  trace M1 t=150ms posM1=-69028 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-69777 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-70532 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-71290 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-72048 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-72805 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-73563 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-74321 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-75079 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-75837 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-76594 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,190,-331.16,before=-68291,after=-76846
+-- step M1 fwd duty=200
+  trace M1 t=150ms posM1=-77613 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-78387 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-79166 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-79947 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-80729 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-81510 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-82291 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-83074 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-83856 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-84638 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-85419 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,200,-341.77,before=-76849,after=-85678
+-- step M1 fwd duty=210
+  trace M1 t=150ms posM1=-86469 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-87270 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-88074 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-88879 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-89685 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-90490 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-91297 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-92106 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-92912 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-93720 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-94528 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,210,-352.84,before=-85681,after=-94796
+-- step M1 fwd duty=220
+  trace M1 t=150ms posM1=-95618 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-96454 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-97292 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-98130 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-98966 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-99804 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-100641 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-101478 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-102316 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-103153 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-103991 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,220,-366.62,before=-94798,after=-104269
+-- step M1 fwd duty=230
+  trace M1 t=150ms posM1=-105124 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-105990 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-106859 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-107729 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-108598 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-109467 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-110338 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-111212 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-112083 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-112954 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-113825 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,230,-381.02,before=-104272,after=-114115
+-- step M1 fwd duty=240
+  trace M1 t=150ms posM1=-115025 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-115948 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-116870 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-117795 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-118714 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-119639 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-120569 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-121494 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-122418 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-123337 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-124261 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,fwd,240,-404.40,before=-114119,after=-124566
+-- step M1 fwd duty=250
+  trace M1 t=150ms posM1=-125531 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-126509 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-127486 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-128466 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-129442 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-130420 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-131397 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-132375 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-133353 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-134331 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-135310 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,fwd,250,-428.36,before=-124570,after=-135636
+=== M1 reverse sweep (IN1=LOW,IN2=HIGH) ===
+-- step M1 rev duty=0
+  trace M1 t=150ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,0,0.00,before=-138501,after=-138501
+-- step M1 rev duty=10
+  trace M1 t=150ms posM1=-138501 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,10,0.12,before=-138501,after=-138498
+-- step M1 rev duty=20
+  trace M1 t=150ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,20,0.00,before=-138498,after=-138498
+-- step M1 rev duty=30
+  trace M1 t=150ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,30,0.00,before=-138498,after=-138498
+-- step M1 rev duty=40
+  trace M1 t=150ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-138498 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,40,0.00,before=-138498,after=-138498
+-- step M1 rev duty=50
+  trace M1 t=150ms posM1=-138460 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-138399 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-138334 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-138268 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-138201 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-138135 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-138059 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-137992 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-137924 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-137847 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-137778 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,50,28.72,before=-138498,after=-137756
+-- step M1 rev duty=60
+  trace M1 t=150ms posM1=-137658 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-137545 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-137426 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-137308 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-137189 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-137061 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-136937 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-136815 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-136695 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-136561 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-136423 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,rev,60,53.26,before=-137756,after=-136380
+-- step M1 rev duty=70
+  trace M1 t=150ms posM1=-136216 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-136040 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-135858 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-135673 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-135488 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-135305 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-135120 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-134935 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-134750 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-134557 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-134369 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,70,80.21,before=-136380,after=-134308
+-- step M1 rev duty=80
+  trace M1 t=150ms posM1=-134099 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-133866 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-133622 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-133374 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-133124 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-132874 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-132623 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-132372 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-132121 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-131861 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-131606 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,80,107.85,before=-134307,after=-131521
+-- step M1 rev duty=90
+  trace M1 t=150ms posM1=-131246 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-130946 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-130636 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-130318 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-129996 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-129674 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-129352 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-129030 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-128706 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-128382 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-128058 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,90,138.19,before=-131520,after=-127950
+-- step M1 rev duty=100
+  trace M1 t=150ms posM1=-127610 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-127249 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-126876 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-126497 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-126108 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-125713 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-125324 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-124936 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-124549 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-124156 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-123767 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,100,166.88,before=-127949,after=-123638
+-- step M1 rev duty=110
+  trace M1 t=150ms posM1=-123235 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-122810 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-122375 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-121936 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-121492 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-121047 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-120598 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-120149 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-119700 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-119250 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-118798 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,110,193.08,before=-123637,after=-118649
+-- step M1 rev duty=120
+  trace M1 t=150ms posM1=-118185 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-117704 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-117212 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-116708 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-116204 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-115700 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-115197 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-114693 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-114189 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-113685 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-113178 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,120,218.28,before=-118648,after=-113009
+-- step M1 rev duty=130
+  trace M1 t=150ms posM1=-112490 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-111958 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-111418 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-110876 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-110330 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-109782 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-109233 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-108684 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-108134 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-107586 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-107038 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,130,238.10,before=-113007,after=-106856
+-- step M1 rev duty=140
+  trace M1 t=150ms posM1=-106295 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-105718 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-105134 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-104542 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-103949 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-103356 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-102762 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-102169 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-101574 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-100980 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-100385 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,rev,140,258.08,before=-106854,after=-100187
+-- step M1 rev duty=150
+  trace M1 t=150ms posM1=-99581 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-98961 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-98333 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-97702 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-97069 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-96434 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-95798 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-95160 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-94521 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-93884 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-93246 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,150,276.81,before=-100185,after=-93034
+-- step M1 rev duty=160
+  trace M1 t=150ms posM1=-92386 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-91724 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-91056 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-90382 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-89709 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-89032 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-88356 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-87679 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-86998 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-86318 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-85641 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,rev,160,294.81,before=-93032,after=-85416
+-- step M1 rev duty=170
+  trace M1 t=150ms posM1=-84730 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-84028 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-83322 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-82613 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-81904 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-81191 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-80480 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-79769 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-79058 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-78347 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-77636 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,170,310.26,before=-85414,after=-77399
+-- step M1 rev duty=180
+  trace M1 t=150ms posM1=-76678 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-75947 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-75212 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-74474 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-73736 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-72997 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-72256 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-71517 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-70777 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-70038 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-69298 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,180,322.99,before=-77397,after=-69053
+-- step M1 rev duty=190
+  trace M1 t=150ms posM1=-68302 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-67540 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-66774 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-66008 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-65238 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-64469 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-63701 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-62932 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-62164 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-61395 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-60624 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,190,336.08,before=-69050,after=-60368
+-- step M1 rev duty=200
+  trace M1 t=150ms posM1=-59587 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-58800 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-58006 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-57214 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-56421 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-55626 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-54833 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-54039 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-53245 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-52452 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-51657 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,rev,200,347.30,before=-60365,after=-51393
+-- step M1 rev duty=210
+  trace M1 t=150ms posM1=-50586 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-49770 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-48950 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-48130 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-47312 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-46494 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-45675 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-44856 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-44036 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-43216 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-42398 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,210,358.61,before=-51390,after=-42126
+-- step M1 rev duty=220
+  trace M1 t=150ms posM1=-41291 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-40446 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-39597 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-38746 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-37896 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-37045 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-36196 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-35346 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-34497 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-33648 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-32798 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,220,371.85,before=-42123,after=-32517
+-- step M1 rev duty=230
+  trace M1 t=150ms posM1=-31648 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-30766 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-29881 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-28998 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-28113 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-27228 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-26342 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-25457 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-24573 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-23689 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-22802 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,230,387.25,before=-32513,after=-22509
+-- step M1 rev duty=240
+  trace M1 t=150ms posM1=-21586 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-20649 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-19712 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-18775 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-17837 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-16900 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-15964 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-15026 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-14087 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-13150 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-12213 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+CSV,M1,rev,240,410.48,before=-22506,after=-11902
+-- step M1 rev duty=250
+  trace M1 t=150ms posM1=-10924 posM2=0 rawA1=0 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=300ms posM1=-9935 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=450ms posM1=-8945 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=600ms posM1=-7951 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=750ms posM1=-6960 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=900ms posM1=-5966 posM2=0 rawA1=0 rawB1=0 rawA2=1 rawB2=1
+  trace M1 t=1050ms posM1=-4973 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1200ms posM1=-3980 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1350ms posM1=-2989 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1500ms posM1=-1998 posM2=0 rawA1=1 rawB1=1 rawA2=1 rawB2=1
+  trace M1 t=1650ms posM1=-1006 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M1,rev,250,434.36,before=-11898,after=-677
+=== M2 forward sweep (IN3=HIGH,IN4=LOW) ===
+-- step M2 fwd duty=0
+  trace M2 t=150ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,0,0.00,before=0,after=0
+-- step M2 fwd duty=10
+  trace M2 t=150ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=0 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,10,0.04,before=0,after=1
+-- step M2 fwd duty=20
+  trace M2 t=150ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,20,0.00,before=1,after=1
+-- step M2 fwd duty=30
+  trace M2 t=150ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=1 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=2 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=2 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=6 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=10 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,30,0.35,before=1,after=10
+-- step M2 fwd duty=40
+  trace M2 t=150ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=11 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=16 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=25 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=36 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=40 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=40 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,40,1.35,before=10,after=45
+-- step M2 fwd duty=50
+  trace M2 t=150ms posM1=2383 posM2=92 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=156 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=225 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=296 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=366 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=435 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=517 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=598 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=667 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=747 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=818 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,50,30.97,before=45,after=845
+-- step M2 fwd duty=60
+  trace M2 t=150ms posM1=2383 posM2=960 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=1084 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=1208 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=1334 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=1462 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=1589 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=1716 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=1842 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=1964 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=2100 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=2227 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,fwd,60,55.08,before=845,after=2268
+-- step M2 fwd duty=70
+  trace M2 t=150ms posM1=2383 posM2=2418 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=2588 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=2766 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=2947 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=3131 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=3316 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=3500 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=3686 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=3870 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=4055 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=4242 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,70,78.77,before=2268,after=4303
+-- step M2 fwd duty=80
+  trace M2 t=150ms posM1=2383 posM2=4512 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=4747 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=4994 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=5255 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=5513 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=5770 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=6027 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=6284 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=6551 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=6814 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=7084 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,80,111.02,before=4304,after=7172
+-- step M2 fwd duty=90
+  trace M2 t=150ms posM1=2383 posM2=7453 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=7755 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=8073 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=8392 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=8720 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=9043 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=9365 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=9686 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=10010 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=10336 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=10660 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,90,139.16,before=7173,after=10768
+-- step M2 fwd duty=100
+  trace M2 t=150ms posM1=2383 posM2=11113 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=11480 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=11862 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=12247 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=12632 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=13017 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=13403 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=13789 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=14175 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=14563 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=14958 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,100,167.15,before=10770,after=15088
+-- step M2 fwd duty=110
+  trace M2 t=150ms posM1=2383 posM2=15496 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=15925 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=16364 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=16809 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=17257 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=17708 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=18166 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=18620 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=19074 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=19536 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=19995 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,110,195.79,before=15089,after=20147
+-- step M2 fwd duty=120
+  trace M2 t=150ms posM1=2383 posM2=20616 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=21102 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=21597 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=22103 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=22608 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=23114 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=23619 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=24124 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=24638 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=25148 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=25656 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,120,219.83,before=20148,after=25827
+-- step M2 fwd duty=130
+  trace M2 t=150ms posM1=2383 posM2=26353 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=26890 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=27433 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=27981 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=28532 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=29090 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=29645 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=30199 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=30750 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=31302 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=31855 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,130,240.35,before=25829,after=32038
+-- step M2 fwd duty=140
+  trace M2 t=150ms posM1=2383 posM2=32610 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=33196 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=33792 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=34386 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=34982 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=35576 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=36171 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=36767 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=37363 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=37958 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=38554 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,140,259.90,before=32040,after=38754
+-- step M2 fwd duty=150
+  trace M2 t=150ms posM1=2383 posM2=39374 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=40002 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=40634 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=41267 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=41903 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=42540 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=43178 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=43817 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=44456 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=45094 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=45734 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,fwd,150,278.32,before=38756,after=45946
+-- step M2 fwd duty=160
+  trace M2 t=150ms posM1=2383 posM2=46597 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=47259 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=47928 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=48602 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=49284 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=49962 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=50640 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=51322 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=52002 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=52683 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=53360 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,160,295.66,before=45948,after=53586
+-- step M2 fwd duty=170
+  trace M2 t=150ms posM1=2383 posM2=54274 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=54972 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=55675 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=56383 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=57090 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=57797 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=58502 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=59209 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=59916 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=60625 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=61334 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,170,308.98,before=53588,after=61570
+-- step M2 fwd duty=180
+  trace M2 t=150ms posM1=2383 posM2=62291 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=63023 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=63758 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=64497 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=65236 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=65976 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=66716 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=67455 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=68195 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=68938 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=69679 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,180,323.34,before=61572,after=69925
+-- step M2 fwd duty=190
+  trace M2 t=150ms posM1=2383 posM2=70678 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=71443 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=72210 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=72976 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=73743 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=74511 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=75282 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=76056 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=76830 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=77601 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=78370 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,190,336.70,before=69928,after=78626
+-- step M2 fwd duty=200
+  trace M2 t=150ms posM1=2383 posM2=79405 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=80194 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=80988 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=81782 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=82576 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=83370 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=84164 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=84958 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=85753 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=86552 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=87352 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,fwd,200,347.92,before=78628,after=87616
+-- step M2 fwd duty=210
+  trace M2 t=150ms posM1=2383 posM2=88422 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=89242 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=90064 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=90890 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=91714 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=92535 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=93358 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=94180 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=95002 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=95824 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=96646 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,210,360.04,before=87619,after=96920
+-- step M2 fwd duty=220
+  trace M2 t=150ms posM1=2383 posM2=97761 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=98615 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=99472 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=100329 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=101186 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=102043 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=102900 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=103758 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=104615 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=105472 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=106330 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,fwd,220,375.14,before=96923,after=106614
+-- step M2 fwd duty=230
+  trace M2 t=150ms posM1=2383 posM2=107474 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=108349 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=109227 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=110106 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=110986 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=111868 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=112750 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=113633 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=114516 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=115398 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=116282 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,230,385.47,before=106617,after=116575
+-- step M2 fwd duty=240
+  trace M2 t=150ms posM1=2383 posM2=117490 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=118416 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=119340 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=120274 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=121203 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=122132 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=123064 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=123993 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=124924 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=125853 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=126785 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,fwd,240,407.03,before=116579,after=127094
+-- step M2 fwd duty=250
+  trace M2 t=150ms posM1=2383 posM2=128063 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=129046 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=130028 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=131010 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=131990 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=132971 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=133954 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=134935 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=135917 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=136899 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=137882 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,fwd,250,430.06,before=127098,after=138208
+=== M2 reverse sweep (IN3=LOW,IN4=HIGH) ===
+-- step M2 rev duty=0
+  trace M2 t=150ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,rev,0,0.00,before=141255,after=141255
+-- step M2 rev duty=10
+  trace M2 t=150ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=141255 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=141254 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=141254 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=141254 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,10,-0.08,before=141255,after=141253
+-- step M2 rev duty=20
+  trace M2 t=150ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,20,0.00,before=141253,after=141253
+-- step M2 rev duty=30
+  trace M2 t=150ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=141253 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,30,-0.12,before=141253,after=141250
+-- step M2 rev duty=40
+  trace M2 t=150ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=141250 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=141240 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=141233 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=141230 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=141230 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=141230 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,40,-1.05,before=141250,after=141223
+-- step M2 rev duty=50
+  trace M2 t=150ms posM1=2383 posM2=141174 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=141111 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=141045 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=140980 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=140916 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=140853 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=140787 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=140711 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=140644 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=140580 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=140516 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,rev,50,-28.14,before=141223,after=140496
+-- step M2 rev duty=60
+  trace M2 t=150ms posM1=2383 posM2=140403 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=140292 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=140177 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=140061 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=139946 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=139831 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=139713 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=139596 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=139480 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=139364 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=139246 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,60,-49.90,before=140496,after=139207
+-- step M2 rev duty=70
+  trace M2 t=150ms posM1=2383 posM2=139059 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=138890 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=138714 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=138533 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=138352 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=138169 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=137976 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=137791 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=137609 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=137429 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=137248 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,rev,70,-78.12,before=139206,after=137188
+-- step M2 rev duty=80
+  trace M2 t=150ms posM1=2383 posM2=136982 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=136752 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=136514 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=136270 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=136023 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=135778 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=135532 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=135286 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=135039 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=134792 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=134535 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,80,-105.99,before=137188,after=134450
+-- step M2 rev duty=90
+  trace M2 t=150ms posM1=2383 posM2=134164 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=133854 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=133534 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=133218 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=132901 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=132581 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=132262 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=131943 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=131623 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=131306 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=130986 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,90,-138.15,before=134449,after=130880
+-- step M2 rev duty=100
+  trace M2 t=150ms posM1=2383 posM2=130542 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=130180 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=129805 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=129424 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=129042 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=128658 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=128274 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=127890 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=127506 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=127122 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=126738 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,100,-165.21,before=130879,after=126611
+-- step M2 rev duty=110
+  trace M2 t=150ms posM1=2383 posM2=126213 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=125796 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=125366 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=124930 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=124492 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=124054 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=123612 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=123169 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=122728 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=122285 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=121842 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,110,-190.26,before=126610,after=121695
+-- step M2 rev duty=120
+  trace M2 t=150ms posM1=2383 posM2=121237 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=120762 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=120278 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=119788 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=119295 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=118802 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=118309 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=117814 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=117313 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=116816 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=116322 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,120,-214.26,before=121693,after=116158
+-- step M2 rev duty=130
+  trace M2 t=150ms posM1=2383 posM2=115639 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=115110 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=114575 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=114039 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=113503 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=112963 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=112424 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=111884 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=111346 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=110809 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=110271 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,130,-234.74,before=116156,after=110092
+-- step M2 rev duty=140
+  trace M2 t=150ms posM1=2383 posM2=109541 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=108976 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=108403 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=107823 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=107242 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=106659 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=106076 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=105492 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=104908 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=104323 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=103738 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,140,-253.39,before=110090,after=103544
+-- step M2 rev duty=150
+  trace M2 t=150ms posM1=2383 posM2=102946 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=102332 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=101706 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=101078 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=100448 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=99819 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=99189 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=98557 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=97923 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=97292 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=96662 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,150,-274.37,before=103542,after=96454
+-- step M2 rev duty=160
+  trace M2 t=150ms posM1=2383 posM2=95813 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=95159 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=94499 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=93835 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=93168 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=92504 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=91839 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=91176 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=90514 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=89851 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=89188 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,rev,160,-289.63,before=96451,after=88969
+-- step M2 rev duty=170
+  trace M2 t=150ms posM1=2383 posM2=88296 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=87613 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=86923 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=86228 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=85533 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=84838 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=84140 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=83443 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=82746 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=82048 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=81351 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+CSV,M2,rev,170,-303.72,before=88966,after=81120
+-- step M2 rev duty=180
+  trace M2 t=150ms posM1=2383 posM2=80411 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=79693 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=78969 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=78243 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=77517 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=76788 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=76060 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=75330 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=74600 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=73871 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=73142 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,180,-318.12,before=81118,after=72900
+-- step M2 rev duty=190
+  trace M2 t=150ms posM1=2383 posM2=72157 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=71408 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=70658 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=69908 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=69157 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=68408 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=67657 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=66908 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=66158 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=65407 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=64658 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+CSV,M2,rev,190,-328.57,before=72897,after=64409
+-- step M2 rev duty=200
+  trace M2 t=150ms posM1=2383 posM2=63648 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=62868 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=62084 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=61296 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=750ms posM1=2383 posM2=60506 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=59716 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=58925 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=58134 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=57344 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=56552 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=55758 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,200,-344.94,before=64406,after=55495
+-- step M2 rev duty=210
+  trace M2 t=150ms posM1=2383 posM2=54690 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=53873 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=53054 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=52234 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=51415 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=50596 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=49773 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=48950 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=48130 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1500ms posM1=2383 posM2=47313 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=46497 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,rev,210,-358.68,before=55492,after=46226
+-- step M2 rev duty=220
+  trace M2 t=150ms posM1=2383 posM2=45395 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=44548 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=43696 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=42842 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=41984 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=41128 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=40277 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=39426 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=38573 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=37715 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=36859 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,220,-373.43,before=46223,after=36576
+-- step M2 rev duty=230
+  trace M2 t=150ms posM1=2383 posM2=35706 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=34830 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=33952 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=600ms posM1=2383 posM2=33074 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=32196 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=31318 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=30441 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1200ms posM1=2383 posM2=29562 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=28683 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=27806 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=26927 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+CSV,M2,rev,230,-384.70,before=36573,after=26635
+-- step M2 rev duty=240
+  trace M2 t=150ms posM1=2383 posM2=25726 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=300ms posM1=2383 posM2=24804 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=450ms posM1=2383 posM2=23882 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=22959 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=22038 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=900ms posM1=2383 posM2=21116 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1050ms posM1=2383 posM2=20194 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=19269 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1350ms posM1=2383 posM2=18345 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=17418 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1650ms posM1=2383 posM2=16493 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,rev,240,-404.28,before=26632,after=16188
+-- step M2 rev duty=250
+  trace M2 t=150ms posM1=2383 posM2=15225 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=300ms posM1=2383 posM2=14251 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=450ms posM1=2383 posM2=13275 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=600ms posM1=2383 posM2=12299 rawA1=1 rawB1=0 rawA2=0 rawB2=1
+  trace M2 t=750ms posM1=2383 posM2=11324 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+  trace M2 t=900ms posM1=2383 posM2=10350 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1050ms posM1=2383 posM2=9374 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1200ms posM1=2383 posM2=8398 rawA1=1 rawB1=0 rawA2=1 rawB2=1
+  trace M2 t=1350ms posM1=2383 posM2=7419 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1500ms posM1=2383 posM2=6444 rawA1=1 rawB1=0 rawA2=0 rawB2=0
+  trace M2 t=1650ms posM1=2383 posM2=5470 rawA1=1 rawB1=0 rawA2=1 rawB2=0
+CSV,M2,rev,250,-427.28,before=16184,after=5146
+=== all sweeps done, motors stopped ===

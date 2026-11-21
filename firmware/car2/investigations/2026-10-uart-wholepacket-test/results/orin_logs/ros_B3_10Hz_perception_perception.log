@@ -1,0 +1,397 @@
+[INFO] [launch]: All log files can be found below /home/orinnode/.ros/log/2026-10-08-14-04-29-949087-localhost.localdomain-18209
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [component_container-1]: process started with pid [18236]
+[INFO] [depth_bev_node-2]: process started with pid [18237]
+[INFO] [mjpeg_bridge_node-3]: process started with pid [18238]
+[INFO] [mjpeg_bridge_node-4]: process started with pid [18239]
+[component_container-1] [INFO] [1791439470.796943149] [camera.camera_container]: Load Library: /home/orinnode/car2_ws/install/orbbec_camera/lib/liborbbec_camera.so
+[component_container-1] [INFO] [1791439471.003917801] [camera.camera_container]: Found class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1791439471.004237583] [camera.camera_container]: Instantiate class: rclcpp_components::NodeFactoryTemplate<orbbec_camera::OBCameraNodeDriver>
+[component_container-1] [INFO] [1791439471.021786880] [camera.camera]: SDK log file path set to: /home/orinnode/.ros/Log/camera/OrbbecSDK_20261008_140431.log
+[component_container-1] [INFO] [1791439471.040211610] [camera.camera]: Device access mode: Default (4)
+[component_container-1] [INFO] [1791439471.040306757] [camera.camera]: Set UVC backend to libuvc
+[mjpeg_bridge_node-3] [INFO] [1791439471.314920176] [path_overlay_mjpeg]: mjpeg_bridge_node 啟動，訂閱 /line_follow/path_overlay/compressed，串流網址 http://<jetson-ip>:8082/stream
+[mjpeg_bridge_node-4] [INFO] [1791439471.349296987] [bev_debug_mjpeg]: mjpeg_bridge_node 啟動，訂閱 /line_follow/bev_debug/compressed，串流網址 http://<jetson-ip>:8083/stream
+[depth_bev_node-2] [INFO] [1791439471.934369037] [depth_bev_node]: depth_bev_node 啟動，等待 camera_info/depth/image
+[component_container-1] [INFO] [1791439472.275383624] [camera.camera]: startDevice called
+[INFO] [launch_ros.actions.load_composable_nodes]: Loaded node '/camera/camera' in container '/camera/camera_container'
+[component_container-1] [INFO] [1791439472.285600747] [camera.camera]: Connecting to the default device
+[component_container-1] [INFO] [1791439472.755711590] [camera.camera]: OBCameraNode: use_intra_process: OFF
+[component_container-1] [INFO] [1791439472.766573462] [camera.camera]: Current time domain: global
+[component_container-1] [INFO] [1791439472.766758764] [camera.camera]: Loaded device preset: Default
+[component_container-1] [INFO] [1791439472.952206523] [camera.camera]: Current heartbeat: OFF
+[component_container-1] [INFO] [1791439472.952312168] [camera.camera]: Set firmware log to OFF
+[component_container-1] [INFO] [1791439472.952389329] [camera.camera]: set align mode to SW
+[component_container-1] [INFO] [1791439472.953837918] [camera.camera]: Disparity to depth mode: HW
+[component_container-1] [INFO] [1791439472.959785091] [camera.camera]: Current LDP: OFF
+[component_container-1] [INFO] [1791439472.962924634] [camera.camera]: Current G300 laser control: ON
+[component_container-1] [INFO] [1791439472.963003971] [camera.camera]: Current sync mode: OB_MULTI_DEVICE_SYNC_MODE_STANDALONE
+[component_container-1] [INFO] [1791439472.963063562] [camera.camera]: Current color mirror: OFF
+[component_container-1] [INFO] [1791439472.963102959] [camera.camera]: Current color flip: OFF
+[component_container-1] [INFO] [1791439472.963139955] [camera.camera]: Current depth mirror: OFF
+[component_container-1] [INFO] [1791439472.963175768] [camera.camera]: Current depth flip: OFF
+[component_container-1] [INFO] [1791439472.964819068] [camera.camera]: Current color auto white balance: ON
+[component_container-1] [WARN] [1791439472.964892036] [camera.camera]: Color preset is not supported by this device
+[component_container-1] [INFO] [1791439472.966472993] [camera.camera]: Current color auto exposure priority: OFF
+[component_container-1] [INFO] [1791439472.969549840] [camera.camera]: Current color auto exposure: ON
+[component_container-1] [INFO] [1791439472.972680774] [camera.camera]: Current depth auto exposure priority: OFF
+[component_container-1] [INFO] [1791439472.977705629] [camera.camera]: Current IR auto exposure: ON
+[component_container-1] [INFO] [1791439472.977796136] [camera.camera]: Current noise_removal_filter_min_diff: 256
+[component_container-1] [INFO] [1791439472.977840973] [camera.camera]: Current noise_removal_filter_max_size: 80
+[component_container-1] [INFO] [1791439472.977879506] [camera.camera]: Set noise removal filter to true
+[component_container-1] [INFO] [1791439472.980924061] [camera.camera]: Set hardware noise removal filter to false
+[component_container-1] [INFO] [1791439472.981009672] [camera.camera]: Current accel data correction: ON
+[component_container-1] [INFO] [1791439472.981053325] [camera.camera]: Current gyro data correction: ON
+[component_container-1] [INFO] [1791439472.981277448] [camera.camera]: Set depth filter DecimationFilter to disabled
+[component_container-1] [INFO] [1791439472.981347920] [camera.camera]: Set depth filter ThresholdFilter to disabled
+[component_container-1] [INFO] [1791439472.981382516] [camera.camera]: Set depth filter HDRMerge to disabled
+[component_container-1] [INFO] [1791439472.981410391] [camera.camera]: Set depth filter SequenceIdFilter to disabled
+[component_container-1] [INFO] [1791439472.981434746] [camera.camera]: Set depth filter SpatialFastFilter to disabled
+[component_container-1] [INFO] [1791439472.981457949] [camera.camera]: Set depth filter SpatialModerateFilter to disabled
+[component_container-1] [INFO] [1791439472.981480864] [camera.camera]: Set depth filter SpatialAdvancedFilter to disabled
+[component_container-1] [INFO] [1791439472.981504835] [camera.camera]: Set depth filter TemporalFilter to disabled
+[component_container-1] [INFO] [1791439472.981529382] [camera.camera]: Set depth filter HoleFillingFilter to disabled
+[component_container-1] [INFO] [1791439472.981552936] [camera.camera]: Set depth filter DisparityTransform to enabled
+[component_container-1] [INFO] [1791439472.983876606] [camera.camera]: Set color filter DecimationFilter to disabled
+[component_container-1] [INFO] [1791439473.082985986] [camera.camera]: Publish diagnostics every 1 seconds
+[component_container-1] [INFO] [1791439473.085451912] [camera.camera]: Device Orbbec Gemini 336L connected
+[component_container-1] [INFO] [1791439473.085580887] [camera.camera]: Serial number: CPC8563000K7
+[component_container-1] [INFO] [1791439473.085610426] [camera.camera]: Firmware version: 1.4.60
+[component_container-1] [INFO] [1791439473.085631069] [camera.camera]: ROS Wrapper version: 2.9.3
+[component_container-1] [INFO] [1791439473.085665313] [camera.camera]: SDK version: 2.9.3
+[component_container-1] [INFO] [1791439473.085713735] [camera.camera]: Hardware version: 0.1
+[component_container-1] [INFO] [1791439473.085740458] [camera.camera]: ISP firmware version: 20241125
+[component_container-1] [INFO] [1791439473.085758540] [camera.camera]: ISP needed version: 20241125
+[component_container-1] [INFO] [1791439473.085774350] [camera.camera]: usb connect type: USB3.2
+[component_container-1] [INFO] [1791439473.085789200] [camera.camera]: device unique id: 2-1.1-3
+[component_container-1] [INFO] [1791439473.085810546] [camera.camera]: Current node pid: 18236
+[component_container-1] [INFO] [1791439473.099728141] [camera.camera]: Enable frame sync
+[component_container-1] [INFO] [1791439473.578751007] [camera.camera]: Set depth AE ROI to 0, 847, 0, 479
+[component_container-1] [INFO] [1791439473.601893605] [camera.camera]: Set color AE ROI to 0, 1279, 0, 719
+[component_container-1] [INFO] [1791439473.616689224] [camera.camera]: color Frame - Width: 1280 Height: 720 fps: 30 Format: MJPG
+[component_container-1] [INFO] [1791439473.616846522] [camera.camera]: depth Frame - Width: 1280 Height: 720 fps: 30 Format: Y16
+[depth_bev_node-2] [INFO] [1791439473.674008181] [depth_bev_node]: frame period=n/a process=53ms status=no valid edges
+[component_container-1] [INFO] [1791439474.099906078] [camera.camera]: current interleave_ae_mode_: laser
+[component_container-1] [INFO] [1791439474.104455068] [camera.camera]: Enable enable_interleave_depth_frame to false
+[component_container-1] [INFO] [1791439474.104548935] [camera.camera]: Initialize device cost: 1349 ms
+[depth_bev_node-2] [INFO] [1791439474.697501310] [depth_bev_node]: frame period=61ms process=35ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439475.745508635] [depth_bev_node]: frame period=64ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439476.765609717] [depth_bev_node]: frame period=64ms process=42ms status=tracking
+[depth_bev_node-2] [INFO] [1791439477.779521192] [depth_bev_node]: frame period=63ms process=42ms status=tracking
+[depth_bev_node-2] [INFO] [1791439478.834850904] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439479.852551637] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439480.885685672] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439481.908341373] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439482.926139919] [depth_bev_node]: frame period=70ms process=31ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439483.950819940] [depth_bev_node]: frame period=63ms process=40ms status=tracking
+[depth_bev_node-2] [INFO] [1791439485.003396028] [depth_bev_node]: frame period=68ms process=38ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439486.007474321] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439487.039487239] [depth_bev_node]: frame period=69ms process=44ms status=tracking
+[depth_bev_node-2] [INFO] [1791439488.059146901] [depth_bev_node]: frame period=59ms process=41ms status=tracking
+[depth_bev_node-2] [INFO] [1791439489.077014510] [depth_bev_node]: frame period=64ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439490.125471216] [depth_bev_node]: frame period=70ms process=38ms status=tracking
+[depth_bev_node-2] [INFO] [1791439491.173482228] [depth_bev_node]: frame period=70ms process=34ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439492.176072020] [depth_bev_node]: frame period=68ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439493.196026679] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439494.219225587] [depth_bev_node]: frame period=73ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439495.245628257] [depth_bev_node]: frame period=75ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439496.274837267] [depth_bev_node]: frame period=75ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439497.309118510] [depth_bev_node]: frame period=76ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439498.346085597] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439499.389105154] [depth_bev_node]: frame period=70ms process=46ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439500.427390373] [depth_bev_node]: frame period=72ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439501.453935205] [depth_bev_node]: frame period=74ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439502.475611610] [depth_bev_node]: frame period=74ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439503.490783277] [depth_bev_node]: frame period=68ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439504.520453921] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439505.552449027] [depth_bev_node]: frame period=73ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439506.580915159] [depth_bev_node]: frame period=70ms process=44ms status=tracking
+[depth_bev_node-2] [INFO] [1791439507.598708434] [depth_bev_node]: frame period=73ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439508.610093439] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439509.632713011] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439510.660280323] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439511.698085539] [depth_bev_node]: frame period=66ms process=46ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439512.699303774] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439513.706674914] [depth_bev_node]: frame period=68ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439514.752994050] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439515.802282999] [depth_bev_node]: frame period=65ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439516.855090494] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439517.863915961] [depth_bev_node]: frame period=66ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439518.887411222] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439519.914696810] [depth_bev_node]: frame period=69ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439520.946619957] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439521.971438098] [depth_bev_node]: frame period=68ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439522.997585875] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439524.020764664] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439525.055456463] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439526.089881496] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439527.113469181] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439528.144794256] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439529.180642538] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439530.221078961] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439531.278144119] [depth_bev_node]: frame period=66ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439532.309167566] [depth_bev_node]: frame period=70ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439533.347462588] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439534.388498154] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439535.429952505] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439536.480906768] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439537.493111386] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439538.521134246] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439539.557205469] [depth_bev_node]: frame period=70ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439540.584761094] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439541.637321045] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439542.660317150] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439543.664028748] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439544.697913457] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439545.709744369] [depth_bev_node]: frame period=70ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439546.767715750] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439547.822866910] [depth_bev_node]: frame period=75ms process=46ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439548.840441540] [depth_bev_node]: frame period=66ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439549.886789302] [depth_bev_node]: frame period=64ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439550.941925271] [depth_bev_node]: frame period=66ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439551.997809281] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439553.046407981] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439554.089559880] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439555.141893595] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439556.197203786] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439557.246183692] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439558.302146039] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439559.351584100] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439560.400494070] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439561.451013138] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439562.514914849] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439563.515650464] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439564.568775956] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439565.571361417] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439566.637069948] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439567.701689017] [depth_bev_node]: frame period=66ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439568.755523933] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439569.757334942] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439570.803926734] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439571.858308280] [depth_bev_node]: frame period=66ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439572.911239469] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439573.957290000] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439575.011919456] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439576.069227273] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439577.069436907] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439578.134636703] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439579.185213851] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439580.231249443] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439581.271128368] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439582.295200917] [depth_bev_node]: frame period=54ms process=42ms status=tracking
+[depth_bev_node-2] [INFO] [1791439583.312665718] [depth_bev_node]: frame period=64ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439584.349670205] [depth_bev_node]: frame period=65ms process=43ms status=tracking
+[depth_bev_node-2] [INFO] [1791439585.387651479] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439586.393335966] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439587.451533258] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439588.496439259] [depth_bev_node]: frame period=64ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439589.508388865] [depth_bev_node]: frame period=57ms process=41ms status=tracking
+[depth_bev_node-2] [INFO] [1791439590.508904153] [depth_bev_node]: frame period=74ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439591.541732473] [depth_bev_node]: frame period=68ms process=34ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439592.602551480] [depth_bev_node]: frame period=72ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439593.644825831] [depth_bev_node]: frame period=63ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439594.645485664] [depth_bev_node]: frame period=63ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439595.667965306] [depth_bev_node]: frame period=69ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439596.735895186] [depth_bev_node]: frame period=73ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439597.803658212] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439598.806922014] [depth_bev_node]: frame period=73ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439599.810145614] [depth_bev_node]: frame period=73ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439600.874383242] [depth_bev_node]: frame period=68ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439601.913054361] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439602.937558481] [depth_bev_node]: frame period=63ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439603.962118503] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439604.981670741] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439606.002815550] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439607.049731040] [depth_bev_node]: frame period=64ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439608.117664498] [depth_bev_node]: frame period=70ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439609.172962287] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439610.220371967] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439611.275613344] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439612.281476999] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439613.299397298] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439614.342413734] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439615.387891306] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439616.436289390] [depth_bev_node]: frame period=65ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439617.438773009] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439618.460355899] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439619.467742732] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439620.481225956] [depth_bev_node]: frame period=68ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439621.484236512] [depth_bev_node]: frame period=63ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439622.511979731] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439623.537797922] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439624.542886003] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439625.543616786] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439626.565505755] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439627.589161751] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439628.613117425] [depth_bev_node]: frame period=67ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439629.650275250] [depth_bev_node]: frame period=69ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439630.684332669] [depth_bev_node]: frame period=69ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439631.697757377] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439632.750102092] [depth_bev_node]: frame period=65ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439633.790559222] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439634.844285992] [depth_bev_node]: frame period=65ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439635.876659439] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439636.911020031] [depth_bev_node]: frame period=68ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439637.930372706] [depth_bev_node]: frame period=68ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439638.947428391] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439639.954808853] [depth_bev_node]: frame period=67ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439640.972470628] [depth_bev_node]: frame period=69ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439642.007390561] [depth_bev_node]: frame period=69ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439643.044849659] [depth_bev_node]: frame period=74ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439644.067911343] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439645.094102014] [depth_bev_node]: frame period=69ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439646.133813029] [depth_bev_node]: frame period=73ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439647.196876456] [depth_bev_node]: frame period=73ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439648.259689235] [depth_bev_node]: frame period=69ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439649.287543484] [depth_bev_node]: frame period=67ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439650.312277563] [depth_bev_node]: frame period=67ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439651.363760318] [depth_bev_node]: frame period=72ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439652.416328848] [depth_bev_node]: frame period=75ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439653.438272406] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439654.454758161] [depth_bev_node]: frame period=71ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439655.513865784] [depth_bev_node]: frame period=69ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439656.559148319] [depth_bev_node]: frame period=69ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439657.586936390] [depth_bev_node]: frame period=64ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439658.589345169] [depth_bev_node]: frame period=71ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439659.589461069] [depth_bev_node]: frame period=70ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439660.651394896] [depth_bev_node]: frame period=74ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439661.713689469] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439662.725118665] [depth_bev_node]: frame period=64ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439663.755830770] [depth_bev_node]: frame period=67ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439664.794135335] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439665.832534353] [depth_bev_node]: frame period=71ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439666.871953161] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439667.929170726] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439668.982526903] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439670.003075446] [depth_bev_node]: frame period=69ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439671.059431389] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439672.067299987] [depth_bev_node]: frame period=73ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439673.114302064] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439674.153018718] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439675.190731033] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439676.230608404] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439677.262257289] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439678.300504198] [depth_bev_node]: frame period=67ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439679.327800700] [depth_bev_node]: frame period=67ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439680.357515627] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439681.400855777] [depth_bev_node]: frame period=71ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439682.444920526] [depth_bev_node]: frame period=68ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439683.479266763] [depth_bev_node]: frame period=70ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439684.524748832] [depth_bev_node]: frame period=73ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439685.526724917] [depth_bev_node]: frame period=67ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439686.552048048] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439687.589157761] [depth_bev_node]: frame period=68ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439688.620780603] [depth_bev_node]: frame period=64ms process=36ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439689.649527768] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439690.674524966] [depth_bev_node]: frame period=64ms process=37ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439691.741389070] [depth_bev_node]: frame period=66ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439692.750455262] [depth_bev_node]: frame period=63ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439693.816361135] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439694.877664285] [depth_bev_node]: frame period=64ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439695.893448300] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439696.898263526] [depth_bev_node]: frame period=66ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439697.912862103] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439698.960295963] [depth_bev_node]: frame period=63ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439699.978670273] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439701.006854107] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439702.063260428] [depth_bev_node]: frame period=65ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439703.127695108] [depth_bev_node]: frame period=65ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439704.195289433] [depth_bev_node]: frame period=66ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439705.244332468] [depth_bev_node]: frame period=60ms process=45ms status=tracking
+[depth_bev_node-2] [INFO] [1791439706.294247735] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439707.343982560] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439708.393003102] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439709.441750041] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439710.489604408] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439711.544034359] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439712.598649374] [depth_bev_node]: frame period=72ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439713.635615630] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439714.684163600] [depth_bev_node]: frame period=71ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439715.712663551] [depth_bev_node]: frame period=75ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439716.777238315] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439717.816499994] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439718.855247028] [depth_bev_node]: frame period=67ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439719.861878048] [depth_bev_node]: frame period=69ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439720.881775548] [depth_bev_node]: frame period=75ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439721.900936531] [depth_bev_node]: frame period=75ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439722.916262084] [depth_bev_node]: frame period=71ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439723.938717771] [depth_bev_node]: frame period=70ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439724.960173972] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439725.963061733] [depth_bev_node]: frame period=72ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439727.034773175] [depth_bev_node]: frame period=70ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439728.053028852] [depth_bev_node]: frame period=74ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439729.076157012] [depth_bev_node]: frame period=75ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439730.100190535] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439731.112464830] [depth_bev_node]: frame period=70ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439732.129521744] [depth_bev_node]: frame period=71ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439733.158121003] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439734.188645240] [depth_bev_node]: frame period=74ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439735.220132894] [depth_bev_node]: frame period=73ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439736.252001384] [depth_bev_node]: frame period=70ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439737.277976406] [depth_bev_node]: frame period=75ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439738.287734580] [depth_bev_node]: frame period=70ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439739.296621351] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439740.318698295] [depth_bev_node]: frame period=74ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439741.368715916] [depth_bev_node]: frame period=71ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439742.368930255] [depth_bev_node]: frame period=65ms process=45ms status=tracking
+[depth_bev_node-2] [INFO] [1791439743.394374141] [depth_bev_node]: frame period=65ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439744.415974928] [depth_bev_node]: frame period=66ms process=36ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439745.455139052] [depth_bev_node]: frame period=62ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439746.496494067] [depth_bev_node]: frame period=67ms process=37ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439747.497956705] [depth_bev_node]: frame period=69ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439748.559793245] [depth_bev_node]: frame period=65ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439749.592309382] [depth_bev_node]: frame period=65ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439750.646985528] [depth_bev_node]: frame period=69ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439751.654465984] [depth_bev_node]: frame period=68ms process=38ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439752.662067644] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439753.708085861] [depth_bev_node]: frame period=75ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439754.732345208] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439755.759224351] [depth_bev_node]: frame period=71ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439756.785591166] [depth_bev_node]: frame period=74ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439757.808454149] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439758.866350237] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439759.883856587] [depth_bev_node]: frame period=69ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439760.946065139] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439761.981473700] [depth_bev_node]: frame period=71ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439763.030244403] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439764.068308351] [depth_bev_node]: frame period=71ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439765.117948199] [depth_bev_node]: frame period=71ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439766.187091478] [depth_bev_node]: frame period=73ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439767.206751961] [depth_bev_node]: frame period=74ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439768.220314911] [depth_bev_node]: frame period=69ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439769.231801780] [depth_bev_node]: frame period=66ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439770.286326136] [depth_bev_node]: frame period=72ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439771.334064352] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439772.377972215] [depth_bev_node]: frame period=67ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439773.421611294] [depth_bev_node]: frame period=66ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439774.469730239] [depth_bev_node]: frame period=71ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439775.505012008] [depth_bev_node]: frame period=71ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439776.557336628] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439777.605368935] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439778.639220012] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439779.683806012] [depth_bev_node]: frame period=71ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439780.718117470] [depth_bev_node]: frame period=70ms process=47ms status=tracking
+[depth_bev_node-2] [INFO] [1791439781.792342368] [depth_bev_node]: frame period=70ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439782.822940170] [depth_bev_node]: frame period=68ms process=48ms status=tracking
+[depth_bev_node-2] [INFO] [1791439783.845051561] [depth_bev_node]: frame period=73ms process=45ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439784.892832746] [depth_bev_node]: frame period=66ms process=38ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439785.906045478] [depth_bev_node]: frame period=68ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439786.920873409] [depth_bev_node]: frame period=68ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439787.923834758] [depth_bev_node]: frame period=66ms process=46ms status=tracking
+[depth_bev_node-2] [INFO] [1791439788.953950193] [depth_bev_node]: frame period=60ms process=42ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439789.980861450] [depth_bev_node]: frame period=64ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439791.000733470] [depth_bev_node]: frame period=61ms process=40ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439792.035577556] [depth_bev_node]: frame period=65ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439793.073029598] [depth_bev_node]: frame period=65ms process=39ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439794.104687347] [depth_bev_node]: frame period=67ms process=41ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439795.124772561] [depth_bev_node]: frame period=70ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439796.186114925] [depth_bev_node]: frame period=65ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439797.191992667] [depth_bev_node]: frame period=62ms process=43ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439798.217567917] [depth_bev_node]: frame period=68ms process=44ms status=no valid edges
+[depth_bev_node-2] [INFO] [1791439799.241732977] [depth_bev_node]: frame period=74ms process=49ms status=tracking
+[depth_bev_node-2] [INFO] [1791439800.302123662] [depth_bev_node]: frame period=71ms process=48ms status=tracking
+[component_container-1] Received signal: 2
+[INFO] [depth_bev_node-2]: process has finished cleanly [pid 18237]
+[INFO] [mjpeg_bridge_node-3]: process has finished cleanly [pid 18238]
+[INFO] [mjpeg_bridge_node-4]: process has finished cleanly [pid 18239]
+[INFO] [component_container-1]: process has finished cleanly [pid 18236]

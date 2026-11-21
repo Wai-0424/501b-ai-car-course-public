@@ -1,0 +1,46 @@
+[WARN] [1791438288.038586027] [uart_bridge_node]: uart_send_mode='bogus' 無效，改用 'chunked'（原本的分段送法）
+[INFO] [1791438288.061248128] [uart_bridge_node]: uart_bridge_node 啟動，port=/dev/ttyTHS1，baud=460800，訂閱 /cmd_vel，CMD送出方式=chunked
+Exception in thread Thread-1 (_read_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_bridge_node.py", line 225, in _read_loop
+    line = self._serial.readline()
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 575, in read
+    buf = os.read(self.fd, size - len(read))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object cannot be interpreted as an integer
+Traceback (most recent call last):
+  File "/home/orinnode/car2_ws/install/car2_bringup/lib/car2_bringup/uart_bridge_node", line 33, in <module>
+    sys.exit(load_entry_point('car2-bringup', 'console_scripts', 'uart_bridge_node')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_bridge_node.py", line 371, in main
+    rclpy.spin(node)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+    executor.spin_once()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+    self._spin_once_impl(timeout_sec)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+    raise handler.exception()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+    result = coro.send(None)
+             ^^^^^^^^^^^^^^^
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 592, in handler
+    await call_coroutine()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 454, in _execute
+    await await_or_execute(tmr.callback)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 115, in await_or_execute
+    return callback(*args)
+           ^^^^^^^^^^^^^^^
+  File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_bridge_node.py", line 218, in _on_timer
+    self._send_cmd(cmd)
+  File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_bridge_node.py", line 181, in _send_cmd
+    send_chunked(self._serial, cmd, flush=self._flush_each_chunk)
+  File "/home/orinnode/car2_ws/build/car2_bringup/car2_bringup/uart_protocol.py", line 101, in send_chunked
+    ser.flush()
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 673, in flush
+    termios.tcdrain(self.fd)
+termios.error: (4, 'Interrupted system call')

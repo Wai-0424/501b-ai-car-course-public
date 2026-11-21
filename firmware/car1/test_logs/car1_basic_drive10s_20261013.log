@@ -1,0 +1,77 @@
+[INFO] [launch]: All log files can be found below /home/orinnode/.ros/log/2026-10-13-18-53-46-961168-localhost.localdomain-11406
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [launch.user]: [drive] 輪子會轉：直線 15%、彎道 15%、行駛累計上限 10 s（相機／感知／網頁由常駐層 car1_base 提供）
+[INFO] [run_recorder_node-1]: process started with pid [11409]
+[INFO] [uart_bridge_node-2]: process started with pid [11410]
+[INFO] [line_follow_control_node-3]: process started with pid [11411]
+[line_follow_control_node-3] [INFO] [1791888828.472671749] [line_follow_control_node]: kp_lat=150 kp_head=20 max_steer=20 speed=15%  [弦線航向開]
+[uart_bridge_node-2] [INFO] [1791888828.474264015] [uart_bridge_node]: UART /dev/ttyTHS1@460800  max_wheel_speed=15%  max_steer=20deg  [輪子可被驅動，累計上限 10 s]
+[line_follow_control_node-3] [INFO] [1791888828.480683707] [line_follow_control_node]: no valid lane -> speed 0, steering to centre
+[uart_bridge_node-2] [WARN] [1791888828.494110882] [uart_bridge_node]: 輪速被強制為 0: no_link
+[uart_bridge_node-2] [WARN] [1791888828.543545259] [uart_bridge_node]: 輪速被強制為 0: ack_lag
+[uart_bridge_node-2] [INFO] [1791888828.544552710] [uart_bridge_node]: link ok ack=351/2 f=0 gate=OK rpm left/right=0.0/0.0 bad_STA=0
+[uart_bridge_node-2] [INFO] [1791888828.593469954] [uart_bridge_node]: 輪速狀態: 放行
+[uart_bridge_node-2] [INFO] [1791888829.143907643] [uart_bridge_node]: 輪速狀態: watchdog
+[uart_bridge_node-2] [INFO] [1791888829.243852969] [uart_bridge_node]: 輪速狀態: 放行
+[run_recorder_node-1] [INFO] [1791888829.338584620] [run_recorder_node]: recording to /home/orinnode/car1_ws/run/20261013_185349
+[line_follow_control_node-3] [INFO] [1791888829.482399406] [line_follow_control_node]: no valid lane -> speed 0, steering to centre
+[uart_bridge_node-2] [INFO] [1791888830.393707265] [uart_bridge_node]: 輪速狀態: watchdog
+[uart_bridge_node-2] [INFO] [1791888830.443828380] [uart_bridge_node]: 輪速狀態: 放行
+[line_follow_control_node-3] [INFO] [1791888830.530482725] [line_follow_control_node]: no valid lane -> speed 0, steering to centre
+[line_follow_control_node-3] [INFO] [1791888831.530843920] [line_follow_control_node]: near=0.01961916871368885 heading=-0.003626535200448633 -> fwa=+2.8deg speed=7.60167%
+[uart_bridge_node-2] [INFO] [1791888832.171007302] [uart_bridge_node]: 輪速狀態: watchdog
+[uart_bridge_node-2] [INFO] [1791888832.193657538] [uart_bridge_node]: 輪速狀態: 放行
+[line_follow_control_node-3] [INFO] [1791888832.530937827] [line_follow_control_node]: near=0.024636054411530495 heading=0.006379750576282502 -> fwa=+3.8deg speed=15%
+[uart_bridge_node-2] [INFO] [1791888833.543946396] [uart_bridge_node]: link ok ack=95/97 f=0 gate=OK rpm left/right=33.2/32.5 bad_STA=1
+[line_follow_control_node-3] [INFO] [1791888833.580615118] [line_follow_control_node]: near=0.029098737984895706 heading=0.025554458551114018 -> fwa=+4.8deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888834.582421066] [line_follow_control_node]: near=0.028054675087332726 heading=0.05388667368787099 -> fwa=+5.3deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888835.631142134] [line_follow_control_node]: near=0.020218072459101677 heading=0.10136470752166142 -> fwa=+5.1deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888836.680543330] [line_follow_control_node]: near=0.01350520458072424 heading=0.1732488524417111 -> fwa=+5.4deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888837.680631131] [line_follow_control_node]: near=0.0040105190128088 heading=0.2527408056988578 -> fwa=+5.6deg speed=15%
+[uart_bridge_node-2] [INFO] [1791888838.594505906] [uart_bridge_node]: link ok ack=196/198 f=0 gate=OK rpm left/right=35.0/34.0 bad_STA=1
+[line_follow_control_node-3] [INFO] [1791888838.681299283] [line_follow_control_node]: near=0.00514861848205328 heading=0.317376005582539 -> fwa=+7.1deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888839.730697384] [line_follow_control_node]: near=0.004809263162314892 heading=0.37639768330392726 -> fwa=+8.1deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888840.781568721] [line_follow_control_node]: near=0.003304285928606987 heading=0.42634205123651747 -> fwa=+9.0deg speed=15%
+[uart_bridge_node-2] [INFO] [1791888840.943734590] [uart_bridge_node]: 輪速狀態: time_limit
+[line_follow_control_node-3] [INFO] [1791888841.781765671] [line_follow_control_node]: near=0.0025957447942346334 heading=0.435704648392403 -> fwa=+9.1deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888842.831515502] [line_follow_control_node]: near=0.0029099618550390005 heading=0.4396599536217351 -> fwa=+9.2deg speed=15%
+[uart_bridge_node-2] [INFO] [1791888843.593958571] [uart_bridge_node]: link ok ack=296/298 f=0 gate=OK rpm left/right=0.0/0.0 bad_STA=1
+[line_follow_control_node-3] [INFO] [1791888843.880605552] [line_follow_control_node]: near=0.0034793552476912737 heading=0.4401347812089696 -> fwa=+9.3deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888844.931078276] [line_follow_control_node]: near=0.003319342387840152 heading=0.43899318545236427 -> fwa=+9.3deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888845.980728368] [line_follow_control_node]: near=0.0031973638106137514 heading=0.4380137716506178 -> fwa=+9.2deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888847.030579918] [line_follow_control_node]: near=0.0033811526373028755 heading=0.43879375645670565 -> fwa=+9.3deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888848.031405772] [line_follow_control_node]: near=0.0032907926943153143 heading=0.4403238603591586 -> fwa=+9.3deg speed=15%
+[uart_bridge_node-2] [INFO] [1791888848.643761613] [uart_bridge_node]: link ok ack=397/399 f=0 gate=OK rpm left/right=0.0/0.0 bad_STA=1
+[line_follow_control_node-3] [INFO] [1791888849.080716055] [line_follow_control_node]: near=0.002747581573203206 heading=0.4339262415800889 -> fwa=+9.1deg speed=15%
+[line_follow_control_node-3] [INFO] [1791888850.130632608] [line_follow_control_node]: near=0.0030828663147985935 heading=0.4398412339297342 -> fwa=+9.3deg speed=15%
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [line_follow_control_node-3]: sending signal 'SIGINT' to process[line_follow_control_node-3]
+[INFO] [uart_bridge_node-2]: sending signal 'SIGINT' to process[uart_bridge_node-2]
+[INFO] [run_recorder_node-1]: sending signal 'SIGINT' to process[run_recorder_node-1]
+[run_recorder_node-1] [INFO] [1791888851.119609970] [run_recorder_node]: recorded 2559 rows, 204 overlay frames -> /home/orinnode/car1_ws/run/20261013_185349
+[run_recorder_node-1] Failed to publish log message to rosout: publisher's context is invalid, at ./src/rcl/publisher.c:423
+[run_recorder_node-1] Traceback (most recent call last):
+[run_recorder_node-1]   File "/home/orinnode/car1_ws/install/car1_bringup/lib/car1_bringup/run_recorder_node", line 33, in <module>
+[run_recorder_node-1]     sys.exit(load_entry_point('car1-bringup', 'console_scripts', 'run_recorder_node')())
+[run_recorder_node-1]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[run_recorder_node-1]   File "/home/orinnode/car1_ws/build/car1_bringup/car1_bringup/run_recorder_node.py", line 112, in main
+[run_recorder_node-1]     rclpy.spin(node)
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 247, in spin
+[run_recorder_node-1]     executor.spin_once()
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 926, in spin_once
+[run_recorder_node-1]     self._spin_once_impl(timeout_sec)
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 918, in _spin_once_impl
+[run_recorder_node-1]     raise handler.exception()
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/task.py", line 286, in _execute_coroutine_step
+[run_recorder_node-1]     result = coro.send(None)
+[run_recorder_node-1]              ^^^^^^^^^^^^^^^
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 584, in handler
+[run_recorder_node-1]     call_coroutine = take_from_wait_list(entity)
+[run_recorder_node-1]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[run_recorder_node-1]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/executors.py", line 470, in _take_subscription
+[run_recorder_node-1]     msg_info = sub.handle.take_message(sub.msg_type, sub.raw)
+[run_recorder_node-1]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[run_recorder_node-1] RuntimeError: Unable to convert call argument '0' to Python object (#define PYBIND11_DETAILED_ERROR_MESSAGES or compile in debug mode for details)
+[INFO] [line_follow_control_node-3]: process has finished cleanly [pid 11411]
+[ERROR] [run_recorder_node-1]: process has died [pid 11409, exit code 1, cmd '/home/orinnode/car1_ws/install/car1_bringup/lib/car1_bringup/run_recorder_node --ros-args -r __node:=run_recorder_node'].
+[INFO] [uart_bridge_node-2]: process has finished cleanly [pid 11410]

@@ -1,0 +1,418 @@
+0.01 ator] fwa=90 bwl=0 bwr=0
+0.01 [actuator] fwa=0 bwl=0 bwr=0
+0.03 [actuator] fwa=0 bwl=0 bwr=0
+0.05 [actuator] fwa=0 bwl=0 bwr=0
+0.07 [actuator] fwa=0 bwl=0 bwr=0
+0.09 [actuator] fwa=0 bwl=0 bwr=0
+0.10 <STA,S1 -1>
+0.10 [dbg] rxBytesUSB=0 rxBytesBM=120 feBM=0 rxdrBM=120
+0.11 [actuator] fwa=0 bwl=0 bwr=0
+0.13 [actuator] fwa=0 bwl=0 bwr=0
+0.15 [actuator] fwa=0 bwl=0 bwr=0
+0.17 [actuator] fwa=0 bwl=0 bwr=0
+0.19 [actuator] fwa=0 bwl=0 bwr=0
+0.20 <STA,S1 -1>
+0.20 [dbg] rxBytesUSB=0 rxBytesBM=240 feBM=0 rxdrBM=240
+0.21 [actuator] fwa=0 bwl=0 bwr=0
+0.23 [actuator] fwa=0 bwl=0 bwr=0
+0.25 [actuator] fwa=0 bwl=0 bwr=0
+0.27 [actuator] fwa=0 bwl=0 bwr=0
+0.29 [actuator] fwa=0 bwl=0 bwr=0
+0.30 <STA,S1 -1>
+0.30 [dbg] rxBytesUSB=0 rxBytesBM=360 feBM=0 rxdrBM=360
+0.31 [actuator] fwa=0 bwl=0 bwr=0
+0.33 [actuator] fwa=0 bwl=0 bwr=0
+0.35 [actuator] fwa=0 bwl=0 bwr=0
+0.37 [actuator] fwa=0 bwl=0 bwr=0
+0.39 [actuator] fwa=0 bwl=0 bwr=0
+0.40 <STA,S1 -1>
+0.40 [dbg] rxBytesUSB=0 rxBytesBM=480 feBM=0 rxdrBM=480
+0.41 [actuator] fwa=0 bwl=0 bwr=0
+0.43 [actuator] fwa=0 bwl=0 bwr=0
+0.45 [actuator] fwa=0 bwl=0 bwr=0
+0.47 [actuator] fwa=0 bwl=0 bwr=0
+0.49 [actuator] fwa=0 bwl=0 bwr=0
+0.50 <STA,S1 -1>
+0.50 [dbg] rxBytesUSB=0 rxBytesBM=600 feBM=0 rxdrBM=600
+0.51 [actuator] fwa=0 bwl=0 bwr=0
+0.53 [actuator] fwa=0 bwl=0 bwr=0
+0.55 [actuator] fwa=0 bwl=0 bwr=0
+0.57 [actuator] fwa=0 bwl=0 bwr=0
+0.59 [actuator] fwa=0 bwl=0 bwr=0
+0.60 <STA,S1 -1>
+0.60 [dbg] rxBytesUSB=0 rxBytesBM=720 feBM=0 rxdrBM=720
+0.61 [actuator] fwa=0 bwl=0 bwr=0
+0.63 [actuator] fwa=0 bwl=0 bwr=0
+0.66 [actuator] fwa=0 bwl=0 bwr=0
+0.68 [actuator] fwa=0 bwl=0 bwr=0
+0.70 [actuator] fwa=0 bwl=0 bwr=0
+0.70 <STA,S1 -1>
+0.70 [dbg] rxBytesUSB=0 rxBytesBM=840 feBM=0 rxdrBM=840
+0.72 [actuator] fwa=0 bwl=0 bwr=0
+0.74 [actuator] fwa=0 bwl=0 bwr=0
+0.76 [actuator] fwa=0 bwl=0 bwr=0
+0.78 [actuator] fwa=0 bwl=0 bwr=0
+0.80 [actuator] fwa=0 bwl=0 bwr=0
+0.80 <STA,S1 -1>
+0.80 [dbg] rxBytesUSB=0 rxBytesBM=960 feBM=0 rxdrBM=960
+0.82 [actuator] fwa=0 bwl=0 bwr=0
+0.84 [actuator] fwa=0 bwl=0 bwr=0
+0.86 [actuator] fwa=0 bwl=0 bwr=0
+0.88 [actuator] fwa=0 bwl=0 bwr=0
+0.90 [actuator] fwa=0 bwl=0 bwr=0
+0.90 <STA,S1 -1>
+0.91 [dbg] rxBytesUSB=0 rxBytesBM=1080 feBM=0 rxdrBM=1080
+0.92 [actuator] fwa=0 bwl=0 bwr=0
+0.94 [actuator] fwa=0 bwl=0 bwr=0
+0.96 [actuator] fwa=0 bwl=0 bwr=0
+0.98 [actuator] fwa=0 bwl=0 bwr=0
+1.00 [actuator] fwa=0 bwl=0 bwr=0
+1.00 <STA,S1 -1>
+1.00 [dbg] rxBytesUSB=0 rxBytesBM=1200 feBM=0 rxdrBM=1200
+1.02 [actuator] fwa=0 bwl=0 bwr=0
+1.04 [actuator] fwa=0 bwl=0 bwr=0
+1.06 [actuator] fwa=0 bwl=0 bwr=0
+1.08 [actuator] fwa=0 bwl=0 bwr=0
+1.10 [actuator] fwa=0 bwl=0 bwr=0
+1.10 <STA,S1 -1>
+1.10 [dbg] rxBytesUSB=0 rxBytesBM=1320 feBM=0 rxdrBM=1320
+1.12 [actuator] fwa=0 bwl=0 bwr=0
+1.14 [actuator] fwa=0 bwl=0 bwr=0
+1.16 [actuator] fwa=0 bwl=0 bwr=0
+1.18 [actuator] fwa=0 bwl=0 bwr=0
+1.20 [actuator] fwa=0 bwl=0 bwr=0
+1.20 <STA,S1 -1>
+1.20 [dbg] rxBytesUSB=0 rxBytesBM=1440 feBM=0 rxdrBM=1440
+1.22 [actuator] fwa=0 bwl=0 bwr=0
+1.24 [actuator] fwa=0 bwl=0 bwr=0
+1.26 [actuator] fwa=0 bwl=0 bwr=0
+1.28 [actuator] fwa=0 bwl=0 bwr=0
+1.30 [actuator] fwa=0 bwl=0 bwr=0
+1.30 <STA,S1 -1>
+1.30 [dbg] rxBytesUSB=0 rxBytesBM=1560 feBM=0 rxdrBM=1560
+1.32 [actuator] fwa=0 bwl=0 bwr=0
+1.34 [actuator] fwa=0 bwl=0 bwr=0
+1.36 [actuator] fwa=0 bwl=0 bwr=0
+1.38 [actuator] fwa=0 bwl=0 bwr=0
+1.40 [actuator] fwa=0 bwl=0 bwr=0
+1.40 <STA,S1 -1>
+1.40 [dbg] rxBytesUSB=0 rxBytesBM=1680 feBM=0 rxdrBM=1680
+1.42 [actuator] fwa=0 bwl=0 bwr=0
+1.44 [actuator] fwa=0 bwl=0 bwr=0
+1.46 [actuator] fwa=0 bwl=0 bwr=0
+1.48 [actuator] fwa=0 bwl=0 bwr=0
+1.50 [actuator] fwa=0 bwl=0 bwr=0
+1.50 <STA,S1 -1>
+1.50 [dbg] rxBytesUSB=0 rxBytesBM=1800 feBM=0 rxdrBM=1800
+1.52 [actuator] fwa=0 bwl=0 bwr=0
+1.54 [actuator] fwa=0 bwl=0 bwr=0
+1.56 [actuator] fwa=0 bwl=0 bwr=0
+1.58 [actuator] fwa=0 bwl=0 bwr=0
+1.60 [actuator] fwa=0 bwl=0 bwr=0
+1.60 <STA,S1 -1>
+1.61 [dbg] rxBytesUSB=0 rxBytesBM=1920 feBM=0 rxdrBM=1920
+1.62 [actuator] fwa=0 bwl=0 bwr=0
+1.64 [actuator] fwa=0 bwl=0 bwr=0
+1.66 [actuator] fwa=0 bwl=0 bwr=0
+1.68 [actuator] fwa=0 bwl=0 bwr=0
+1.70 [actuator] fwa=0 bwl=0 bwr=0
+1.70 <STA,S1 -1>
+1.71 [dbg] rxBytesUSB=0 rxBytesBM=2040 feBM=0 rxdrBM=2040
+1.72 [actuator] fwa=0 bwl=0 bwr=0
+1.74 [actuator] fwa=0 bwl=0 bwr=0
+1.76 [actuator] fwa=0 bwl=0 bwr=0
+1.78 [actuator] fwa=0 bwl=0 bwr=0
+1.80 [actuator] fwa=0 bwl=0 bwr=0
+1.80 <STA,S1 -1>
+1.81 [dbg] rxBytesUSB=0 rxBytesBM=2160 feBM=0 rxdrBM=2160
+1.82 [actuator] fwa=0 bwl=0 bwr=0
+1.84 [actuator] fwa=0 bwl=0 bwr=0
+1.86 [actuator] fwa=0 bwl=0 bwr=0
+1.88 [actuator] fwa=0 bwl=0 bwr=0
+1.90 [actuator] fwa=0 bwl=0 bwr=0
+1.90 <STA,S1 -1>
+1.91 [dbg] rxBytesUSB=0 rxBytesBM=2280 feBM=0 rxdrBM=2280
+1.92 [actuator] fwa=0 bwl=0 bwr=0
+1.94 [actuator] fwa=0 bwl=0 bwr=0
+1.96 [actuator] fwa=0 bwl=0 bwr=0
+1.98 [actuator] fwa=0 bwl=0 bwr=0
+2.00 [actuator] fwa=0 bwl=0 bwr=0
+2.00 <STA,S1 -1>
+2.01 [dbg] rxBytesUSB=0 rxBytesBM=2400 feBM=0 rxdrBM=2400
+2.02 [actuator] fwa=0 bwl=0 bwr=0
+2.04 [actuator] fwa=0 bwl=0 bwr=0
+2.06 [actuator] fwa=0 bwl=0 bwr=0
+2.08 [actuator] fwa=0 bwl=0 bwr=0
+2.10 [actuator] fwa=0 bwl=0 bwr=0
+2.10 <STA,S1 -1>
+2.11 [dbg] rxBytesUSB=0 rxBytesBM=2520 feBM=0 rxdrBM=2520
+2.12 [actuator] fwa=0 bwl=0 bwr=0
+2.14 [actuator] fwa=0 bwl=0 bwr=0
+2.16 [actuator] fwa=0 bwl=0 bwr=0
+2.18 [actuator] fwa=0 bwl=0 bwr=0
+2.20 <STA,S1 -1>
+2.20 [dbg] rxBytesUSB=0 rxBytesBM=2634 feBM=0 rxdrBM=2640
+2.21 [actuator] fwa=0 bwl=0 bwr=0
+2.22 [actuator] fwa=0 bwl=0 bwr=0
+2.24 [actuator] fwa=0 bwl=0 bwr=0
+2.26 [actuator] fwa=0 bwl=0 bwr=0
+2.28 [actuator] fwa=0 bwl=0 bwr=0
+2.30 <STA,S1 -1>
+2.30 [dbg] rxBytesUSB=0 rxBytesBM=2748 feBM=0 rxdrBM=2754
+2.31 [actuator] fwa=0 bwl=0 bwr=0
+2.32 [actuator] fwa=0 bwl=0 bwr=0
+2.34 [actuator] fwa=0 bwl=0 bwr=0
+2.36 [actuator] fwa=0 bwl=0 bwr=0
+2.38 [actuator] fwa=0 bwl=0 bwr=0
+2.40 <STA,S1 -1>
+2.40 [dbg] rxBytesUSB=0 rxBytesBM=2862 feBM=0 rxdrBM=2869
+2.41 [actuator] fwa=0 bwl=0 bwr=0
+2.42 [actuator] fwa=0 bwl=0 bwr=0
+2.44 [actuator] fwa=0 bwl=0 bwr=0
+2.46 [actuator] fwa=0 bwl=0 bwr=0
+2.49 [actuator] fwa=0 bwl=0 bwr=0
+2.50 <STA,S1 -1>
+2.50 [dbg] rxBytesUSB=0 rxBytesBM=2977 feBM=0 rxdrBM=2984
+2.51 [actuator] fwa=0 bwl=0 bwr=0
+2.52 [actuator] fwa=0 bwl=0 bwr=0
+2.54 [actuator] fwa=0 bwl=0 bwr=0
+2.56 [actuator] fwa=0 bwl=0 bwr=0
+2.58 [actuator] fwa=0 bwl=0 bwr=0
+2.60 <STA,S1 -1>
+2.60 [dbg] rxBytesUSB=0 rxBytesBM=3096 feBM=0 rxdrBM=3097
+2.61 [actuator] fwa=0 bwl=0 bwr=0
+2.62 [actuator] fwa=0 bwl=0 bwr=0
+2.64 [actuator] fwa=0 bwl=0 bwr=0
+2.66 [actuator] fwa=0 bwl=0 bwr=0
+2.68 [actuator] fwa=0 bwl=0 bwr=0
+2.70 <STA,S1 -1>
+2.70 [dbg] rxBytesUSB=0 rxBytesBM=3216 feBM=0 rxdrBM=3216
+2.71 [actuator] fwa=0 bwl=0 bwr=0
+2.72 [actuator] fwa=0 bwl=0 bwr=0
+2.75 [actuator] fwa=0 bwl=0 bwr=0
+2.76 [actuator] fwa=0 bwl=0 bwr=0
+2.79 [actuator] fwa=0 bwl=0 bwr=0
+2.80 <STA,S1 -1>
+2.80 [dbg] rxBytesUSB=0 rxBytesBM=3336 feBM=0 rxdrBM=3336
+2.81 [actuator] fwa=0 bwl=0 bwr=0
+2.83 [actuator] fwa=0 bwl=0 bwr=0
+2.85 [actuator] fwa=0 bwl=0 bwr=0
+2.87 [actuator] fwa=0 bwl=0 bwr=0
+2.89 [actuator] fwa=0 bwl=0 bwr=0
+2.90 <STA,S1 -1>
+2.90 [dbg] rxBytesUSB=0 rxBytesBM=3456 feBM=0 rxdrBM=3456
+2.91 [actuator] fwa=0 bwl=0 bwr=0
+2.93 [actuator] fwa=0 bwl=0 bwr=0
+2.95 [actuator] fwa=0 bwl=0 bwr=0
+2.97 [actuator] fwa=0 bwl=0 bwr=0
+2.99 [actuator] fwa=0 bwl=0 bwr=0
+3.00 <STA,S1 -1>
+3.01 [dbg] rxBytesUSB=0 rxBytesBM=3576 feBM=0 rxdrBM=3576
+3.01 [actuator] fwa=0 bwl=0 bwr=0
+3.03 [actuator] fwa=0 bwl=0 bwr=0
+3.05 [actuator] fwa=0 bwl=0 bwr=0
+3.07 [actuator] fwa=0 bwl=0 bwr=0
+3.09 [actuator] fwa=0 bwl=0 bwr=0
+3.10 <STA,S1 -1>
+3.10 [dbg] rxBytesUSB=0 rxBytesBM=3696 feBM=0 rxdrBM=3696
+3.11 [actuator] fwa=0 bwl=0 bwr=0
+3.13 [actuator] fwa=0 bwl=0 bwr=0
+3.15 [actuator] fwa=0 bwl=0 bwr=0
+3.17 [actuator] fwa=0 bwl=0 bwr=0
+3.19 [actuator] fwa=0 bwl=0 bwr=0
+3.20 <STA,S1 -1>
+3.20 [dbg] rxBytesUSB=0 rxBytesBM=3816 feBM=0 rxdrBM=3816
+3.21 [actuator] fwa=0 bwl=0 bwr=0
+3.23 [actuator] fwa=0 bwl=0 bwr=0
+3.25 [actuator] fwa=0 bwl=0 bwr=0
+3.27 [actuator] fwa=0 bwl=0 bwr=0
+3.29 [actuator] fwa=0 bwl=0 bwr=0
+3.30 <STA,S1 -1>
+3.30 [dbg] rxBytesUSB=0 rxBytesBM=3936 feBM=0 rxdrBM=3936
+3.31 [actuator] fwa=0 bwl=0 bwr=0
+3.33 [actuator] fwa=0 bwl=0 bwr=0
+3.35 [actuator] fwa=0 bwl=0 bwr=0
+3.37 [actuator] fwa=0 bwl=0 bwr=0
+3.39 [actuator] fwa=0 bwl=0 bwr=0
+3.40 <STA,S1 -1>
+3.40 [dbg] rxBytesUSB=0 rxBytesBM=4056 feBM=0 rxdrBM=4056
+3.41 [actuator] fwa=0 bwl=0 bwr=0
+3.43 [actuator] fwa=0 bwl=0 bwr=0
+3.45 [actuator] fwa=0 bwl=0 bwr=0
+3.47 [actuator] fwa=0 bwl=0 bwr=0
+3.49 [actuator] fwa=0 bwl=0 bwr=0
+3.50 <STA,S1 -1>
+3.50 [dbg] rxBytesUSB=0 rxBytesBM=4176 feBM=0 rxdrBM=4176
+3.51 [actuator] fwa=0 bwl=0 bwr=0
+3.53 [actuator] fwa=0 bwl=0 bwr=0
+3.55 [actuator] fwa=0 bwl=0 bwr=0
+3.57 [actuator] fwa=0 bwl=0 bwr=0
+3.59 [actuator] fwa=0 bwl=0 bwr=0
+3.60 <STA,S1 -1>
+3.60 [dbg] rxBytesUSB=0 rxBytesBM=4296 feBM=0 rxdrBM=4296
+3.61 [actuator] fwa=0 bwl=0 bwr=0
+3.63 [actuator] fwa=0 bwl=0 bwr=0
+3.65 [actuator] fwa=0 bwl=0 bwr=0
+3.67 [actuator] fwa=0 bwl=0 bwr=0
+3.69 [actuator] fwa=0 bwl=0 bwr=0
+3.70 <STA,S1 -1>
+3.70 [dbg] rxBytesUSB=0 rxBytesBM=4416 feBM=0 rxdrBM=4416
+3.71 [actuator] fwa=0 bwl=0 bwr=0
+3.73 [actuator] fwa=0 bwl=0 bwr=0
+3.75 [actuator] fwa=0 bwl=0 bwr=0
+3.77 [actuator] fwa=0 bwl=0 bwr=0
+3.79 [actuator] fwa=0 bwl=0 bwr=0
+3.80 <STA,S1 -1>
+3.80 [dbg] rxBytesUSB=0 rxBytesBM=4536 feBM=0 rxdrBM=4536
+3.81 [actuator] fwa=0 bwl=0 bwr=0
+3.83 [actuator] fwa=0 bwl=0 bwr=0
+3.85 [actuator] fwa=0 bwl=0 bwr=0
+3.87 [actuator] fwa=0 bwl=0 bwr=0
+3.89 [actuator] fwa=0 bwl=0 bwr=0
+3.90 <STA,S1 -1>
+3.90 [dbg] rxBytesUSB=0 rxBytesBM=4656 feBM=0 rxdrBM=4656
+3.91 [actuator] fwa=0 bwl=0 bwr=0
+3.93 [actuator] fwa=0 bwl=0 bwr=0
+3.95 [actuator] fwa=0 bwl=0 bwr=0
+3.97 [actuator] fwa=0 bwl=0 bwr=0
+3.99 [actuator] fwa=0 bwl=0 bwr=0
+4.00 <STA,S1 -1>
+4.00 [dbg] rxBytesUSB=0 rxBytesBM=4776 feBM=0 rxdrBM=4776
+4.01 [actuator] fwa=0 bwl=0 bwr=0
+4.03 [actuator] fwa=0 bwl=0 bwr=0
+4.05 [actuator] fwa=0 bwl=0 bwr=0
+4.07 [actuator] fwa=0 bwl=0 bwr=0
+4.09 [actuator] fwa=0 bwl=0 bwr=0
+4.10 <STA,S1 -1>
+4.11 [dbg] rxBytesUSB=0 rxBytesBM=4896 feBM=0 rxdrBM=4896
+4.11 [actuator] fwa=0 bwl=0 bwr=0
+4.13 [actuator] fwa=0 bwl=0 bwr=0
+4.15 [actuator] fwa=0 bwl=0 bwr=0
+4.17 [actuator] fwa=0 bwl=0 bwr=0
+4.19 [actuator] fwa=0 bwl=0 bwr=0
+4.20 <STA,S1 -1>
+4.20 [dbg] rxBytesUSB=0 rxBytesBM=5016 feBM=0 rxdrBM=5016
+4.21 [actuator] fwa=0 bwl=0 bwr=0
+4.23 [actuator] fwa=0 bwl=0 bwr=0
+4.25 [actuator] fwa=0 bwl=0 bwr=0
+4.27 [actuator] fwa=0 bwl=0 bwr=0
+4.29 [actuator] fwa=0 bwl=0 bwr=0
+4.30 <STA,S1 -1>
+4.30 [dbg] rxBytesUSB=0 rxBytesBM=5136 feBM=0 rxdrBM=5136
+4.31 [actuator] fwa=0 bwl=0 bwr=0
+4.33 [actuator] fwa=0 bwl=0 bwr=0
+4.35 [actuator] fwa=0 bwl=0 bwr=0
+4.37 [actuator] fwa=0 bwl=0 bwr=0
+4.39 [actuator] fwa=0 bwl=0 bwr=0
+4.40 <STA,S1 -1>
+4.40 [dbg] rxBytesUSB=0 rxBytesBM=5256 feBM=0 rxdrBM=5256
+4.41 [actuator] fwa=0 bwl=0 bwr=0
+4.43 [actuator] fwa=0 bwl=0 bwr=0
+4.45 [actuator] fwa=0 bwl=0 bwr=0
+4.47 [actuator] fwa=0 bwl=0 bwr=0
+4.49 [actuator] fwa=0 bwl=0 bwr=0
+4.50 <STA,S1 -1>
+4.50 [dbg] rxBytesUSB=0 rxBytesBM=5376 feBM=0 rxdrBM=5376
+4.51 [actuator] fwa=0 bwl=0 bwr=0
+4.53 [actuator] fwa=0 bwl=0 bwr=0
+4.55 [actuator] fwa=0 bwl=0 bwr=0
+4.57 [actuator] fwa=0 bwl=0 bwr=0
+4.59 [actuator] fwa=0 bwl=0 bwr=0
+4.60 <STA,S1 -1>
+4.60 [dbg] rxBytesUSB=0 rxBytesBM=5496 feBM=0 rxdrBM=5496
+4.61 [actuator] fwa=0 bwl=0 bwr=0
+4.63 [actuator] fwa=0 bwl=0 bwr=0
+4.65 [actuator] fwa=0 bwl=0 bwr=0
+4.67 [actuator] fwa=0 bwl=0 bwr=0
+4.69 [actuator] fwa=0 bwl=0 bwr=0
+4.70 <STA,S1 -1>
+4.70 [dbg] rxBytesUSB=0 rxBytesBM=5616 feBM=0 rxdrBM=5616
+4.71 [actuator] fwa=0 bwl=0 bwr=0
+4.73 [actuator] fwa=0 bwl=0 bwr=0
+4.75 [actuator] fwa=0 bwl=0 bwr=0
+4.77 [actuator] fwa=0 bwl=0 bwr=0
+4.79 [actuator] fwa=0 bwl=0 bwr=0
+4.80 <STA,S1 -1>
+4.80 [dbg] rxBytesUSB=0 rxBytesBM=5736 feBM=0 rxdrBM=5736
+4.81 [actuator] fwa=0 bwl=0 bwr=0
+4.83 [actuator] fwa=0 bwl=0 bwr=0
+4.85 [actuator] fwa=0 bwl=0 bwr=0
+4.87 [actuator] fwa=0 bwl=0 bwr=0
+4.90 [actuator] fwa=0 bwl=0 bwr=0
+4.90 <STA,S1 -1>
+4.90 [dbg] rxBytesUSB=0 rxBytesBM=5856 feBM=0 rxdrBM=5856
+4.92 [actuator] fwa=0 bwl=0 bwr=0
+4.94 [actuator] fwa=0 bwl=0 bwr=0
+4.96 [actuator] fwa=0 bwl=0 bwr=0
+4.98 [actuator] fwa=0 bwl=0 bwr=0
+5.00 [actuator] fwa=0 bwl=0 bwr=0
+5.00 <STA,S1 -1>
+5.00 [dbg] rxBytesUSB=0 rxBytesBM=5976 feBM=0 rxdrBM=5976
+5.02 [actuator] fwa=0 bwl=0 bwr=0
+5.04 [actuator] fwa=0 bwl=0 bwr=0
+5.06 [actuator] fwa=0 bwl=0 bwr=0
+5.08 [actuator] fwa=0 bwl=0 bwr=0
+5.10 [actuator] fwa=0 bwl=0 bwr=0
+5.10 <STA,S1 -1>
+5.10 [dbg] rxBytesUSB=0 rxBytesBM=6096 feBM=0 rxdrBM=6096
+5.12 [actuator] fwa=0 bwl=0 bwr=0
+5.14 [actuator] fwa=0 bwl=0 bwr=0
+5.16 [actuator] fwa=0 bwl=0 bwr=0
+5.18 [actuator] fwa=0 bwl=0 bwr=0
+5.20 [actuator] fwa=0 bwl=0 bwr=0
+5.20 <STA,S1 -1>
+5.20 [dbg] rxBytesUSB=0 rxBytesBM=6216 feBM=0 rxdrBM=6216
+5.22 [actuator] fwa=0 bwl=0 bwr=0
+5.24 [actuator] fwa=0 bwl=0 bwr=0
+5.26 [actuator] fwa=0 bwl=0 bwr=0
+5.28 [actuator] fwa=0 bwl=0 bwr=0
+5.30 [actuator] fwa=0 bwl=0 bwr=0
+5.30 <STA,S1 -1>
+5.30 [dbg] rxBytesUSB=0 rxBytesBM=6336 feBM=0 rxdrBM=6336
+5.32 [actuator] fwa=0 bwl=0 bwr=0
+5.34 [actuator] fwa=0 bwl=0 bwr=0
+5.36 [actuator] fwa=0 bwl=0 bwr=0
+5.38 [actuator] fwa=0 bwl=0 bwr=0
+5.40 [actuator] fwa=0 bwl=0 bwr=0
+5.40 <STA,S1 -1>
+5.41 [dbg] rxBytesUSB=0 rxBytesBM=6456 feBM=0 rxdrBM=6456
+5.42 [actuator] fwa=0 bwl=0 bwr=0
+5.44 [actuator] fwa=0 bwl=0 bwr=0
+5.46 [actuator] fwa=0 bwl=0 bwr=0
+5.48 [actuator] fwa=0 bwl=0 bwr=0
+5.50 [actuator] fwa=0 bwl=0 bwr=0
+5.50 <STA,S1 -1>
+5.50 [dbg] rxBytesUSB=0 rxBytesBM=6576 feBM=0 rxdrBM=6576
+5.52 [actuator] fwa=0 bwl=0 bwr=0
+5.54 [actuator] fwa=0 bwl=0 bwr=0
+5.56 [actuator] fwa=0 bwl=0 bwr=0
+5.58 [actuator] fwa=0 bwl=0 bwr=0
+5.60 [actuator] fwa=0 bwl=0 bwr=0
+5.60 <STA,S1 -1>
+5.60 [dbg] rxBytesUSB=0 rxBytesBM=6696 feBM=0 rxdrBM=6696
+5.62 [actuator] fwa=0 bwl=0 bwr=0
+5.64 [actuator] fwa=0 bwl=0 bwr=0
+5.66 [actuator] fwa=0 bwl=0 bwr=0
+5.68 [actuator] fwa=0 bwl=0 bwr=0
+5.70 [actuator] fwa=0 bwl=0 bwr=0
+5.70 <STA,S1 -1>
+5.70 [dbg] rxBytesUSB=0 rxBytesBM=6816 feBM=0 rxdrBM=6816
+5.72 [actuator] fwa=0 bwl=0 bwr=0
+5.74 [actuator] fwa=0 bwl=0 bwr=0
+5.76 [actuator] fwa=0 bwl=0 bwr=0
+5.78 [actuator] fwa=0 bwl=0 bwr=0
+5.80 [actuator] fwa=0 bwl=0 bwr=0
+5.80 <STA,S1 -1>
+5.81 [dbg] rxBytesUSB=0 rxBytesBM=6936 feBM=0 rxdrBM=6936
+5.82 [actuator] fwa=0 bwl=0 bwr=0
+5.84 [actuator] fwa=0 bwl=0 bwr=0
+5.86 [actuator] fwa=0 bwl=0 bwr=0
+5.88 [actuator] fwa=0 bwl=0 bwr=0
+5.90 [actuator] fwa=0 bwl=0 bwr=0
+5.90 <STA,S1 -1>
+5.91 [dbg] rxBytesUSB=0 rxBytesBM=7056 feBM=0 rxdrBM=7056
+5.92 [actuator] fwa=0 bwl=0 bwr=0
+5.94 [actuator] fwa=0 bwl=0 bwr=0
+5.96 [actuator] fwa=0 bwl=0 bwr=0
+5.98 [actuator] fwa=0 bwl=0 bwr=0
+6.00 [actuator] fwa=0 bwl=0 bwr=0

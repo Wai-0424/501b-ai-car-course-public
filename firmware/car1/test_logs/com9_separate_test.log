@@ -1,0 +1,8 @@
+--- bwl=40 only (M1) ---
+[last] [enc] posM1=0 posM2=1 dutyM1=187 dutyM2=0
+--- stop ---
+[last] [enc] posM1=0 posM2=1 dutyM1=0 dutyM2=0
+--- bwr=40 only (M2) ---
+[last] [enc] posM1=0 posM2=-7760 dutyM1=0 dutyM2=121
+--- stop ---
+[last] [enc] posM1=0 posM2=-10195 dutyM1=0 dutyM2=0

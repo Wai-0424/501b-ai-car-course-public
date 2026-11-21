@@ -1,0 +1,11 @@
+[TX] cycle=1 fwa=40
+[TX] cycle=1 fwa=-40
+[TX] cycle=2 fwa=40
+[TX] cycle=2 fwa=-40
+[TX] cycle=3 fwa=40
+[TX] cycle=3 fwa=-40
+[TX] cycle=4 fwa=40
+[TX] cycle=4 fwa=-40
+[TX] cycle=5 fwa=40
+[TX] cycle=5 fwa=-40
+[TX] fwa=0 (final)

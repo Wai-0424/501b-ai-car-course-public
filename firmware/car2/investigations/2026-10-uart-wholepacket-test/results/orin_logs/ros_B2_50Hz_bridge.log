@@ -1,0 +1,4 @@
+[INFO] [1791439116.057057902] [uart_bridge_node]: uart_bridge_node 啟動，port=/dev/ttyTHS1，baud=460800，訂閱 /cmd_vel，CMD送出方式=whole
+Exception in thread Thread-1 (_read_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner

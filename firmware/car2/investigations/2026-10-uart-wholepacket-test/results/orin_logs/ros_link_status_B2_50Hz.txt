@@ -1,0 +1,16 @@
+bm_to_orin: UP
+orin_to_bm: UP
+last_sta_age_sec: 0.19
+last_ackseq_change_age_sec: 0.19
+cmd_seq_sent: 15350
+send_mode: whole
+last_ackseq: 15338
+sta_ok_count: 1525
+sta_checksum_fail_count: 9
+motor_fault_flags: 0
+fault_gate: OK
+faults_in_window: 0
+faults_total: 0
+last_signed_rpm_left: 0.0
+last_signed_rpm_right: 0.0
+updated_at: 2026-10-08 14:03:43

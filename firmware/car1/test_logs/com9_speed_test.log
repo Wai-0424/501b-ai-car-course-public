@@ -1,0 +1,8 @@
+--- speed 20% ---
+[last] [enc] posM1=-1 posM2=-4215 dutyM1=125 dutyM2=75
+--- speed 50% ---
+[last] [enc] posM1=0 posM2=-15180 dutyM1=219 dutyM2=146
+--- speed 80% ---
+[last] [enc] posM1=-1 posM2=-32894 dutyM1=255 dutyM2=218
+--- stop ---
+[last] [enc] posM1=-1 posM2=-38715 dutyM1=0 dutyM2=0

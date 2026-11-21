@@ -1,0 +1,87 @@
+測試日期:2026-09-07
+測試方式:bmduino_uart_loopback_diag.ino,透過 arduino-cli 編譯燒錄(FQBN HT32:HT32:BM53A367A,COM6),
+         PowerShell System.IO.Ports.SerialPort 讀取(115200 baud,DTR toggle 觸發板子重置後擷取)
+接線:Serial3 (USART1) TX=PA4 <-> RX=PA5 自我迴接;Serial1 (UART1) TX=PC12 <-> RX=PC13 自我迴接
+     Serial (USART0, PA8/PA10) 未接跳線,僅作為 USB 輸出結果用
+board: BMduino-UNO BM53A367A / HT32F52367
+
+==========================================
+ HT32 / BMduino UART self-loopback 診斷測試
+==========================================
+確認接線:Serial3 PA4<->PA5, Serial1 PC12<->PC13
+(Serial 本身 PA8/PA10 不要接跳線;Serial4 這次先不測)
+
+---- 測試 Serial3 (USART1, PA4/PA5) ----
+  len= 1  recvLen= 1  feCount+=0  rxdrCount+=1  -> PASS
+  len= 2  recvLen= 2  feCount+=0  rxdrCount+=2  -> PASS
+  len= 3  recvLen= 3  feCount+=0  rxdrCount+=3  -> PASS
+  len= 4  recvLen= 4  feCount+=0  rxdrCount+=4  -> PASS
+  len= 5  recvLen= 5  feCount+=0  rxdrCount+=5  -> PASS
+  len= 6  recvLen= 6  feCount+=0  rxdrCount+=6  -> PASS
+  len= 7  recvLen= 7  feCount+=0  rxdrCount+=7  -> PASS
+  len= 8  recvLen= 8  feCount+=0  rxdrCount+=8  -> PASS
+  len= 9  recvLen= 9  feCount+=0  rxdrCount+=9  -> PASS
+  len=10  recvLen=10  feCount+=0  rxdrCount+=10  -> PASS
+  len=11  recvLen=11  feCount+=0  rxdrCount+=11  -> PASS
+  len=12  recvLen=12  feCount+=0  rxdrCount+=12  -> PASS
+  len=13  recvLen=13  feCount+=0  rxdrCount+=13  -> PASS
+  len=14  recvLen=14  feCount+=0  rxdrCount+=14  -> PASS
+  len=15  recvLen=15  feCount+=0  rxdrCount+=15  -> PASS
+  len=16  recvLen=16  feCount+=0  rxdrCount+=16  -> PASS
+  len=17  recvLen=17  feCount+=0  rxdrCount+=17  -> PASS
+  len=18  recvLen=18  feCount+=0  rxdrCount+=18  -> PASS
+  len=19  recvLen=19  feCount+=0  rxdrCount+=19  -> PASS
+  len=20  recvLen=20  feCount+=0  rxdrCount+=20  -> PASS
+  len=21  recvLen=21  feCount+=0  rxdrCount+=21  -> PASS
+  len=22  recvLen=22  feCount+=0  rxdrCount+=22  -> PASS
+  len=23  recvLen=23  feCount+=0  rxdrCount+=23  -> PASS
+  len=24  recvLen=24  feCount+=0  rxdrCount+=24  -> PASS
+  len=25  recvLen=25  feCount+=0  rxdrCount+=25  -> PASS
+  len=26  recvLen=26  feCount+=0  rxdrCount+=26  -> PASS
+  len=27  recvLen=27  feCount+=0  rxdrCount+=27  -> PASS
+  len=28  recvLen=28  feCount+=0  rxdrCount+=28  -> PASS
+  len=29  recvLen=29  feCount+=0  rxdrCount+=29  -> PASS
+  len=30  recvLen=30  feCount+=0  rxdrCount+=30  -> PASS
+  len=31  recvLen=31  feCount+=0  rxdrCount+=31  -> PASS
+  len=32  recvLen=32  feCount+=0  rxdrCount+=32  -> PASS
+
+---- 測試 Serial1 (UART1, PC12/PC13) ----
+  len= 1  recvLen= 1  feCount+=0  rxdrCount+=1  -> PASS
+  len= 2  recvLen= 2  feCount+=0  rxdrCount+=2  -> PASS
+  len= 3  recvLen= 3  feCount+=0  rxdrCount+=3  -> PASS
+  len= 4  recvLen= 4  feCount+=0  rxdrCount+=4  -> PASS
+  len= 5  recvLen= 5  feCount+=0  rxdrCount+=5  -> PASS
+  len= 6  recvLen= 6  feCount+=0  rxdrCount+=6  -> PASS
+  len= 7  recvLen= 7  feCount+=0  rxdrCount+=7  -> PASS
+  len= 8  recvLen= 8  feCount+=0  rxdrCount+=8  -> PASS
+  len= 9  recvLen= 9  feCount+=0  rxdrCount+=9  -> PASS
+  len=10  recvLen=10  feCount+=0  rxdrCount+=10  -> PASS
+  len=11  recvLen=11  feCount+=0  rxdrCount+=11  -> PASS
+  len=12  recvLen=12  feCount+=0  rxdrCount+=12  -> PASS
+  len=13  recvLen=13  feCount+=0  rxdrCount+=13  -> PASS
+  len=14  recvLen=14  feCount+=0  rxdrCount+=14  -> PASS
+  len=15  recvLen=15  feCount+=0  rxdrCount+=15  -> PASS
+  len=16  recvLen=16  feCount+=0  rxdrCount+=16  -> PASS
+  len=17  recvLen=17  feCount+=0  rxdrCount+=17  -> PASS
+  len=18  recvLen=18  feCount+=0  rxdrCount+=18  -> PASS
+  len=19  recvLen=19  feCount+=0  rxdrCount+=19  -> PASS
+  len=20  recvLen=20  feCount+=0  rxdrCount+=20  -> PASS
+  len=21  recvLen=21  feCount+=0  rxdrCount+=21  -> PASS
+  len=22  recvLen=22  feCount+=0  rxdrCount+=22  -> PASS
+  len=23  recvLen=23  feCount+=0  rxdrCount+=23  -> PASS
+  len=24  recvLen=24  feCount+=0  rxdrCount+=24  -> PASS
+  len=25  recvLen=25  feCount+=0  rxdrCount+=25  -> PASS
+  len=26  recvLen=26  feCount+=0  rxdrCount+=26  -> PASS
+  len=27  recvLen=27  feCount+=0  rxdrCount+=27  -> PASS
+  len=28  recvLen=28  feCount+=0  rxdrCount+=28  -> PASS
+  len=29  recvLen=29  feCount+=0  rxdrCount+=29  -> PASS
+  len=30  recvLen=30  feCount+=0  rxdrCount+=30  -> PASS
+  len=31  recvLen=31  feCount+=0  rxdrCount+=31  -> PASS
+  len=32  recvLen=32  feCount+=0  rxdrCount+=32  -> PASS
+
+==========================================
+ 總結
+==========================================
+Serial3 (USART1, PA4/PA5) : 全部長度(1~32)PASS,完全沒有損毀
+Serial1 (UART1,  PC12/PC13) : 全部長度(1~32)PASS,完全沒有損毀
+==========================================

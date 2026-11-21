@@ -1,0 +1,52 @@
+=== up sweep 0 -> 100 ===
+  pct=  0  rpmL=    0.0  rpmR=    0.0  vL=0.000m/s  vR=0.000m/s
+  pct=  5  rpmL=   34.5  rpmR=   30.7  vL=0.181m/s  vR=0.161m/s
+  pct= 10  rpmL=   67.6  rpmR=   66.0  vL=0.354m/s  vR=0.346m/s
+  pct= 15  rpmL=   73.7  rpmR=   73.5  vL=0.386m/s  vR=0.385m/s
+  pct= 20  rpmL=   76.7  rpmR=   78.4  vL=0.402m/s  vR=0.411m/s
+  pct= 25  rpmL=  107.2  rpmR=  104.8  vL=0.561m/s  vR=0.549m/s
+  pct= 30  rpmL=  118.9  rpmR=  119.1  vL=0.623m/s  vR=0.623m/s
+  pct= 35  rpmL=  139.9  rpmR=  141.0  vL=0.732m/s  vR=0.738m/s
+  pct= 40  rpmL=  159.1  rpmR=  159.8  vL=0.833m/s  vR=0.837m/s
+  pct= 45  rpmL=  176.6  rpmR=  178.8  vL=0.925m/s  vR=0.936m/s
+  pct= 50  rpmL=  195.2  rpmR=  197.5  vL=1.022m/s  vR=1.034m/s
+  pct= 55  rpmL=  208.8  rpmR=  210.8  vL=1.093m/s  vR=1.104m/s
+  pct= 60  rpmL=  222.3  rpmR=  224.2  vL=1.164m/s  vR=1.174m/s
+  pct= 65  rpmL=  235.6  rpmR=  237.5  vL=1.234m/s  vR=1.244m/s
+  pct= 70  rpmL=  250.7  rpmR=  253.2  vL=1.313m/s  vR=1.326m/s
+  pct= 75  rpmL=  266.9  rpmR=  269.4  vL=1.397m/s  vR=1.411m/s
+  pct= 80  rpmL=  282.4  rpmR=  283.8  vL=1.479m/s  vR=1.486m/s
+  pct= 85  rpmL=  299.0  rpmR=  300.1  vL=1.566m/s  vR=1.572m/s
+  pct= 90  rpmL=  316.0  rpmR=  317.8  vL=1.654m/s  vR=1.664m/s
+  pct= 95  rpmL=  327.0  rpmR=  328.0  vL=1.712m/s  vR=1.718m/s
+  pct=100  rpmL=  335.3  rpmR=  336.3  vL=1.755m/s  vR=1.761m/s
+=== down sweep 100 -> 0 ===
+  pct=100  rpmL=  338.9  rpmR=  339.1  vL=1.775m/s  vR=1.776m/s
+  pct= 95  rpmL=  335.4  rpmR=  334.6  vL=1.756m/s  vR=1.752m/s
+  pct= 90  rpmL=  322.8  rpmR=  321.5  vL=1.690m/s  vR=1.683m/s
+  pct= 85  rpmL=  301.8  rpmR=  302.5  vL=1.580m/s  vR=1.584m/s
+  pct= 80  rpmL=  285.5  rpmR=  287.2  vL=1.495m/s  vR=1.504m/s
+  pct= 75  rpmL=  270.7  rpmR=  271.4  vL=1.417m/s  vR=1.421m/s
+  pct= 70  rpmL=  257.9  rpmR=  257.5  vL=1.350m/s  vR=1.348m/s
+  pct= 65  rpmL=  243.4  rpmR=  244.3  vL=1.275m/s  vR=1.279m/s
+  pct= 60  rpmL=  230.6  rpmR=  231.8  vL=1.207m/s  vR=1.214m/s
+  pct= 55  rpmL=  219.5  rpmR=  217.9  vL=1.149m/s  vR=1.141m/s
+  pct= 50  rpmL=  202.2  rpmR=  200.9  vL=1.059m/s  vR=1.052m/s
+  pct= 45  rpmL=  184.9  rpmR=  182.7  vL=0.968m/s  vR=0.957m/s
+  pct= 40  rpmL=  169.4  rpmR=  167.5  vL=0.887m/s  vR=0.877m/s
+  pct= 35  rpmL=  153.1  rpmR=  151.5  vL=0.802m/s  vR=0.793m/s
+  pct= 30  rpmL=  129.2  rpmR=  126.8  vL=0.676m/s  vR=0.664m/s
+  pct= 25  rpmL=  101.4  rpmR=   99.7  vL=0.531m/s  vR=0.522m/s
+  pct= 20  rpmL=   90.1  rpmR=   86.4  vL=0.472m/s  vR=0.452m/s
+  pct= 15  rpmL=   75.8  rpmR=   71.7  vL=0.397m/s  vR=0.375m/s
+  pct= 10  rpmL=   68.2  rpmR=   65.9  vL=0.357m/s  vR=0.345m/s
+  pct=  5  rpmL=   41.6  rpmR=   39.1  vL=0.218m/s  vR=0.205m/s
+  pct=  0  rpmL=    0.0  rpmR=    0.0  vL=0.000m/s  vR=0.000m/s
+
+raw samples -> /home/<orin-user>/car2_ws/run/throttle_rpm_raw_20260917_191648.csv
+step summary -> /home/<orin-user>/car2_ws/run/throttle_rpm_summary_20260917_191648.csv
+
+估計死區(dead zone): pct < 5% 時輪子幾乎不轉
+死區以上線性擬合: rpm = 3.21 * pct + 26.68  (R^2=0.9957)
+換算：v = 0.0168 * pct(%) + 0.1397  (m/s)
+最大觀測轉速: 335.8 rpm (= 1.758 m/s)

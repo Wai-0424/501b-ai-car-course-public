@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local files and working directories
+/電路規劃圖/
+/書面資料/
+/build/
+/tmp/
+/_trash_for_review/
+*.kicad_prl
+
+# Camera captures from the car 2 angle calibration
+/hardware/car2/calibration/angle_test_20260915/angle_test/*.jpg
+
+# Local camera and console captures from the car 1 bench tests
+/firmware/car1/test_logs/car1_calibration_snapshot_20261013.jpg
+/firmware/car1/test_logs/car1_manual_console_20261013.png
+/firmware/car1/test_logs/car1_overlay_live_20261013.jpg
+
+# Locally built flash backups for the Car 2 UART experiment
+/firmware/car2/investigations/2026-10-uart-wholepacket-test/backup_before_flash/*.bin
+/firmware/car2/investigations/2026-10-uart-wholepacket-test/backup_before_flash/*.hex

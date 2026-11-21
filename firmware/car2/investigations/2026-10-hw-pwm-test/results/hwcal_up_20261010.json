@@ -1,0 +1,10 @@
+{
+  "L": {
+    "start_duty": 85,
+    "rpm_in_last_300ms": 30.6
+  },
+  "R": {
+    "start_duty": 90,
+    "rpm_in_last_300ms": 41.7
+  }
+}

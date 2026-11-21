@@ -1,0 +1,830 @@
+// 車一 BMduino / L298N 控制韌體，2026-10-10 架高驗證版。
+// 通訊：Serial3 與本機 USB，115200 baud；CMD 必須有 XOR8 checksum 與 seq。
+// 方向：PCA9685 0x40 / Wire1，CH1/2 -> M1 IN1/2，CH3/4 -> M2 IN3/4。
+// 轉速：硬體 5 kHz PWM，D8 -> M1 ENA，D9 -> M2 ENB，經 74LS14 雙級緩衝。
+// 編碼器：M1 D2/D3、M2 D6/D7，四倍正交解碼；兩輪暫用 1560 tick/輸出軸轉。
+// 非零 CMD 百分比映射 55–180 RPM；PID 50 Hz、查表前饋、限速與安全停車。
+// 詳細接線、控制假設、測試結果請見同資料夾 README.md。
+//#include <Arduino.h>
+#include <Wire.h>
+#include <Adafruit_PWMServoDriver.h>
+
+// 2026-09-08更新：BMCOM1(Serial1)現在給PCA9685(Wire1/I2C1)用，
+// Jetson<->BMduino通訊改走SPI1排針(Serial3: TX3=D27/PA4, RX3=D28/PA5)。
+#define SerialBM Serial3
+
+Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver(0x40, Wire1);
+bool pcaReady = false;
+uint32_t lastPcaCheckMs = 0;
+const uint32_t PCA_CHECK_PERIOD_MS = 1000;
+
+// ---- PCA9685 channel 配置 ----
+const uint8_t CH_STEER = 0;
+const uint8_t CH_M1_IN1 = 1;
+const uint8_t CH_M1_IN2 = 2;
+const uint8_t CH_M2_IN1 = 3;  // 實測：CH3 -> L298N IN3
+const uint8_t CH_M2_IN2 = 4;  // 實測：CH4 -> L298N IN4
+
+// ---- 馬達轉速 PWM（BMduino 硬體 5 kHz PWM，經 74LS14 雙級正邏輯緩衝）----
+const uint8_t M1_PWM_PIN = 8;  // 實測：D8 → 74LS14(雙級) → M1 ENA
+const uint8_t M2_PWM_PIN = 9;  // 實測：D9 → 74LS14(雙級) → M2 ENB
+
+// ---- 編碼器輸入（四倍正交解碼）----
+const uint8_t PIN_M1_A = 2;  // M1 編碼器 A 相（原本D4接觸不良，改接到D2）
+const uint8_t PIN_M1_B = 3;  // M1 編碼器 B 相（原本D5有雜訊，改接到D3）
+const uint8_t PIN_M2_A = 6;
+const uint8_t PIN_M2_B = 7;
+
+// 實測 servo（TBSK20）datasheet：500~2500us 對應 0~180°，中立點 1500us
+const uint16_t STEER_MIN_US = 500;
+const uint16_t STEER_MAX_US = 2500;
+
+const uint32_t CMD_TIMEOUT_MS = 500;    // 有效CMD逾時後關閉Enable
+// 架高雙輪閉環實測通過；改成 false 可在保留 UART 遙測時鎖住馬達輸出。
+const bool L298N_PID_CALIBRATED = true;
+const uint8_t FAULT_CALIBRATION_REQUIRED = 0x08;
+const uint8_t FAULT_M1_STALL = 0x01;
+const uint8_t FAULT_M2_STALL = 0x02;
+const uint8_t FAULT_PCA_OFFLINE = 0x04;
+const uint32_t STATUS_PERIOD_MS = 100;  // 10 Hz 遙測；PWM 計時器獨立運作
+
+const uint8_t NUM_SENSORS = 1;  // 目前只有1個佔位感測器，之後要加TOF就把這個數字改大
+
+const uint32_t PWM_FREQ_HZ = 5000;
+
+// ---- 編碼器/PID 校正常數 ----
+// 2026-10-10 手轉十圈曾量到 M1=15585、M2=13200/13181 tick；
+// 使用者確認兩顆馬達與減速配置相同，指定 PID 階段暫以兩輪
+// 1560 tick／輸出軸轉換算。M2 實際分辨率仍待獨立驗證，
+// 因此此值是控制假設，不是已確認的編碼器規格。
+const int32_t TICKS_PER_REV_M1 = 1560;
+const int32_t TICKS_PER_REV_M2 = 1560;
+const uint32_t PID_INTERVAL_MS = 20;  // PID 更新率 50Hz
+
+// ---- 距離回報（STA的unit欄位，2026-09-14新增，2026-09-15改名+改整數累積）----
+// 現階段不綁定實際跑道一圈的長度，直接拿「一輪轉一圈」當作unit的最小距離
+// 單位（目前暫用兩輪相同的tick/輸出軸轉換算，不需要另外量測跑道），單純讓Orin端
+// 有個粗略的距離/位移信號可以用（不是真正的圈數——真正第幾圈由Orin端用
+// 視覺起終點標記計算，unit只提供防呆用的距離參考，故意不取名lap避免
+// 誤會成圈數）。之後如果真的要換成別的距離單位，只要把這個常數換成量出來
+// 的tick數即可，不影響下面的累加/wrap邏輯。
+// 先將各輪 tick 換算成同一個「輸出軸圈數」整數尺度，再取兩輪平均。
+// 1560 是目前兩輪暫用的每轉 tick 數；兩輪各轉一圈時總和為 2*1560，
+// unit 正好加 1。變更每轉 tick 數時
+// 須同步檢查此尺度；整數餘數不會因反覆取平均而流失。
+const int32_t UNIT_SCALE = 1560;
+const int32_t UNIT_WEIGHT_M1 = UNIT_SCALE / TICKS_PER_REV_M1;
+const int32_t UNIT_WEIGHT_M2 = UNIT_SCALE / TICKS_PER_REV_M2;
+const int32_t UNIT_THRESHOLD_SCALED = 2 * UNIT_SCALE;
+static_assert(UNIT_SCALE % TICKS_PER_REV_M1 == 0 &&
+              UNIT_SCALE % TICKS_PER_REV_M2 == 0,
+              "UNIT_SCALE must be divisible by both encoder resolutions");
+
+// 2026-10-10 L298N 架高開迴路 6 s 測試，取第 4–6 s 的雙向平均。
+// 診斷韌體的軟體 PWM 與本版硬體 PWM 不完全相同；此表僅作初始前饋，
+// 2026-10-10 已由正式韌體架高閉環數據確認可收斂。
+const uint8_t FF_LUT_N = 8;
+const float FF_LUT_DUTY[FF_LUT_N] = {120, 140, 160, 180, 200, 220, 240, 255};
+const float FF_LUT_TICKS_M1[FF_LUT_N] = {30.0f, 46.5f, 64.6f, 82.9f, 100.2f, 127.8f, 152.3f, 171.4f};
+const float FF_LUT_TICKS_M2[FF_LUT_N] = {31.3f, 42.8f, 59.5f, 74.5f, 92.5f, 110.6f, 133.9f, 150.9f};
+
+// 車一不追求滿速：100% 指令 = 180 RPM = 93.6 tick/20 ms。
+// 開迴路 duty 255 約 M1 330+、M2 290+ RPM，180 RPM 留有大幅 duty 餘裕。
+const float MAX_TICKS_PER_INTERVAL_M1 = 93.6f;
+const float MAX_TICKS_PER_INTERVAL_M2 = 93.6f;
+// 低於約 55 RPM 尚無穩定連續轉動的實測點；非零指令暫映射到 55–180 RPM。
+const float MIN_TICKS_PER_INTERVAL = 28.6f;
+
+// 加上 feedforward 之後，PID 只需要處理殘差（feedforward 沒抓準的部分），
+// 增益可以比純 PID（無 feedforward）小很多，起始值仍需要實測微調：
+const float PID_KP = 0.50f;
+const float PID_KI = 0.04;
+const float PID_INTEGRAL_LIMIT = 400.0;  // 最多提供 ±16 duty 修正
+const uint32_t STALL_CUTOFF_MS = 600;    // 無編碼器回授切斷
+const uint32_t FAULT_CLEAR_MS = 300;     // 零指令維持此時間才解鎖
+
+// 目標速度階躍變化時（例如從0->30%），feedforward+Kp*error 算出來的
+// duty 會直接跳到很高（例如140+），這個 duty 會維持好幾個PID週期直到
+// 馬達+齒輪箱（有實際轉動慣量、不是瞬間響應）追上來，追上來的過程中
+// 累積的角動量會讓實際轉速衝過頭（overshoot），衝過頭之後才被PID往回拉，
+// 造成持續震盪。加上輸出斜率限制（slew rate limit）：duty 每個PID週期
+// 最多只能變動這麼多，等於強制「軟啟動」，避免一次給太大的duty衝擊。
+const float MAX_DUTY_STEP_PER_CYCLE = 8.0;
+
+// L298N 換向前先關閉 Enable、兩個方向腳拉低。這段是空轉等待，
+// 不是主動煞車；等待至少 300 ms，並確認編碼器連續 3 個 PID 週期
+// 都低於 5 tick/20 ms（約 9.6 RPM）才放行。負載下仍需驗證。
+const uint32_t REVERSE_BRAKE_MS = 300;
+const int32_t REVERSE_STOP_TICKS = 5;
+const uint8_t REVERSE_STOP_CYCLES = 3;
+
+// ---- 型別定義（要放在所有函式之前，避免 Arduino 自動產生的函式原型
+// 在 struct 定義之前找不到型別）----
+struct PidState {
+  float integral;
+  int32_t lastPos;
+  float filteredSpeed;  // 實際速度的低通濾波值，降低編碼器雜訊（PID 快速切換
+                         // duty 時觀察到耦合雜訊會讓 tick 數虛高）對 PID 的影響
+  int8_t lastDir;  // 上次下達 PCA9685 的方向；方向不變便不重送 I2C。
+  int8_t lastNonZeroDir;  // 上一次「真正驅動過」的非零方向（0=還沒有過，開機預設）。
+                          // 跟lastDir不同：lastDir在targetPercent==0時會被設成0，
+                          // lastNonZeroDir會保留，才能在停止之後判斷「接下來這個
+                          // 方向跟停止前是不是反的」。
+  uint32_t zeroSinceMs;   // 最近一次從非零方向進入duty=0（煞車）狀態的時間點，
+                          // 用來算「已經煞了多久」，不管是直接反轉觸發的煞車、
+                          // 還是上層先送了個0再送反方向，一律用同一把尺量。
+  uint8_t reverseLowSpeedCycles;
+  uint16_t noMotionMs;
+  bool fault;
+  bool faultClearing;
+  uint32_t faultClearSinceMs;
+};
+
+struct LinkState {
+  Stream* port;
+  // A STA frame now includes ackseq and both duty values.  Keep the
+  // chunked Serial3 buffer larger than the complete framed line so the
+  // terminating checksum and '>' are never truncated on the Orin link.
+  char buf[192];
+  uint8_t len;
+  bool active;
+  uint32_t byteCount;
+};
+
+// 非阻塞分段傳送用的狀態結構（2026-09-15新增，沿用車2已驗證過的做法，見
+// docs/architecture/uart_tx_corruption_bug.md）。要放在所有函式之前，否則
+// Arduino自動產生的函式原型（startSend/pumpSend簽章用到這個型別）會插在
+// 這個定義之前，導致「型別未宣告」的編譯錯誤。
+struct ChunkedSender {
+  // Must contain the entire framed STA line, including the checksum and
+  // trailing newline.  The old 80-byte limit silently removed `>\n` after
+  // ackseq/duty fields were added, so pyserial.readline() could never parse a
+  // valid STA frame on the Orin.
+  char buf[192];
+  uint8_t len;
+  uint8_t pos;
+  uint32_t nextSendMs;
+  bool active;
+};
+
+// ---- 目前狀態 ----
+int steerAngle = 0;    // -90~90，0=直行、負=左轉、正=右轉
+int leftSpeed = 0;     // -100~100，PID 目標速度百分比（不是直接的PWM duty）
+int rightSpeed = 0;
+uint8_t m1DriverDuty = 0;  // 驅動板端 ENA 目前的 duty（0~255），由 PID 動態調整
+uint8_t m2DriverDuty = 0;  // 驅動板端 ENB 目前的 duty（0~255），由 PID 動態調整
+uint32_t lastCmdMs = 0;
+uint32_t lastStatusMs = 0;
+uint32_t lastPidMs = 0;
+uint32_t cmdChecksumFailCount = 0;  // 除錯用：checksum驗證失敗的CMD累計次數，隨STA debug line印出
+uint16_t lastAcceptedSeq = 0;
+bool hasAcceptedSeq = false;
+int32_t lastStatusPosM1 = 0;
+int32_t lastStatusPosM2 = 0;
+uint32_t lastStatusSampleMs = 0;
+
+// ---- 編碼器計數（四倍正交解碼，ISR 更新）----
+volatile int32_t posM1 = 0;
+volatile int32_t posM2 = 0;
+volatile uint8_t stateM1 = 0;
+volatile uint8_t stateM2 = 0;
+
+static const int8_t QDEC_TABLE[16] = {
+  0, -1, 1, 0,
+  1, 0, 0, -1,
+  -1, 0, 0, 1,
+  0, 1, -1, 0
+};
+
+void updateQuadM1() {
+  uint8_t a = digitalRead(PIN_M1_A);
+  uint8_t b = digitalRead(PIN_M1_B);
+  uint8_t newState = (a << 1) | b;
+  posM1 += QDEC_TABLE[((stateM1 << 2) | newState) & 0x0F];
+  stateM1 = newState;
+}
+void updateQuadM2() {
+  uint8_t a = digitalRead(PIN_M2_A);
+  uint8_t b = digitalRead(PIN_M2_B);
+  uint8_t newState = (a << 1) | b;
+  posM2 += QDEC_TABLE[((stateM2 << 2) | newState) & 0x0F];
+  stateM2 = newState;
+}
+void isrM1A() { updateQuadM1(); }
+void isrM1B() { updateQuadM1(); }
+void isrM2A() { updateQuadM2(); }
+void isrM2B() { updateQuadM2(); }
+
+// ---- PID 狀態 ----
+PidState pidM1State = { 0, 0, 0, 2, 0, 0, 0, 0, false, false, 0 };
+PidState pidM2State = { 0, 0, 0, 2, 0, 0, 0, 0, false, false, 0 };
+
+// 除錯用：最近一次 PID 週期量到的實際速度（tick/週期，沿目標方向為正）
+float lastActualM1 = 0;
+float lastActualM2 = 0;
+
+// ---- 距離回報：unit 是 uint8_t 循環計數（0~255 wrap），每累積
+// UNIT_THRESHOLD_SCALED（兩輪各轉一圈的歸一化門檻）就
+// +1；後退累積到反方向一樣多就 -1（uint8_t 溢位/下溢自動變成0/255，本身
+// 就是正確的wrap，不是bug）。故意不叫lap：這不是真正的跑道圈數（真正第
+// 幾圈由Orin端用視覺起終點標記算），只是一個固定距離單位，叫lap容易誤會。
+//
+// unitAccumScaled 是int32_t（不是float，避免長時間浮點累加誤差）累積的
+// 餘數，帶正負號、前進為正。刻意不沿用PID的lastActualM1/M2（那是「相對
+// 於目前指令方向」、經過EMA低通濾波、且targetPercent==0/煞車時會被強制
+// 清成0的值，拿來做絕對距離累積會漏算煞車時的殘餘滑行），而是用
+// unitLastPosM1/M2獨立記錄上次讀到的原始posM1/posM2，每次直接算tick差值
+// 乘前進方向的位移符號（M1=-1、M2=+1），
+// 得到的是不受指令/PID狀態影響的絕對物理位移，再用各輪的權重換成
+// 共用圈數尺度；門檻乘2代表兩輪平均前進一個輸出軸圈數。
+//
+// 【重要】Orin端解讀unit時不能用簡單的「無號差值」（(now-prev)&0xFF），
+// 那個算法假設兩次讀取之間車子淨移動一定是前進，車子倒退時會被誤判成
+// 快要繞完一圈。正確做法是signed 8-bit差值：
+//   raw = (unit_now - unit_prev) & 0xFF
+//   delta = raw if raw < 128 else raw - 256   # 映射到 -128~127
+// 只要兩次STA之間淨移動不超過127個unit（幾乎必定成立），這樣才能正確
+// 處理前進/後退兩種方向。
+//
+// 【重開機注意】unit在BMduino重開機時會回到0，STA另外加的upms欄位
+// （開機以來的millis()，單位ms）就是給Orin端判斷「這包的開機時間比上一包
+// 還短」，代表中間發生了重開機，這時候要重設自己的unit基準值，不能直接
+// 拿新值跟舊值做signed-diff，否則會被誤判成一次大幅移動。
+uint8_t unit = 0;
+int32_t unitAccumScaled = 0;
+int32_t unitLastPosM1 = 0;
+int32_t unitLastPosM2 = 0;
+
+// 每次 loop() 都呼叫（不依賴PID時序），獨立把M1/M2最新的原始encoder位置
+// 換算成絕對物理位移、累加、跨過門檻就讓 unit +1/-1。
+void updateDistanceUnit() {
+  int32_t currentM1 = posM1;
+  int32_t currentM2 = posM2;
+  int32_t deltaM1 = currentM1 - unitLastPosM1;
+  int32_t deltaM2 = currentM2 - unitLastPosM2;
+  unitLastPosM1 = currentM1;
+  unitLastPosM2 = currentM2;
+
+  // 車輛前進時 M1 原始計數遞減、M2 遞增。
+  unitAccumScaled += deltaM1 * (-UNIT_WEIGHT_M1) + deltaM2 * UNIT_WEIGHT_M2;
+
+  while (unitAccumScaled >= UNIT_THRESHOLD_SCALED) {
+    unitAccumScaled -= UNIT_THRESHOLD_SCALED;
+    unit++;
+  }
+  while (unitAccumScaled <= -UNIT_THRESHOLD_SCALED) {
+    unitAccumScaled += UNIT_THRESHOLD_SCALED;
+    unit--;
+  }
+}
+
+// ---- 每個 serial 埠各自的收訊緩衝 ----
+LinkState linkUSB = { &Serial, {0}, 0, false, 0 };
+LinkState linkBM = { &SerialBM, {0}, 0, false, 0 };
+
+// ---- 非阻塞分段傳送（2026-09-15新增，取代原本一次整包送出的
+// SerialBM.print()）----
+// 車1的STA封包一直都超過 docs/architecture/uart_tx_corruption_bug.md
+// 記錄的5byte安全門檻（連最早的`<STA,S1 -1>`都已經是12byte），只是之前
+// Orin端沒有驗證STA內容，壞掉的封包被悄悄丟棄、沒人注意到；現在STA
+// 變長（加了checksum/unit/upms）、Orin端又開始嚴格驗證checksum，
+// 「polling內容偶爾壞掉」變成「幾乎每包都被判定壞掉、完全收不到回授」。
+// 這裡沿用車2已經實測驗證過的做法：每次pumpSend()最多送一個5-byte
+// chunk就return，段落間隔靠「下次loop()進來時millis()是否已到
+// nextSendMs」自然形成，不佔用任何一次loop()呼叫超過一個write()的時間，
+// 不阻塞主循環。ChunkedSender結構定義移到檔案
+// 前面，原因見那裡的註解。
+ChunkedSender bmSender = { {0}, 0, 0, 0, false };
+
+void startSend(ChunkedSender& cs, const char* s) {
+  size_t n = strlen(s);
+  if (n >= sizeof(cs.buf)) n = sizeof(cs.buf) - 1;
+  memcpy(cs.buf, s, n);
+  cs.buf[n] = '\0';
+  cs.len = (uint8_t)n;
+  cs.pos = 0;
+  cs.nextSendMs = millis();
+  cs.active = true;
+}
+
+void pumpSend(ChunkedSender& cs, Stream& port) {
+  if (!cs.active) return;
+  if ((int32_t)(millis() - cs.nextSendMs) < 0) return;
+  uint8_t remain = cs.len - cs.pos;
+  uint8_t n = remain < 5 ? remain : 5;
+  port.write((const uint8_t*)(cs.buf + cs.pos), n);
+  cs.pos += n;
+  cs.nextSendMs = millis() + 1;  // 1ms間隔，沿用車2在115200/460800下都已驗證過的保守值
+  if (cs.pos >= cs.len) cs.active = false;
+}
+
+void applyCommand(const char* key, int value) {
+  if (strcmp(key, "fwa") == 0) {
+    steerAngle = constrain(value, -60, 60);  // 0=直行、負=左轉、正=右轉（2026-09-08測試放寬到±60，見README已知問題）
+  } else if (strcmp(key, "bwl") == 0) {
+    // 2026-09-08實測：正值指令實際會讓後輪往後轉，取負號修正成
+    // 「正值=前進」，PID/encSign已驗證過不用動，只是這裡的方向語意相反。
+    leftSpeed = -constrain(value, -100, 100);
+  } else if (strcmp(key, "bwr") == 0) {
+    rightSpeed = -constrain(value, -100, 100);
+  }
+}
+
+bool pcaWritePinChecked(uint8_t channel, bool high) {
+  uint8_t result = high ? pwm.setPWM(channel, 4096, 0) : pwm.setPWM(channel, 0, 4096);
+  if (result != 0) pcaReady = false;
+  return result == 0;
+}
+
+bool driveDirection(uint8_t in1Ch, uint8_t in2Ch, int dir) {
+  bool a, b;
+  if (dir > 0) {
+    a = pcaWritePinChecked(in1Ch, true);
+    b = pcaWritePinChecked(in2Ch, false);
+  } else if (dir < 0) {
+    a = pcaWritePinChecked(in1Ch, false);
+    b = pcaWritePinChecked(in2Ch, true);
+  } else {
+    a = pcaWritePinChecked(in1Ch, false);
+    b = pcaWritePinChecked(in2Ch, false);  // Enable=0 時停止輸出
+  }
+  return a && b;
+}
+
+// driveDirection() 每次呼叫都是兩次 I2C 交易（pwm.setPin() x2），實測
+// 這樣的 I2C 交易加起來會讓 loop() 卡住約 1ms 以上；方向沒變不需要重送，
+// 這裡加一層快取，
+// 只有方向真的改變（含第一次呼叫）才實際送 I2C。
+bool driveDirectionCached(uint8_t in1Ch, uint8_t in2Ch, int dir, int8_t* lastDir) {
+  if (!pcaReady) return false;
+  if (*lastDir == dir) return true;
+  if (!driveDirection(in1Ch, in2Ch, dir)) return false;
+  *lastDir = (int8_t)dir;
+  return true;
+}
+
+bool pcaProbe() {
+  Wire1.beginTransmission(0x40);
+  Wire1.write((uint8_t)0x00);
+  return Wire1.endTransmission() == 0;
+}
+
+bool pcaInit() {
+  if (!pcaProbe()) return false;
+  pwm.begin();
+  pwm.setPWMFreq(50);
+  bool m1Off = driveDirection(CH_M1_IN1, CH_M1_IN2, 0);
+  bool m2Off = driveDirection(CH_M2_IN1, CH_M2_IN2, 0);
+  if (!(m1Off && m2Off)) return false;
+  pidM1State.lastDir = 0;
+  pidM2State.lastDir = 0;
+  return true;
+}
+
+void pcaHealthTick(uint32_t now) {
+  if (now - lastPcaCheckMs < PCA_CHECK_PERIOD_MS) return;
+  lastPcaCheckMs = now;
+  if (pcaReady) {
+    if (!pcaProbe()) pcaReady = false;
+  } else {
+    pcaReady = pcaInit();
+  }
+  if (!pcaReady) {
+    m1DriverDuty = 0;
+    m2DriverDuty = 0;
+    updateMotorPWM();
+  }
+}
+
+// 車2同款分段查表前饋：以目標 tick/PID週期內插所需 duty。
+float ffDutyForTicks(const float* ticksLut, float ticks) {
+  if (ticks <= ticksLut[0]) return FF_LUT_DUTY[0];
+  for (uint8_t i = 1; i < FF_LUT_N; i++) {
+    if (ticks <= ticksLut[i]) {
+      float span = ticksLut[i] - ticksLut[i - 1];
+      float fraction = span > 0.01f ? (ticks - ticksLut[i - 1]) / span : 0.0f;
+      return FF_LUT_DUTY[i - 1] + fraction * (FF_LUT_DUTY[i] - FF_LUT_DUTY[i - 1]);
+    }
+  }
+  return FF_LUT_DUTY[FF_LUT_N - 1];
+}
+
+// PID 速度閉環：targetPercent 是 -100~100 的目標速度百分比。
+// 0 立即停用 Enable；非零命令保守映射至 55–180 RPM 的連續轉動範圍。
+void updateMotorPID(int targetPercent, volatile int32_t* pos, PidState* pid,
+                     uint8_t* dutyOut, uint8_t in1Ch, uint8_t in2Ch, float* actualOut,
+                     const float* ffTicksLut, float maxTicksPerInterval,
+                     int encSign) {
+  int32_t currentPos = *pos;
+  int32_t deltaTicks = currentPos - pid->lastPos;
+  pid->lastPos = currentPos;
+
+  uint32_t now = millis();
+
+  if (pid->fault) {
+    if (targetPercent == 0) {
+      if (!pid->faultClearing) {
+        pid->faultClearing = true;
+        pid->faultClearSinceMs = now;
+      }
+      if (now - pid->faultClearSinceMs >= FAULT_CLEAR_MS) {
+        pid->fault = false;
+        pid->faultClearing = false;
+        pid->noMotionMs = 0;
+      }
+    } else {
+      pid->faultClearing = false;
+    }
+    if (pid->fault) {
+      driveDirectionCached(in1Ch, in2Ch, 0, &pid->lastDir);
+      *dutyOut = 0;
+      pid->integral = 0;
+      pid->filteredSpeed = 0;
+      *actualOut = 0;
+      return;
+    }
+  }
+
+  if (targetPercent == 0) {
+    if (pid->lastDir != 0) {
+      pid->zeroSinceMs = now;  // 剛從有在轉變成煞車，記錄煞車起點
+    }
+    driveDirectionCached(in1Ch, in2Ch, 0, &pid->lastDir);
+    *dutyOut = 0;
+    pid->integral = 0;
+    pid->filteredSpeed = 0;
+    pid->noMotionMs = 0;
+    pid->reverseLowSpeedCycles = 0;
+    *actualOut = 0;
+    return;
+  }
+
+  if (!pcaReady) {
+    *dutyOut = 0;
+    pid->integral = 0;
+    pid->filteredSpeed = 0;
+    pid->noMotionMs = 0;
+    *actualOut = 0;
+    return;
+  }
+
+  int dir = targetPercent > 0 ? 1 : -1;
+
+  // 反轉保護：不管上層是「直接送反方向」還是「先送0再送反方向」，
+  // 只要跟上次真正驅動過的方向相反，先等至少 300 ms，
+  // 然後以原始 encoder delta 確認近乎停轉；避免固定延遲過後仍高速滑行。
+  if (pid->lastNonZeroDir != 0 && pid->lastNonZeroDir != dir) {
+    if (pid->lastDir != 0) {
+      // 還沒進入煞車狀態（這是直接翻轉的情況），先煞車、記錄起點，
+      // 這個週期先不送新方向。
+      pid->zeroSinceMs = now;
+      pid->reverseLowSpeedCycles = 0;
+      driveDirectionCached(in1Ch, in2Ch, 0, &pid->lastDir);
+      *dutyOut = 0;
+      pid->integral = 0;
+      pid->filteredSpeed = 0;
+      pid->noMotionMs = 0;
+      *actualOut = 0;
+      return;
+    }
+    if ((int32_t)(now - pid->zeroSinceMs) < (int32_t)REVERSE_BRAKE_MS) {
+      *dutyOut = 0;
+      pid->noMotionMs = 0;
+      *actualOut = 0;
+      return;
+    }
+    if (deltaTicks >= -REVERSE_STOP_TICKS && deltaTicks <= REVERSE_STOP_TICKS) {
+      if (pid->reverseLowSpeedCycles < REVERSE_STOP_CYCLES) pid->reverseLowSpeedCycles++;
+    } else {
+      pid->reverseLowSpeedCycles = 0;
+    }
+    if (pid->reverseLowSpeedCycles < REVERSE_STOP_CYCLES) {
+      *dutyOut = 0;
+      pid->noMotionMs = 0;
+      *actualOut = 0;
+      return;
+    }
+  }
+
+  pid->lastNonZeroDir = dir;
+  pid->reverseLowSpeedCycles = 0;
+
+  if (deltaTicks == 0) {
+    if (pid->noMotionMs < STALL_CUTOFF_MS) pid->noMotionMs += PID_INTERVAL_MS;
+  } else {
+    pid->noMotionMs = 0;
+  }
+  if (pid->noMotionMs >= STALL_CUTOFF_MS) {
+    pid->fault = true;
+    pid->faultClearing = false;
+    pid->zeroSinceMs = now;
+    driveDirectionCached(in1Ch, in2Ch, 0, &pid->lastDir);
+    *dutyOut = 0;
+    pid->integral = 0;
+    pid->filteredSpeed = 0;
+    *actualOut = 0;
+    return;
+  }
+
+  // encSign：修正編碼器計數方向跟馬達命令方向的正負號對應，兩顆馬達的
+  // 編碼器A/B相接線方向不一樣，指令方向相同時量到的原始tick正負號會
+  // 不同（PID算error要看正確符號，不然目標速度是正的但量到的
+  // actualSpeed一直是負的，PID會拼命把duty往上衝，越衝越錯）。
+  // 新 L298N 指令方向與車輛前進語意相反：M1 傳 +1、M2 傳 -1。
+  float rawActualSpeed = deltaTicks * dir * encSign;  // 沿著目標方向移動視為正值
+
+  // 低通濾波（指數移動平均）：PID 快速切換 duty 時，編碼器線上觀察到
+  // 耦合雜訊會讓瞬間 tick 數虛高，濾波後的值比較能反映真實趨勢。
+  // ALPHA 越小濾波越強（但反應變慢），0.3 是折衷起始值。
+  const float ALPHA = 0.3f;
+  pid->filteredSpeed = ALPHA * rawActualSpeed + (1.0f - ALPHA) * pid->filteredSpeed;
+  float actualSpeed = pid->filteredSpeed;
+  *actualOut = actualSpeed;
+
+  float targetSpeed = MIN_TICKS_PER_INTERVAL +
+      ((float)(abs(targetPercent) - 1) / 99.0f) *
+      (maxTicksPerInterval - MIN_TICKS_PER_INTERVAL);
+  float error = targetSpeed - actualSpeed;
+
+  float feedforward = ffDutyForTicks(ffTicksLut, targetSpeed);
+
+  // 位置式 PID：每次直接算出完整輸出（不是疊加在上次 duty 上），
+  // feedforward 當基準、PID 項只做修正。
+  // anti-windup：先用「還沒加上這次誤差」的積分算一次嘗試輸出，如果會
+  // 飽和（超出0~255），就不要再把這次誤差疊加進積分，避免積分越滾越大、
+  // 之後要花很久才能退回來。
+  float tentativeOutput = feedforward + PID_KP * error + PID_KI * pid->integral;
+  float prevDuty = (float)(*dutyOut);
+  bool slewLimited = (tentativeOutput > prevDuty + MAX_DUTY_STEP_PER_CYCLE) ||
+                     (tentativeOutput < prevDuty - MAX_DUTY_STEP_PER_CYCLE);
+  bool willSaturate = (tentativeOutput <= 0.0f) || (tentativeOutput >= 255.0f) || slewLimited;
+  if (!willSaturate) {
+    pid->integral = constrain(pid->integral + error, -PID_INTEGRAL_LIMIT, PID_INTEGRAL_LIMIT);
+  }
+
+  float output = feedforward + PID_KP * error + PID_KI * pid->integral;
+
+  // 斜率限制：這次的duty不能跟上次差太多，強制平滑過渡，避免階躍指令
+  // 直接把duty打到頂造成馬達轉動慣量帶來的overshoot。
+  float slewedOutput = constrain(output, prevDuty - MAX_DUTY_STEP_PER_CYCLE, prevDuty + MAX_DUTY_STEP_PER_CYCLE);
+
+  float newDuty = constrain(slewedOutput, 0.0f, 255.0f);
+  *dutyOut = (uint8_t)newDuty;
+
+  if (!driveDirectionCached(in1Ch, in2Ch, dir, &pid->lastDir)) {
+    *dutyOut = 0;
+    pid->integral = 0;
+  }
+}
+
+void updateSteering() {
+  if (!pcaReady) return;
+  // steerAngle -90(左)~90(右) 對應 STEER_MIN_US~STEER_MAX_US。如果實際
+  // 裝上車後左右方向跟預期相反，把 STEER_MIN_US/STEER_MAX_US 兩個值
+  // 對調即可，不用改這行。
+  uint16_t steerUs = map(steerAngle, -90, 90, STEER_MIN_US, STEER_MAX_US);
+  pwm.writeMicroseconds(CH_STEER, steerUs);
+}
+
+// 車2已驗證的硬體 PWM。D8/D9 計時器在 Serial/I2C 期間維持 5 kHz 載波。
+void updateMotorPWM() {
+  analogWrite(M1_PWM_PIN, m1DriverDuty);
+  analogWrite(M2_PWM_PIN, m2DriverDuty);
+}
+
+// 感測器讀值佔位，之後接 TOF 等模組就把這裡換成實際讀取。
+// 回傳 -1 代表這個感測器目前無效/未接。
+int16_t readSensorMM(uint8_t index) {
+  (void)index;
+  return -1;
+}
+
+// 計算 checksum：將 s[0..len-1] 逐字元進行 XOR 運算（跟車2韌體同一套演算法）。
+uint8_t xorChecksum(const char* s, size_t len) {
+  uint8_t cs = 0;
+  for (size_t i = 0; i < len; i++) cs ^= (uint8_t)s[i];
+  return cs;
+}
+
+// 驗證 CMD 末端的 ,cs XX 欄位，驗證通過就把frame在cs欄位前截斷（方便後面
+// strtok繼續解析），驗證失敗回傳false，呼叫端要整包丟棄、不執行任何動作。
+bool verifyAndStripChecksum(char* frame) {
+  char* csPos = strstr(frame, ",cs ");
+  if (csPos == nullptr) return false;
+  size_t payloadLen = (size_t)(csPos - frame);
+  uint8_t expected = (uint8_t)strtoul(csPos + 4, nullptr, 16);
+  if (xorChecksum(frame, payloadLen) != expected) return false;
+  frame[payloadLen] = '\0';
+  return true;
+}
+
+void handleFrame(char* frame) {
+  if (!verifyAndStripChecksum(frame)) {
+    cmdChecksumFailCount++;
+    return;
+  }
+
+  char* tok = strtok(frame, ",");
+  if (tok == nullptr || strcmp(tok, "CMD") != 0) return;
+
+  bool frameHasSeq = false;
+  uint16_t frameSeq = 0;
+  bool hasFwa = false, hasBwl = false, hasBwr = false;
+  int nextFwa = 0, nextBwl = 0, nextBwr = 0;
+  while ((tok = strtok(nullptr, ",")) != nullptr) {
+    char key[8];
+    int value;
+    if (sscanf(tok, "%7s %d", key, &value) == 2) {
+      if (strcmp(key, "seq") == 0 && value >= 0 && value <= 65535) {
+        frameSeq = (uint16_t)value;
+        frameHasSeq = true;
+      } else if (strcmp(key, "fwa") == 0) {
+        nextFwa = value;
+        hasFwa = true;
+      } else if (strcmp(key, "bwl") == 0) {
+        nextBwl = value;
+        hasBwl = true;
+      } else if (strcmp(key, "bwr") == 0) {
+        nextBwr = value;
+        hasBwr = true;
+      }
+    }
+  }
+
+  // 新車一通訊層要求 seq：STA 的 ackseq 可獨立辨識 Orin->BMduino 停滯。
+  if (!frameHasSeq) return;
+  // 整包驗證完成後才更新目標，缺 seq 的封包不得改變馬達速度。
+  if (hasFwa) applyCommand("fwa", nextFwa);
+  if (hasBwl) applyCommand("bwl", nextBwl);
+  if (hasBwr) applyCommand("bwr", nextBwr);
+  lastAcceptedSeq = frameSeq;
+  hasAcceptedSeq = true;
+  lastCmdMs = millis();
+  updateSteering();
+  // 馬達目標速度（leftSpeed/rightSpeed）交給 loop() 裡的週期性 PID 處理，
+  // 這裡不用馬上驅動，PID 最慢 PID_INTERVAL_MS 內就會跟上新目標。
+}
+
+void pollLink(LinkState& ls) {
+  while (ls.port->available()) {
+    char c = ls.port->read();
+    ls.byteCount++;
+    if (c == '<') {
+      ls.len = 0;
+      ls.active = true;
+      continue;
+    }
+    if (!ls.active) continue;
+    if (c == '>') {
+      ls.buf[ls.len] = '\0';
+      handleFrame(ls.buf);
+      ls.active = false;
+      ls.len = 0;
+      continue;
+    }
+    if (ls.len < sizeof(ls.buf) - 1) {
+      ls.buf[ls.len++] = c;
+    } else {
+      // 緩衝溢位，放棄這個封包重新同步
+      ls.active = false;
+      ls.len = 0;
+    }
+  }
+}
+
+void sendStatus() {
+  // rpmL/rpmR use vehicle-forward sign, independently of the PID's local
+  // encoder sign.  With the confirmed wiring, vehicle forward is M1 raw
+  // negative and M2 raw positive.  Calculate from status-to-status movement
+  // so it also reports coasting or a pushed wheel while the PID is stopped.
+  noInterrupts();
+  const int32_t statusPosM1 = posM1;
+  const int32_t statusPosM2 = posM2;
+  interrupts();
+  const int32_t deltaStatusM1 = statusPosM1 - lastStatusPosM1;
+  const int32_t deltaStatusM2 = statusPosM2 - lastStatusPosM2;
+  lastStatusPosM1 = statusPosM1;
+  lastStatusPosM2 = statusPosM2;
+  const uint32_t sampleMs = millis();
+  const uint32_t elapsedMs = sampleMs - lastStatusSampleMs;
+  lastStatusSampleMs = sampleMs;
+  // Use measured elapsed time; UART and I2C work can delay a nominal 100-ms
+  // status tick.  Each wheel uses its own measured encoder resolution.
+  const uint32_t statusIntervalMs = elapsedMs ? elapsedMs : 1;
+  const int64_t rpmDivisorM1 = (int64_t)TICKS_PER_REV_M1 * statusIntervalMs;
+  const int64_t rpmDivisorM2 = (int64_t)TICKS_PER_REV_M2 * statusIntervalMs;
+  const int32_t rpmL = (int32_t)((-(int64_t)deltaStatusM1 * 60000LL) / rpmDivisorM1);
+  const int32_t rpmR = (int32_t)(((int64_t)deltaStatusM2 * 60000LL) / rpmDivisorM2);
+
+  char payload[160];
+  const uint8_t fault =
+      (L298N_PID_CALIBRATED ? 0 : FAULT_CALIBRATION_REQUIRED) |
+      (pidM1State.fault ? FAULT_M1_STALL : 0) |
+      (pidM2State.fault ? FAULT_M2_STALL : 0) |
+      (pcaReady ? 0 : FAULT_PCA_OFFLINE);
+  int n = snprintf(payload, sizeof(payload),
+                   "STA,ackseq %u,f %u,dutyL %u,dutyR %u,rpmL %ld,rpmR %ld,posL %ld,posR %ld",
+                   (unsigned int)(hasAcceptedSeq ? lastAcceptedSeq : 0),
+                   fault,
+                   (unsigned int)m1DriverDuty,
+                   (unsigned int)m2DriverDuty,
+                   (long)rpmL,
+                   (long)rpmR,
+                   (long)statusPosM1,
+                   (long)statusPosM2);
+  for (uint8_t i = 1; i <= NUM_SENSORS; i++) {
+    int16_t d = readSensorMM(i);
+    n += snprintf(payload + n, sizeof(payload) - n, ",S%u %d", i, d);
+  }
+  n += snprintf(payload + n, sizeof(payload) - n, ",unit %u,upms %lu", unit, (unsigned long)millis());
+  uint8_t cs = xorChecksum(payload, strlen(payload));
+
+  char line[176];
+  snprintf(line, sizeof(line), "<%s,cs %02X>\n", payload, cs);
+
+  Serial.print(line);        // USB debug保留原樣行為，USB不受Serial1/Serial3那個bug影響
+  startSend(bmSender, line);  // 非阻塞排入BM傳送佇列，實際byte由loop()裡的
+                               // pumpSend()逐次送出，這裡不blocking
+
+  Serial.print(F("[enc] posM1="));
+  Serial.print(posM1);
+  Serial.print(F(" posM2="));
+  Serial.print(posM2);
+  Serial.print(F(" dutyM1="));
+  Serial.print(m1DriverDuty);
+  Serial.print(F(" dutyM2="));
+  Serial.print(m2DriverDuty);
+  Serial.print(F(" unit="));
+  Serial.print(unit);
+  Serial.print(F(" cmdCsFail="));
+  Serial.println(cmdChecksumFailCount);
+}
+
+void setup() {
+  Serial.begin(115200);
+  SerialBM.begin(115200);
+
+  pinMode(M1_PWM_PIN, OUTPUT);
+  pinMode(M2_PWM_PIN, OUTPUT);
+  digitalWrite(M1_PWM_PIN, LOW);
+  digitalWrite(M2_PWM_PIN, LOW);
+  analogWriteFrequency(PWM_FREQ_HZ);
+  updateMotorPWM();
+
+  pinMode(PIN_M1_A, INPUT);
+  pinMode(PIN_M1_B, INPUT);
+  pinMode(PIN_M2_A, INPUT);
+  pinMode(PIN_M2_B, INPUT);
+  attachInterrupt(digitalPinToInterrupt(PIN_M1_A), isrM1A, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(PIN_M1_B), isrM1B, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(PIN_M2_A), isrM2A, CHANGE);
+  attachInterrupt(digitalPinToInterrupt(PIN_M2_B), isrM2B, CHANGE);
+
+  Wire1.begin();
+  pcaReady = pcaInit();
+
+  lastCmdMs = millis();
+  lastPidMs = millis();
+  lastStatusSampleMs = millis();
+  if (pcaReady) updateSteering();
+}
+
+void loop() {
+  updateDistanceUnit();
+  pumpSend(bmSender, SerialBM);  // 非阻塞：多數次呼叫直接return，真正要送的
+                                  // 那一刻也只送5byte、不delay，不影響上面的PWM
+
+  pollLink(linkUSB);
+  pollLink(linkBM);
+
+  uint32_t now = millis();
+  pcaHealthTick(now);
+
+  if (now - lastCmdMs > CMD_TIMEOUT_MS) {
+    leftSpeed = 0;
+    rightSpeed = 0;
+  }
+
+  if (now - lastPidMs >= PID_INTERVAL_MS) {
+    lastPidMs = now;
+    if (L298N_PID_CALIBRATED) {
+      updateMotorPID(leftSpeed, &posM1, &pidM1State, &m1DriverDuty, CH_M1_IN1, CH_M1_IN2, &lastActualM1,
+                      FF_LUT_TICKS_M1, MAX_TICKS_PER_INTERVAL_M1, 1);
+      updateMotorPID(rightSpeed, &posM2, &pidM2State, &m2DriverDuty, CH_M2_IN1, CH_M2_IN2, &lastActualM2,
+                      FF_LUT_TICKS_M2, MAX_TICKS_PER_INTERVAL_M2, -1);
+    } else {
+      // New L298N is not calibrated: preserve telemetry and command ACKs while
+      // forcibly holding both motor bridges disabled.
+      updateMotorPID(0, &posM1, &pidM1State, &m1DriverDuty, CH_M1_IN1, CH_M1_IN2, &lastActualM1,
+                     FF_LUT_TICKS_M1, MAX_TICKS_PER_INTERVAL_M1, 1);
+      updateMotorPID(0, &posM2, &pidM2State, &m2DriverDuty, CH_M2_IN1, CH_M2_IN2, &lastActualM2,
+                     FF_LUT_TICKS_M2, MAX_TICKS_PER_INTERVAL_M2, -1);
+    }
+    updateMotorPWM();
+  }
+
+  if (now - lastStatusMs >= STATUS_PERIOD_MS) {
+    lastStatusMs = now;
+    sendStatus();
+  }
+}

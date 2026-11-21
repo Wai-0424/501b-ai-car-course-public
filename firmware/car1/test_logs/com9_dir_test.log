@@ -1,0 +1,16 @@
+--- bwl +40 (left forward) ---
+[last] [enc] posM1=19096 posM2=0 dutyM1=56 dutyM2=0
+--- stop ---
+[last] [enc] posM1=24866 posM2=0 dutyM1=0 dutyM2=0
+--- bwl -40 (left reverse) ---
+[last] [enc] posM1=5836 posM2=0 dutyM1=55 dutyM2=0
+--- stop ---
+[last] [enc] posM1=-562 posM2=0 dutyM1=0 dutyM2=0
+--- bwr +40 (right forward) ---
+[last] [enc] posM1=-562 posM2=-17999 dutyM1=0 dutyM2=56
+--- stop ---
+[last] [enc] posM1=-562 posM2=-25613 dutyM1=0 dutyM2=0
+--- bwr -40 (right reverse) ---
+[last] [enc] posM1=-562 posM2=-8368 dutyM1=0 dutyM2=57
+--- stop ---
+[last] [enc] posM1=-562 posM2=-380 dutyM1=0 dutyM2=0
